@@ -24,29 +24,27 @@ $tablet: 767px;
     }
 }
 
-html,
-body {
+* {
+    margin: 0;
     padding: 0;
+}
+
+body,
+html {
     height: 100%;
-    background-color: #434444;
-}
-
-#container {
-    min-height: 100%;
-    position: relative;
-}
-
-#body {
-    min-height: 1300px;
-
-    @include desktop {
-        padding-bottom: 200px;
-    }
+    /*background-color: #434444;*/
 }
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+
+    #body {
+        overflow: auto;
+        padding-bottom: 100px;
+        background-color: red;
+        height: 2000px;
+    }
 
     header a {
         color: #fff;
@@ -214,25 +212,76 @@ main {
     }
 }
 
-.padding {
-    padding-bottom: 2rem;
-}
-
-.social a {
-    font-size: 2em;
-    padding: .7rem;
-    
-    @include desktop {
-        font-size: 3em;
-        padding: 3rem;
-    }
-
-    @include tablet {
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+    .social a {
         font-size: 2.5em;
         padding: 1.2rem;
     }
+
+    footer {
+        height: 325px;
+    }
+
+    .btn-info {
+        width: 25%;
+    }
+
 }
 
+/*Medium devices (tablets, 767px and down) */
+@media (max-width: 767px) {
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+
+    /*footer {
+        height: 550px;
+    }*/
+
+    .mobile {
+        width: 100%;
+    }
+
+}
+
+#container {
+    min-height: 100%;
+}
+
+#footer {
+    background-color: #000;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    clear: both;
+}
+
+/*footer {
+    color: #d5d5d5;
+    background-color: #434444;
+    padding-top: 2rem;
+    margin-top: -16px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}*/
+
+
+/* FOOTER LÄNK FÄRG */
+footer a {
+    color: #d5d5d5;
+}
+
+/* SOCIAL MEDIA ICONER STORLEK */
+.social a {
+    font-size: 3em;
+    padding: 2rem;
+}
+
+/* SOCIAL MEDIA ICONER FÄRG */
 .fa-envelope,
 .fa-discord,
 .fa-instagram,
@@ -241,53 +290,14 @@ main {
 }
 
 
+/* HOVER SOCIAL MEDIA */
 .fa-discord:hover,
 .fa-envelope:hover,
 .fa-instagram:hover {
     color: #d5d5d5;
 }
 
+/* HOVER LÄNKAR */
 a:hover {
     text-decoration: none;
-}
-
-footer {
-    color: #d5d5d5;
-    padding-top: 2rem;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    background-color: #434444;
-
-    @include desktop {
-        height: auto;
-    }
-
-}
-
-footer a {
-    color: #d5d5d5;
-}
-
-
-@media (max-width: 992px) {
-
-    #body {
-        padding-bottom: 150px;
-    }
-
-}
-
-
-@media (max-width: 767px) {
-
-    footer {
-        height: 550px;
-    }
-
-    #body {
-        padding-bottom: 550px;
-    }
 }

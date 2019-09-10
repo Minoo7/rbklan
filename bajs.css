@@ -1,0 +1,106 @@
+html,
+body {
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+#body {
+    padding-bottom: 325px;
+    min-height: 1300px;
+}
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+.social a {
+    font-size: 3em;
+    padding: 3rem;
+
+}
+
+.fa-envelope,
+.fa-discord,
+.fa-instagram,
+.fa-facebook-square {
+    color: #fff;
+}
+
+
+.fa-discord:hover,
+.fa-envelope:hover,
+.fa-instagram:hover {
+    color: #d5d5d5;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer {
+    color: #d5d5d5;
+    padding-top: 2rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #434444;
+}
+
+footer a {
+    color: #d5d5d5;
+}
+
+
+@media (max-width: 992px) {
+    .social a {
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+
+    footer {
+        height: 325px;
+    }
+
+    #body {
+        padding-bottom: 325px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+
+    footer {
+        height: 550px;
+    }
+
+    #body {
+        padding-bottom: 550px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+}

@@ -1,34 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
 
 <head>
-    <!-- Bootstrap CSS -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="teststyle.css">
-    <title>RudbeckLan 2020 </title>
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css?v=1.1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <title>RudbeckLan</title>
 </head>
 
 <body>
-    <div id="container" class="bg">
+    <div id="container">
         <div id="body">
-            <!-- JAVASCRIPT TILL NAVBAR -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-                crossorigin="anonymous"></script>
-
-            <!-- NAVBAR VÄNSTER-->
             <nav class="navbar navbar-expand-xl navbar-dark">
                 <a class="navbar-brand brand-font" href="index.html">RudbeckLan</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -40,17 +38,9 @@
                 <!-- NAVBAR LÄNK-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Information
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="regler.html">Regler</a>
-                                <a class="dropdown-item" href="packlista.html">Packlista</a>
-                                <a class="dropdown-item" href="faq.html">FAQ</a>
-                            </div>
-                            <!-- NAVBAR LÄNK-->
+                    </ul>
+                    <!-- NAVBAR HÖGER-->
+                    <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,76 +51,75 @@
                                 <a class="dropdown-item" href="csgo.html">Counter-Strike: Global Offensive</a>
                                 <a class="dropdown-item" href="rss.html">Rainbow Six Siege</a>
                                 <a class="dropdown-item" href="fortnite.html">Fortnite</a>
-                                <a class="dropdown-item" href="pubg.html">PUBG</a>
                             </div>
-                            <!-- NAVBAR LÄNK-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="plats.html">Platskarta</a>
                         </li>
-                        <!-- NAVBAR LÄNK-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="hitta.html">Hitta hit</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="regler.html">Regler</a>
+                                <a class="dropdown-item" href="packlista.html">Packlista</a>
+                                <a class="dropdown-item" href="faq.html">FAQ</a>
+                            </div>
                         </li>
-                    </ul>
-                    <!-- NAVBAR HÖGER-->
-                    <ul class="navbar-nav">
-                        <!-- NAVBAR LÄNK-->
                         <li class="nav-item">
-                            <a class="nav-link" href="" data-toggle="modal" data-target="#modalLoginForm"><i
-                                    class="fas fa-sign-in-alt"></i>
-                                Logga in</a>
-                        </li>
-                        <!-- NAVBAR LÄNK-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="kundvagn.html"><i class="fas fa-shopping-cart"></i> Kundvagn</a>
+                            <a class="nav-link" href="hitta.html">Kontakta oss</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <!-- Login-->
-            <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true" style="padding:0;">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title text-dark" style="margin-left:16px;">Logga in</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body mx-3">
-                            <form class="m-auto" action="includes/login.inc.php" method="post">
-                                <div class="input-group mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fas fa-user"></i></div>
-                                    </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup"
-                                        placeholder="Användarnamn">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fas fa-lock"></i></div>
-                                    </div>
-                                    <input type="password" class="form-control" id="inlineFormInputGroup"
-                                        placeholder="Lösenord">
-                                </div>
-                            </form>
 
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <button class="btn btn-success"><i class="fa fa-sign-in" aria-hidden="true"></i> Logga in
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <main id="bg" class="arrow_box">
+                <section id="primary">
+                    <h1>RudbeckLan</h1>
+                    <p>13-15 Mars, Rudbecksskolan</p>
+                    <a href="#">Köp Biljett</a>
+                </section>
+                <section id="card">
+                    <h1><i class="fas fa-map-pin"></i></h1>
+                    <h2>Besöksadress</h2>
+                    <p id="display">Rudbecksskolan</p>
+                    <p>Malla Silfverstolpes Väg 3</p>
+                    <p>192 51 Sollentuna</p>
+                    <h1 class="mt-2"><i class="fas fa-ticket-alt"></i></h1>
+                    <h2>Biljetter</h2>
+                    <p id="display">Standardbiljett</p>
+                    <p>200 SEK</p>
+                    <p>Enkel stol, 90x78 Datorplats, Max 1 Skärm</p>
+                    <p id="display">VIP - Biljett</p>
+                    <p>300 SEK</p>
+                    <p>Enkel stol, 120x90 Datorplats, Max 2st Skärmar</p>
+                </section>
+            </main>
+
+            <div id="om-container">
+                <section id="om">
+                    <h1>Om RudbeckLan</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Donec massa sapien faucibus et molestie. Cursus risus at ultrices
+                        mi tempus imperdiet nulla malesuada pellentesque. Mauris nunc congue nisi vitae. Augue neque
+                        gravida in fermentum. Nibh mauris cursus mattis molestie a iaculis at erat. Facilisis volutpat
+                        est velit egestas dui id. Elementum nibh tellus molestie nunc non. Id semper risus in hendrerit
+                        gravida rutrum quisque. In nibh mauris cursus mattis molestie a. Dictum sit amet justo donec
+                        enim diam. A diam maecenas sed enim ut. Tortor dignissim convallis aenean et tortor at risus.
+                        Tortor aliquam nulla facilisi cras fermentum. Fermentum leo vel orci porta non pulvinar.
+                        Tincidunt nunc pulvinar sapien et ligula. Metus vulputate eu scelerisque felis imperdiet proin
+                        fermentum leo. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Nec dui nunc
+                        mattis enim ut tellus.</p>
+
+                    <p>Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Cursus
+                        turpis massa tincidunt dui. Eleifend donec pretium vulputate sapien nec sagittis. Viverra
+                        suspendisse potenti nullam ac tortor. Velit ut tortor pretium viverra. Risus nec feugiat in
+                        fermentum posuere urna. Accumsan lacus vel facilisis volutpat. Urna nec tincidunt praesent
+                        semper feugiat nibh sed. Elit eget gravida cum sociis natoque penatibus et magnis dis.
+                        Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. Vitae suscipit tellus
+                        mauris a diam.</p>
+                </section>
             </div>
 
 
-
-            <div class="container">
-
-            </div>
-            <!--FOOTER-->
             <footer id="footer">
                 <div class="container-fluid">
                     <div class="row text-center">
@@ -139,26 +128,22 @@
                             <p>000-000-000</p>
                             <p>RudbeckLan@gmail.com</p>
                         </div>
-                        <div class="col-md-4">
-                            <h5>Sponsorer</h5>
-                            <p>Inet</p>
-                            <p>Arena Satelliten</p>
+                        <div class="col-md-4 col-12 social padding">
+                            <a href="https://www.gmail.com/"><i class="fas fa-envelope"></i></a>
+                            <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
+                            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <h5 class="brand-font">&copy; RudbeckLan </h5>
                         </div>
                         <div class="col-md-4">
                             <h5>Adress</h5>
                             <p>Malla Silfverstolpes Väg 3</p>
                             <p>192 51 Sollentuna</p>
                         </div>
-                        <div class="col-12 social padding mt-5">
-                            <a href="https://www.gmail.com/"><i class="fas fa-envelope"></i></a>
-                            <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
-                            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <h5 class="brand-font">&copy; RudbeckLan </h5>
-                        </div>
                     </div>
                 </div>
-            </footer>
         </div>
+        </footer>
+    </div>
     </div>
 </body>
 
