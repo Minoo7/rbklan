@@ -1,0 +1,187 @@
+$colors: (
+  primary: #a36ac4,
+  accent: #fff6bb
+);
+
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 1200px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+$tablet: 767px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #fff;
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  #bg {
+    background-image: url("images/indexbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+main {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary card";
+  }
+
+  section#card {
+    background: #fff;
+    color: #000;
+    opacity: 1;
+    padding: 20px;
+    margin: 1em auto;
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    text-align: justify;
+
+    @include desktop {
+      grid-area: card;
+      height: fit-content;
+      margin: 4em 0 4em 4em;
+      width: 80%;
+      background: #000;
+      opacity: 0.9;
+      color: #fff;
+    }
+
+    h1,
+    h2,
+    p {
+      text-align: center;
+    }
+
+    p#display {
+      color: color(primary);
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  section#primary {
+    color: #fff;
+    padding: $padding;
+    text-align: center;
+
+    @include desktop {
+      grid-area: primary;
+      text-align: left;
+      margin: 4em 0 0 4em;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 10px;
+      text-transform: uppercase;
+
+      @include desktop {
+        width: 80%;
+        font-size: 4em;
+        line-height: 0.9em;
+      }
+    }
+
+    p {
+      font-size: 1.4em;
+    }
+
+    a {
+      color: color(primary);
+      border-radius: $borders;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #fff;
+      display: block;
+      text-align: center;
+      margin: 50px auto 0 auto;
+      padding: $padding;
+      width: 80%;
+
+      @include desktop {
+        display: inline-block;
+        padding: $padding $padding * 4;
+        width: 300px;
+      }
+    }
+  }
+}
+
+.arrow_box {
+  position: relative;
+  background: #000;
+}
+.arrow_box:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #000;
+  border-width: 30px;
+  margin-left: -30px;
+}
+
+.next {
+  background-color: gray;
+
+  section#primary {
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+
+    @include desktop {
+      text-align: center;
+
+      h1{
+        padding: 1em;
+        text-transform: uppercase;
+      }
+
+      p{
+        text-align: center;
+      }
+    }
+  }
+}
