@@ -13,67 +13,26 @@
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> <!--Import-->
+  <script src="imports/get.js"></script> <!--Import-->
   <title>RudbeckLan</title>
 </head>
 
 <body>
   <div id="container">
     <div id="body">
-      <!-- JAVASCRIPT TILL NAVBAR -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-      </script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-      </script>
-
-      <!-- NAVBAR VÄNSTER-->
-      <nav class="navbar navbar-expand-xl navbar-dark">
-        <a class="navbar-brand brand-font" href="index.html">RudbeckLan</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- NAVBAR LÄNK-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-          </ul>
-          <!-- NAVBAR HÖGER-->
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Turneringar
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="league.html">League of Legends</a>
-                <a class="dropdown-item" href="csgo.html">Counter-Strike: Global Offensive</a>
-                <a class="dropdown-item" href="rss.html">Rainbow Six Siege</a>
-                <a class="dropdown-item" href="fortnite.html">Fortnite</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Information
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="regler.html">Allmän information</a>
-                <a class="dropdown-item" href="regler.html">Regler</a>
-                <a class="dropdown-item" href="packlista.html">Packlista</a>
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="hitta.html">Kontakta oss</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div id="get-nav"></div> <!--Import-->
         <div class="container">
 
           <div class="text-center">
@@ -119,35 +78,7 @@
         </div>
       </div>
     </div>
-  <!--FOOTER-->
-  <footer id="footer">
-    <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-md-4">
-          <h5>Kontakt</h5>
-          <p>000-000-000</p>
-          <p>RudbeckLan@gmail.com</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Sponsorer</h5>
-          <p>Inet</p>
-          <p>Arena Satelliten</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Adress</h5>
-          <p>Malla Silfverstolpes Väg 3</p>
-          <p>192 51 Sollentuna</p>
-        </div>
-        <div class="col-12 social padding">
-          <hr class="light">
-          <a href="https://www.gmail.com/"><i class="fas fa-envelope"></i></a>
-          <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
-          <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-          <h5 class="brand-font">&copy; RudbeckLan </h5>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="get-footer"></div> <!--Import-->
 </body>
 
 </html>

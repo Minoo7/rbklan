@@ -186,10 +186,6 @@ main {
             grid-area: card;
             height: fit-content;
             margin: 4em 0 4em 4em;
-            width: 80%;
-            background: #000;
-            opacity: 0.9;
-            color: #fff;
         }
 
         h1,
@@ -339,7 +335,8 @@ main {
 
 .fa-discord:hover,
 .fa-envelope:hover,
-.fa-instagram:hover {
+.fa-instagram:hover
+.fa-facebook-square:hover{
     color: #d5d5d5;
 }
 
