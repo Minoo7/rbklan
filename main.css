@@ -68,9 +68,9 @@ body #bglol {
 }
 
 main section#card {
-  background: #fff;
-  color: #000;
-  opacity: 1;
+  background: #000;
+  opacity: 0.9;
+  color: #fff;
   padding: 20px;
   margin: 1em auto;
   border-radius: 15px;
