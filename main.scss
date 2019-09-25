@@ -161,7 +161,31 @@ body {
         width: 100%;
     }
 
+    .banner {
+        width: 100%;
+        background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+        border-top:5px solid #000;
+        border-bottom:5px solid #000;
 
+        height: 400px;
+        color: color(accent);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+
+
+        h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+        }
+    }
 }
 
 main {
@@ -307,6 +331,13 @@ main {
     }
 }
 
+#regler-container {
+    color: #fff;
+    width: 70%;
+    margin: auto;
+    padding: 2.5em 0 2.5em 0;
+}
+
 .padding {
     padding-bottom: 2rem;
 }
@@ -335,8 +366,7 @@ main {
 
 .fa-discord:hover,
 .fa-envelope:hover,
-.fa-instagram:hover
-.fa-facebook-square:hover{
+.fa-instagram:hover .fa-facebook-square:hover {
     color: #d5d5d5;
 }
 
