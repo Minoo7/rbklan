@@ -42,7 +42,7 @@ body header a {
 }
 
 body #bg {
-  background-image: url("images/indexbg.jpg");
+  background-image: url("../images/indexbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -87,7 +87,6 @@ body .banner h1 {
     display: grid;
     -ms-grid-columns: 50% auto;
         grid-template-columns: 50% auto;
-        grid-template-areas: "primary card";
   }
 }
 

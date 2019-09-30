@@ -146,7 +146,7 @@ body {
     }
 
     #bg {
-        background-image: url("images/indexbg.jpg");
+        background-image: url("../images/indexbg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -165,8 +165,8 @@ body {
         width: 100%;
         background-color: #000000;
         background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-        border-top:5px solid #000;
-        border-bottom:5px solid #000;
+        border-top: 5px solid #000;
+        border-bottom: 5px solid #000;
 
         height: 400px;
         color: color(accent);
@@ -192,7 +192,7 @@ main {
     @include desktop {
         display: grid;
         grid-template-columns: 50% auto;
-        grid-template-areas: "primary card";
+        //grid-template-areas: "primary card";
     }
 
     section#card {
