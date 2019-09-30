@@ -81,48 +81,6 @@ body {
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-
-    #bg {
-        background-image: url("../images/indexbg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-    }
-
-    #bglol {
-        background-image: url("https://maas.museum/app/uploads/2017/08/splashart1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-    }
-
-    .banner {
-        width: 100%;
-        background-color: #000000;
-        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-        border-top: 5px solid #000;
-        border-bottom: 5px solid #000;
-
-        height: 400px;
-        color: color(accent);
-        text-transform: uppercase;
-        font-weight: bold;
-        text-align: center;
-        position: relative;
-
-
-        h1 {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size: 4em;
-        }
-    }
 }
 
 #container {
@@ -142,6 +100,30 @@ body {
     }
 }
 
-nav {
-    background-color: #434444;
+hr {
+    width: 300px;
+    border: 3px solid #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+.social a {
+    font-size: 2em;
+    padding: 0.7rem;
+
+    @include desktop {
+        font-size: 3em;
+        padding: 3rem;
+    }
+
+    @include tablet {
+        font-size: 2.5em;
+        padding: 1rem;
+    }
 }

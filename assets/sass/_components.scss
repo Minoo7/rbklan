@@ -1,0 +1,33 @@
+nav {
+    background-color: #434444;
+}
+
+footer {
+    color: #d5d5d5;
+    padding-top: 2rem;
+    text-align: center;
+    position: relative;
+    height: auto;
+    margin-top: -200px;
+    clear: both;
+    background-color: #434444;
+
+    @include desktop {
+        height: 325px;
+        margin-top: -325px;
+    }
+
+    @include desktop {
+        height: 325px;
+        margin-top: -325px;
+    }
+
+    @include zoom {
+        height: 550px;
+        margin-top: -550px;
+    }
+
+    a {
+        color: #d5d5d5;
+    }
+}

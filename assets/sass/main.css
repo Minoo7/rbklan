@@ -1,41 +1,143 @@
+.fa-envelope,
+.fa-discord,
+.fa-instagram,
+.fa-facebook-square {
+  color: #fff;
+}
+
+.fa-discord:hover,
+.fa-envelope:hover,
+.fa-instagram:hover .fa-facebook-square:hover {
+  color: #d5d5d5;
+}
+
+nav {
+  background-color: #434444;
+}
+
+footer {
+  color: #d5d5d5;
+  padding-top: 2rem;
+  text-align: center;
+  position: relative;
+  height: auto;
+  margin-top: -200px;
+  clear: both;
+  background-color: #434444;
+}
+
+@media (min-width: 1200px) {
+  footer {
+    height: 325px;
+    margin-top: -325px;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    height: 325px;
+    margin-top: -325px;
+  }
+}
+
+@media (min-width: 4000px) {
+  footer {
+    height: 550px;
+    margin-top: -550px;
+  }
+}
+
+footer a {
+  color: #d5d5d5;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(50deg, rgba(146, 146, 146, 0.02) 0%, rgba(146, 146, 146, 0.02) 25%, rgba(82, 82, 82, 0.02) 25%, rgba(82, 82, 82, 0.02) 50%, rgba(217, 217, 217, 0.02) 50%, rgba(217, 217, 217, 0.02) 75%, rgba(41, 41, 41, 0.02) 75%, rgba(41, 41, 41, 0.02) 100%), linear-gradient(252deg, rgba(126, 126, 126, 0.01) 0%, rgba(126, 126, 126, 0.01) 25%, rgba(117, 117, 117, 0.01) 25%, rgba(117, 117, 117, 0.01) 50%, rgba(219, 219, 219, 0.01) 50%, rgba(219, 219, 219, 0.01) 75%, rgba(41, 41, 41, 0.01) 75%, rgba(41, 41, 41, 0.01) 100%), linear-gradient(272deg, rgba(166, 166, 166, 0.01) 0%, rgba(166, 166, 166, 0.01) 20%, rgba(187, 187, 187, 0.01) 20%, rgba(187, 187, 187, 0.01) 40%, rgba(238, 238, 238, 0.01) 40%, rgba(238, 238, 238, 0.01) 60%, rgba(204, 204, 204, 0.01) 60%, rgba(204, 204, 204, 0.01) 80%, rgba(5, 5, 5, 0.01) 80%, rgba(5, 5, 5, 0.01) 100%), linear-gradient(86deg, rgba(143, 143, 143, 0.02) 0%, rgba(143, 143, 143, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 25%, rgba(23, 23, 23, 0.02) 25%, rgba(23, 23, 23, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 50%, rgba(101, 101, 101, 0.02) 50%, rgba(101, 101, 101, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 75%, rgba(148, 148, 148, 0.02) 75%, rgba(148, 148, 148, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 100%), linear-gradient(25deg, rgba(2, 2, 2, 0.02) 0%, rgba(2, 2, 2, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 100.002%), linear-gradient(325deg, rgba(95, 95, 95, 0.03) 0%, rgba(95, 95, 95, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 100.002%), linear-gradient(90deg, #242424, #242424);
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
 }
 
-body #bglol {
-  background-image: url("https://maas.museum/app/uploads/2017/08/splashart1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
+#container {
+  min-height: 100%;
 }
 
-body .banner {
-  width: 100%;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
-  height: 400px;
-  color: #fff6bb;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
+#body {
+  padding-bottom: 200px;
+  overflow: auto;
+}
+
+@media (min-width: 1200px) {
+  #body {
+    padding-bottom: 320px;
+  }
+}
+
+@media (min-width: 4000px) {
+  #body {
+    padding-bottom: 550px;
+  }
+}
+
+hr {
+  width: 300px;
+  border: 3px solid #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.social a {
+  font-size: 2em;
+  padding: 0.7rem;
+}
+
+@media (min-width: 1200px) {
+  .social a {
+    font-size: 3em;
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 767px) {
+  .social a {
+    font-size: 2.5em;
+    padding: 1rem;
+  }
+}
+
+main.arrow_box {
   position: relative;
+  background: #000;
+  border-bottom: 5px solid #000;
+  border-top: 5px solid #000;
 }
 
-body .banner h1 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
+main.arrow_box:after {
+  top: 100%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 4em;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: black;
+  border-width: 30px;
+  margin-left: -30px;
 }
 
-main {
+main#bg {
   background-image: url("../images/indexbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -141,28 +243,6 @@ main section#primary a {
   }
 }
 
-.arrow_box {
-  position: relative;
-  background: #000;
-  border-bottom: 5px solid #000;
-  border-top: 5px solid #000;
-}
-
-.arrow_box:after {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(255, 255, 255, 0);
-  border-top-color: black;
-  border-width: 30px;
-  margin-left: -30px;
-}
-
 #om-container {
   width: 100%;
 }
@@ -198,114 +278,7 @@ main section#primary a {
   }
 }
 
-#regler-container {
-  color: #fff;
-  width: 70%;
-  margin: auto;
-  padding: 2.5em 0 2.5em 0;
-}
-
-.padding {
-  padding-bottom: 2rem;
-}
-
-.social a {
-  font-size: 2em;
-  padding: 0.7rem;
-}
-
-@media (min-width: 1200px) {
-  .social a {
-    font-size: 3em;
-    padding: 3rem;
-  }
-}
-
-@media (min-width: 767px) {
-  .social a {
-    font-size: 2.5em;
-    padding: 1rem;
-  }
-}
-
-.fa-envelope,
-.fa-discord,
-.fa-instagram,
-.fa-facebook-square {
-  color: #fff;
-}
-
-.fa-discord:hover,
-.fa-envelope:hover,
-.fa-instagram:hover .fa-facebook-square:hover {
-  color: #d5d5d5;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-footer {
-  color: #d5d5d5;
-  padding-top: 2rem;
-  text-align: center;
-  position: relative;
-  height: auto;
-  margin-top: -200px;
-  clear: both;
-  background-color: #434444;
-}
-
-@media (min-width: 1200px) {
-  footer {
-    height: 325px;
-    margin-top: -325px;
-  }
-}
-
-@media (min-width: 1200px) {
-  footer {
-    height: 325px;
-    margin-top: -325px;
-  }
-}
-
-@media (min-width: 4000px) {
-  footer {
-    height: 550px;
-    margin-top: -550px;
-  }
-}
-
-footer a {
-  color: #d5d5d5;
-}
-
-hr {
-  width: 300px;
-  border: 3px solid #fff;
-}
-
-html,
-body {
-  height: 100%;
-  background: linear-gradient(50deg, rgba(146, 146, 146, 0.02) 0%, rgba(146, 146, 146, 0.02) 25%, rgba(82, 82, 82, 0.02) 25%, rgba(82, 82, 82, 0.02) 50%, rgba(217, 217, 217, 0.02) 50%, rgba(217, 217, 217, 0.02) 75%, rgba(41, 41, 41, 0.02) 75%, rgba(41, 41, 41, 0.02) 100%), linear-gradient(252deg, rgba(126, 126, 126, 0.01) 0%, rgba(126, 126, 126, 0.01) 25%, rgba(117, 117, 117, 0.01) 25%, rgba(117, 117, 117, 0.01) 50%, rgba(219, 219, 219, 0.01) 50%, rgba(219, 219, 219, 0.01) 75%, rgba(41, 41, 41, 0.01) 75%, rgba(41, 41, 41, 0.01) 100%), linear-gradient(272deg, rgba(166, 166, 166, 0.01) 0%, rgba(166, 166, 166, 0.01) 20%, rgba(187, 187, 187, 0.01) 20%, rgba(187, 187, 187, 0.01) 40%, rgba(238, 238, 238, 0.01) 40%, rgba(238, 238, 238, 0.01) 60%, rgba(204, 204, 204, 0.01) 60%, rgba(204, 204, 204, 0.01) 80%, rgba(5, 5, 5, 0.01) 80%, rgba(5, 5, 5, 0.01) 100%), linear-gradient(86deg, rgba(143, 143, 143, 0.02) 0%, rgba(143, 143, 143, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 25%, rgba(23, 23, 23, 0.02) 25%, rgba(23, 23, 23, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 50%, rgba(101, 101, 101, 0.02) 50%, rgba(101, 101, 101, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 75%, rgba(148, 148, 148, 0.02) 75%, rgba(148, 148, 148, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 100%), linear-gradient(25deg, rgba(2, 2, 2, 0.02) 0%, rgba(2, 2, 2, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 100.002%), linear-gradient(325deg, rgba(95, 95, 95, 0.03) 0%, rgba(95, 95, 95, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 100.002%), linear-gradient(90deg, #242424, #242424);
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-}
-
-body #bg {
-  background-image: url("../images/indexbg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-}
-
-body #bglol {
+#bglol {
   background-image: url("https://maas.museum/app/uploads/2017/08/splashart1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -313,7 +286,7 @@ body #bglol {
   width: 100%;
 }
 
-body .banner {
+.banner {
   width: 100%;
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
@@ -327,7 +300,7 @@ body .banner {
   position: relative;
 }
 
-body .banner h1 {
+.banner h1 {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -337,28 +310,10 @@ body .banner h1 {
   font-size: 4em;
 }
 
-#container {
-  min-height: 100%;
-}
-
-#body {
-  padding-bottom: 200px;
-  overflow: auto;
-}
-
-@media (min-width: 1200px) {
-  #body {
-    padding-bottom: 320px;
-  }
-}
-
-@media (min-width: 4000px) {
-  #body {
-    padding-bottom: 550px;
-  }
-}
-
-nav {
-  background-color: #434444;
+#regler-container {
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  padding: 2.5em 0 2.5em 0;
 }
 /*# sourceMappingURL=main.css.map */
