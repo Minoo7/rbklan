@@ -29,10 +29,75 @@ main {
         width: 100%;
     }
 
-    @include desktop {
-        display: grid;
-        grid-template-columns: 50% auto;
-        //grid-template-areas: "primary card";
+    section#primary {
+        color: #fff;
+        padding: $padding;
+        text-align: center;
+
+        @include desktop {
+            grid-area: primary;
+            text-align: left;
+            margin: 4em 0 0 4em;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 10px;
+            text-transform: uppercase;
+
+            @include desktop {
+                width: 80%;
+                font-size: 4em;
+                line-height: 0.9em;
+            }
+        }
+
+        p {
+            font-size: 1.4em;
+            //margin-top: 10px;
+        }
+
+        div {
+            position: relative;
+            margin: 0 auto 0 auto;
+            width: 290px;
+            height: 50px;
+            text-align: center;
+
+            @include desktop {
+                margin: 0;
+            }
+
+            #countdown {
+                position: absolute;
+                height: 50px;
+                font-size: 40px;
+                font-family: 'Aldrich', sans-serif;
+                color: white;
+
+                @include desktop {}
+            }
+        }
+
+        a {
+            color: color(primary);
+            border-radius: $borders;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: #fff;
+            display: block;
+            text-align: center;
+            margin: 100px auto 0 auto;
+            padding: $padding;
+            width: 80%;
+
+            @include desktop {
+                display: inline-block;
+                padding: $padding $padding * 4;
+                width: 300px;
+            }
+        }
     }
 
     section#card {
@@ -65,52 +130,10 @@ main {
         }
     }
 
-    section#primary {
-        color: #fff;
-        padding: $padding;
-        text-align: center;
-
-        @include desktop {
-            grid-area: primary;
-            text-align: left;
-            margin: 4em 0 0 4em;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-top: 10px;
-            text-transform: uppercase;
-
-            @include desktop {
-                width: 80%;
-                font-size: 4em;
-                line-height: 0.9em;
-            }
-        }
-
-        p {
-            font-size: 1.4em;
-        }
-
-        a {
-            color: color(primary);
-            border-radius: $borders;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            background-color: #fff;
-            display: block;
-            text-align: center;
-            margin: 50px auto 0 auto;
-            padding: $padding;
-            width: 80%;
-
-            @include desktop {
-                display: inline-block;
-                padding: $padding $padding * 4;
-                width: 300px;
-            }
-        }
+    @include desktop {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
     }
 }
 

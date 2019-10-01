@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Aldrich&display=swap");
 .fa-envelope,
 .fa-discord,
 .fa-instagram,
@@ -145,12 +146,79 @@ main#bg {
   width: 100%;
 }
 
+main section#primary {
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
 @media (min-width: 1200px) {
-  main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% auto;
-        grid-template-columns: 50% auto;
+  main section#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+
+main section#primary h1 {
+  font-size: 3em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  main section#primary h1 {
+    width: 80%;
+    font-size: 4em;
+    line-height: 0.9em;
+  }
+}
+
+main section#primary p {
+  font-size: 1.4em;
+}
+
+main section#primary div {
+  position: relative;
+  margin: 0 auto 0 auto;
+  width: 290px;
+  height: 50px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  main section#primary div {
+    margin: 0;
+  }
+}
+
+main section#primary div #countdown {
+  position: absolute;
+  height: 50px;
+  font-size: 40px;
+  font-family: 'Aldrich', sans-serif;
+  color: white;
+}
+
+main section#primary a {
+  color: #a36ac4;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fff;
+  display: block;
+  text-align: center;
+  margin: 100px auto 0 auto;
+  padding: 15px;
+  width: 80%;
+}
+
+@media (min-width: 1200px) {
+  main section#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+    width: 300px;
   }
 }
 
@@ -189,57 +257,13 @@ main section#card p#display {
   font-size: 20px;
 }
 
-main section#primary {
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
-
 @media (min-width: 1200px) {
-  main section#primary {
-    grid-area: primary;
-    text-align: left;
-    margin: 4em 0 0 4em;
-  }
-}
-
-main section#primary h1 {
-  font-size: 3em;
-  margin-top: 10px;
-  text-transform: uppercase;
-}
-
-@media (min-width: 1200px) {
-  main section#primary h1 {
-    width: 80%;
-    font-size: 4em;
-    line-height: 0.9em;
-  }
-}
-
-main section#primary p {
-  font-size: 1.4em;
-}
-
-main section#primary a {
-  color: #a36ac4;
-  border-radius: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: #fff;
-  display: block;
-  text-align: center;
-  margin: 50px auto 0 auto;
-  padding: 15px;
-  width: 80%;
-}
-
-@media (min-width: 1200px) {
-  main section#primary a {
-    display: inline-block;
-    padding: 15px 60px;
-    width: 300px;
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
   }
 }
 
