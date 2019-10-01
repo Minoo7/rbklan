@@ -1,25 +1,4 @@
 main {
-    &.arrow_box {
-        position: relative;
-        background: #000;
-        border-bottom: 5px solid #000;
-        border-top: 5px solid #000;
-
-        &:after {
-            top: 100%;
-            left: 50%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(255, 255, 255, 0);
-            border-top-color: rgb(0, 0, 0);
-            border-width: 30px;
-            margin-left: -30px;
-        }
-    }
 
     &#bg {
         background-image: url("../images/indexbg.jpg");
@@ -50,6 +29,13 @@ main {
                 font-size: 4em;
                 line-height: 0.9em;
             }
+        }
+
+        h2 {
+            //display: none;
+            margin-top: 70px;
+            font-size: 72px;
+            font-family: 'ABeeZee', sans-serif;
         }
 
         p {
@@ -122,16 +108,12 @@ main {
                         font-family: 'Lato', sans-serif;
                         clear: both;
                         display: inline-block;
-                        font-size: 14px;
+                        font-size: 16px;
                         line-height: 20px;
                         padding: 0 4px;
                         text-transform: uppercase;
                         border-radius: 2px;
                     }
-                }
-                li:first-child {
-                    margin-left: 0px;
-                    padding: 0;
                 }
             }
         }
@@ -228,6 +210,64 @@ main {
                 padding: 1em;
                 text-transform: uppercase;
             }
+        }
+    }
+}
+
+#spel-container2 {
+    #spel2 {
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+#spel-container {
+    border-style: dashed;
+    color: #fff;
+    padding: 50px;
+    width: 100%;
+
+    h1 {
+        text-align: center;
+        font-size: 3em;
+        margin: 10px 0 20px 0;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+
+    section#spel {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "lol cs rss fortnite";
+        grid-gap: 20px;
+
+        #lol {
+            grid-area: "lol";
+        }
+
+        #cs {
+            grid-area: "cs";
+        }
+
+        #rss {
+            grid-area: "rss";
+        }
+
+        #fortnite {
+            grid-area: "fortine";
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 }

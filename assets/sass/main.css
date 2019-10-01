@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=ABeeZee%7CFrancois+One&display=swap");
 .fa-envelope,
 .fa-discord,
 .fa-instagram,
@@ -118,28 +119,6 @@ a:hover {
   }
 }
 
-main.arrow_box {
-  position: relative;
-  background: #000;
-  border-bottom: 5px solid #000;
-  border-top: 5px solid #000;
-}
-
-main.arrow_box:after {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(255, 255, 255, 0);
-  border-top-color: black;
-  border-width: 30px;
-  margin-left: -30px;
-}
-
 main#bg {
   background-image: url("../images/indexbg.jpg");
   background-repeat: no-repeat;
@@ -174,6 +153,12 @@ main section#primary h1 {
     font-size: 4em;
     line-height: 0.9em;
   }
+}
+
+main section#primary h2 {
+  margin-top: 70px;
+  font-size: 72px;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 main section#primary p {
@@ -258,16 +243,11 @@ main section#primary div ul li p {
   font-family: 'Lato', sans-serif;
   clear: both;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   padding: 0 4px;
   text-transform: uppercase;
   border-radius: 2px;
-}
-
-main section#primary div ul li:first-child {
-  margin-left: 0px;
-  padding: 0;
 }
 
 main section#primary a {
@@ -372,6 +352,60 @@ main section#card p#display {
     padding: 1em;
     text-transform: uppercase;
   }
+}
+
+#spel-container2 #spel2 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#spel-container2 #spel2 ul li img {
+  width: 30%;
+}
+
+#spel-container {
+  border-style: dashed;
+  color: #fff;
+  padding: 50px;
+  width: 100%;
+}
+
+#spel-container h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 10px 0 20px 0;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+#spel-container section#spel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "lol cs rss fortnite";
+  grid-gap: 20px;
+}
+
+#spel-container section#spel #lol {
+  grid-area: "lol";
+}
+
+#spel-container section#spel #cs {
+  grid-area: "cs";
+}
+
+#spel-container section#spel #rss {
+  grid-area: "rss";
+}
+
+#spel-container section#spel #fortnite {
+  grid-area: "fortine";
+}
+
+#spel-container section#spel img {
+  width: 100%;
+  height: 100%;
 }
 
 #bglol {
