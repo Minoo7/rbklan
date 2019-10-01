@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 .fa-envelope,
 .fa-discord,
 .fa-instagram,
@@ -162,7 +164,7 @@ main section#primary {
 
 main section#primary h1 {
   font-size: 3em;
-  margin-top: 10px;
+  margin: 10px 0 20px 0;
   text-transform: uppercase;
 }
 
@@ -176,14 +178,17 @@ main section#primary h1 {
 
 main section#primary p {
   font-size: 1.4em;
+  margin-bottom: 12px;
 }
 
 main section#primary div {
+  margin: 0;
+  padding: 0;
   position: relative;
-  margin: 0 auto 0 auto;
-  width: 290px;
-  height: 50px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px;
+  height: 100px;
 }
 
 @media (min-width: 1200px) {
@@ -192,31 +197,71 @@ main section#primary div {
   }
 }
 
-main section#primary div #countdown {
+main section#primary div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main section#primary div #cursive {
+  padding-top: 60px;
+}
+
+main section#primary div #cursive li {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 60px;
+}
+
+main section#primary div li {
   position: absolute;
   height: 50px;
+  width: 60px;
+  display: inline-block;
   font-size: 40px;
   font-family: 'Aldrich', sans-serif;
   color: white;
 }
 
+main section#primary div li:nth-child(1) {
+  left: 0px;
+}
+
+main section#primary div li:nth-child(2) {
+  left: 120px;
+}
+
+main section#primary div li:nth-child(3) {
+  left: 240px;
+}
+
+main section#primary div li:nth-child(4) {
+  left: 380px;
+}
+
 main section#primary a {
-  color: #a36ac4;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  color: white;
   border-radius: 15px;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
-  background-color: #fff;
+  background-color: #61ce70;
   display: block;
   text-align: center;
-  margin: 100px auto 0 auto;
+  margin: 31px auto 0 auto;
   padding: 15px;
-  width: 80%;
+  width: 305px;
 }
 
 @media (min-width: 1200px) {
   main section#primary a {
     display: inline-block;
+    margin: 100px auto 0 auto;
     padding: 15px 60px;
     width: 300px;
   }

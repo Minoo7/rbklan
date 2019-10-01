@@ -1,5 +1,9 @@
+function minTwoDigits(n) {
+    return (n < 10 ? '0' : '') + n;
+}
+
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 7, 2020 17:00:00").getTime();
+var countDownDate = new Date("Jan 7, 2020 17:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -17,12 +21,17 @@ var x = setInterval(function () {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-        minutes + ":" + seconds;
+    //document.getElementById("countdown").innerHTML = days + "" + hours + " " +
+    //    minutes + ":" + seconds;
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = minTwoDigits(hours);
+    document.getElementById("minutes").innerHTML = minTwoDigits(minutes);
+    document.getElementById("seconds").innerHTML = minTwoDigits(seconds);
 
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Live!";
+        document.getElementById("days").innerHTML = "Live!";
     }
 }, 1000);
