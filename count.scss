@@ -1,0 +1,139 @@
+div,
+ul,
+span,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+}
+
+@media all {
+
+   
+
+
+    @media only screen and (max-width:767px) {
+        div ul li {
+            margin-bottom: 0;
+        }
+    }
+}
+
+div * {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.7;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 800px;
+    color: #fff;
+    overflow: hidden;
+    max-width: 800px;
+
+    ul {
+        max-width: 400px;
+        text-align: center;
+        width: 400px;
+        display: inline-block;
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            margin-top: 25px;
+        }
+
+        li {
+            display: block;
+            margin: 0 0px;
+            float: left;
+            width: 25%;
+
+            @media (max-width: 479px) {
+                margin-bottom: 30px;
+                width: 25%;
+                height: 100px;
+            }
+
+            @media (min-width: 768px) {
+                width: 25%;
+                height: 130px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                margin-bottom: 30px;
+                width: 25%;
+                height: 100px;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+                font-size: 50px;
+                line-height: 50px;
+                padding: 21px 0 12px;
+
+                @media (max-width: 479px) {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                @media (min-width: 480px) and (max-width: 767px) {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                p {
+                    clear: both;
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 0 4px;
+                    text-transform: uppercase;
+                    border-radius: 2px;
+
+                    @media (max-width: 479px) {
+                        font-size: 14px;
+                        line-height: 20px;
+                        text-transform: none;
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        font-size: 14px;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
