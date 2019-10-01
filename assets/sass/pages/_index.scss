@@ -56,59 +56,83 @@ main {
             font-size: 1.4em;
             margin-bottom: 12px;
         }
-        
+
         div {
-            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 1.7;
+            //border-style: dashed;
             padding: 0;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            width: 420px;
-            height: 100px;
+            margin: 0 auto;
+            width: max-content;
+            color: #fff;
+            overflow: hidden;
 
             @include desktop {
-                margin: 0;
+                margin: 0 0 0 -18px;
             }
 
-            ul {
-                list-style: none;
+            & * {
                 margin: 0;
                 padding: 0;
             }
 
-            #cursive {
-                padding-top: 60px;
-                li {
-                    text-align: center;
-                    font-family: 'Lato', sans-serif;
-                    font-size: 16px;
-                    height: max-content;
-                    width: 60px;
-                }
+            *,
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
             }
 
-            li {
-                position: absolute;
-                height: 50px;
-                width: 60px;
+            ::selection {
+                color: #fff;
+                background: #333;
+                text-shadow: none;
+            }
+
+            ::-moz-selection {
+                color: #fff;
+                background: #333;
+                text-shadow: none;
+            }
+
+            ul {
+                max-width: 400px;
+                text-align: center;
+                width: 400px;
                 display: inline-block;
-                font-size: 40px;
-                font-family: 'Aldrich', sans-serif;
-                color: white;
 
-                @include desktop {}
-            }
-            li:nth-child(1) {
-                left: 0px;
-            }
-            li:nth-child(2) {
-                left: 120px;
-            }
-            li:nth-child(3) {
-                left: 240px;
-            }
-            li:nth-child(4) {
-                left: 380px;
+                li {
+                    display: block;
+                    margin: 0 0px;
+                    float: left;
+                    width: 25%;
+
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-size: 50px;
+                        line-height: 50px;
+                        padding: 21px 0 12px;
+                        font-family: 'Aldrich', sans-serif;
+                    }
+
+                    p {
+                        font-family: 'Lato', sans-serif;
+                        clear: both;
+                        display: inline-block;
+                        font-size: 14px;
+                        line-height: 20px;
+                        padding: 0 4px;
+                        text-transform: uppercase;
+                        border-radius: 2px;
+                    }
+                }
+                li:first-child {
+                    margin-left: 0px;
+                    padding: 0;
+                }
             }
         }
 
@@ -134,6 +158,7 @@ main {
             }
         }
     }
+
 
     section#card {
         background: #000;

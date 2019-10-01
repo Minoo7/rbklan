@@ -182,65 +182,92 @@ main section#primary p {
 }
 
 main section#primary div {
-  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.7;
   padding: 0;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 420px;
-  height: 100px;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #fff;
+  overflow: hidden;
 }
 
 @media (min-width: 1200px) {
   main section#primary div {
-    margin: 0;
+    margin: 0 0 0 -18px;
   }
 }
 
-main section#primary div ul {
-  list-style: none;
+main section#primary div * {
   margin: 0;
   padding: 0;
 }
 
-main section#primary div #cursive {
-  padding-top: 60px;
+main section#primary div *,
+main section#primary div *:before,
+main section#primary div *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-main section#primary div #cursive li {
+main section#primary div ::-moz-selection {
+  color: #fff;
+  background: #333;
+  text-shadow: none;
+}
+
+main section#primary div ::selection {
+  color: #fff;
+  background: #333;
+  text-shadow: none;
+}
+
+main section#primary div ::-moz-selection {
+  color: #fff;
+  background: #333;
+  text-shadow: none;
+}
+
+main section#primary div ul {
+  max-width: 400px;
   text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: 60px;
-}
-
-main section#primary div li {
-  position: absolute;
-  height: 50px;
-  width: 60px;
+  width: 400px;
   display: inline-block;
-  font-size: 40px;
+}
+
+main section#primary div ul li {
+  display: block;
+  margin: 0 0px;
+  float: left;
+  width: 25%;
+}
+
+main section#primary div ul li span {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  line-height: 50px;
+  padding: 21px 0 12px;
   font-family: 'Aldrich', sans-serif;
-  color: white;
 }
 
-main section#primary div li:nth-child(1) {
-  left: 0px;
+main section#primary div ul li p {
+  font-family: 'Lato', sans-serif;
+  clear: both;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 4px;
+  text-transform: uppercase;
+  border-radius: 2px;
 }
 
-main section#primary div li:nth-child(2) {
-  left: 120px;
-}
-
-main section#primary div li:nth-child(3) {
-  left: 240px;
-}
-
-main section#primary div li:nth-child(4) {
-  left: 380px;
+main section#primary div ul li:first-child {
+  margin-left: 0px;
+  padding: 0;
 }
 
 main section#primary a {
