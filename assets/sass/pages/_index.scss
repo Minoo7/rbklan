@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 main {
 
     &#bg {
@@ -181,6 +183,10 @@ main {
 
 #om-container {
     width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
     section#om {
         color: #fff;
@@ -194,7 +200,14 @@ main {
         }
 
         h1 {
-            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0px 0 50px 0;
+            text-transform: uppercase;
+            padding: 10px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
         }
 
         @include desktop {
@@ -203,7 +216,7 @@ main {
             width: 50%;
 
             h1 {
-                margin-bottom: 0;
+                font-size: 3em;
             }
 
             h1 {
@@ -214,60 +227,102 @@ main {
     }
 }
 
-#spel-container2 {
-    #spel2 {
-        ul {
-            list-style-type: none;
-            padding: 0;
+#grid-container{
+    margin: auto;
+    width: 300px;
 
-            li {
-                img {
-                    width: 30%;
-                }
-            }
-        }
+    @include desktop{
+        width: 80%;
     }
 }
 
 #spel-container {
-    border-style: dashed;
-    color: #fff;
-    padding: 50px;
+
+    @include desktop {
+        padding: 100px;
+    }
+
+    border-top: 5px #000 solid;
     width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://image.redbull.com/rbcom/010/2013-10-05/1331614343538_4/0100/0/1/league-of-legfaker-of-skt-t1-atlol-world-championship-at-the-staples-center-lol-world-championshipends-world-championships.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding:25px;
+
 
     h1 {
+        color: #fff;
         text-align: center;
-        font-size: 3em;
-        margin: 10px 0 20px 0;
+        font-size: 2em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
         padding: 10px;
+        margin: 0px 0 50px 0;
+        font-weight: 500;
+
+        @include desktop {
+            font-size: 4em;
+        }
+
     }
 
     section#spel {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-areas: "lol cs rss fortnite";
-        grid-gap: 20px;
+        display: inline-grid;
+        justify-content: center;
+        justify-items: center;
+        width: 300px;
+        margin: auto;
+        row-gap: 100px;
+ 
+
+       
+        
+
+        @include desktop{
+            display: grid;
+            width: 80%;
+            grid-template-areas: "lol cs fortnite";
+            grid-template-columns: 300px 300px 300px;
+            grid-gap: 10%;
+
+            
+        }
+      
+
 
         #lol {
             grid-area: "lol";
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+            background: #333;
+            
         }
 
         #cs {
             grid-area: "cs";
-        }
-
-        #rss {
-            grid-area: "rss";
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+            background: #333;
         }
 
         #fortnite {
             grid-area: "fortine";
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+            background: #333;
         }
 
         img {
             width: 100%;
             height: 100%;
         }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 16px;
+            color: #ccc;
+        }
     }
+
 }

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=ABeeZee%7CFrancois+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .fa-envelope,
 .fa-discord,
 .fa-instagram,
@@ -321,6 +322,11 @@ main section#card p#display {
 
 #om-container {
   width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 #om-container section#om {
@@ -336,7 +342,14 @@ main section#card p#display {
 }
 
 #om-container section#om h1 {
-  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0px 0 50px 0;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
 }
 
 @media (min-width: 1200px) {
@@ -346,7 +359,7 @@ main section#card p#display {
     width: 50%;
   }
   #om-container section#om h1 {
-    margin-bottom: 0;
+    font-size: 3em;
   }
   #om-container section#om h1 {
     padding: 1em;
@@ -354,58 +367,107 @@ main section#card p#display {
   }
 }
 
-#spel-container2 #spel2 ul {
-  list-style-type: none;
-  padding: 0;
+#grid-container {
+  margin: auto;
+  width: 300px;
 }
 
-#spel-container2 #spel2 ul li img {
-  width: 30%;
+@media (min-width: 1200px) {
+  #grid-container {
+    width: 80%;
+  }
 }
 
 #spel-container {
-  border-style: dashed;
-  color: #fff;
-  padding: 50px;
+  border-top: 5px #000 solid;
   width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://image.redbull.com/rbcom/010/2013-10-05/1331614343538_4/0100/0/1/league-of-legfaker-of-skt-t1-atlol-world-championship-at-the-staples-center-lol-world-championshipends-world-championships.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://image.redbull.com/rbcom/010/2013-10-05/1331614343538_4/0100/0/1/league-of-legfaker-of-skt-t1-atlol-world-championship-at-the-staples-center-lol-world-championshipends-world-championships.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 25px;
+}
+
+@media (min-width: 1200px) {
+  #spel-container {
+    padding: 100px;
+  }
 }
 
 #spel-container h1 {
+  color: #fff;
   text-align: center;
-  font-size: 3em;
-  margin: 10px 0 20px 0;
+  font-size: 2em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 10px;
+  margin: 0px 0 50px 0;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  #spel-container h1 {
+    font-size: 4em;
+  }
 }
 
 #spel-container section#spel {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-      grid-template-areas: "lol cs rss fortnite";
-  grid-gap: 20px;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  width: 300px;
+  margin: auto;
+  row-gap: 100px;
+}
+
+@media (min-width: 1200px) {
+  #spel-container section#spel {
+    display: -ms-grid;
+    display: grid;
+    width: 80%;
+        grid-template-areas: "lol cs fortnite";
+    -ms-grid-columns: 300px 300px 300px;
+        grid-template-columns: 300px 300px 300px;
+    grid-gap: 10%;
+  }
 }
 
 #spel-container section#spel #lol {
   grid-area: "lol";
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+  background: #333;
 }
 
 #spel-container section#spel #cs {
   grid-area: "cs";
-}
-
-#spel-container section#spel #rss {
-  grid-area: "rss";
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+  background: #333;
 }
 
 #spel-container section#spel #fortnite {
   grid-area: "fortine";
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+  background: #333;
 }
 
 #spel-container section#spel img {
   width: 100%;
   height: 100%;
+}
+
+#spel-container section#spel p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 16px;
+  color: #ccc;
 }
 
 #bglol {
