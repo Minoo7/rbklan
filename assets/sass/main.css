@@ -17,7 +17,9 @@
 }
 
 nav {
-  background-color: #434444;
+  background-color: #000;
+  -webkit-box-shadow: 0px 5px 10px #000;
+          box-shadow: 0px 5px 10px #000;
 }
 
 footer {
@@ -28,7 +30,7 @@ footer {
   height: auto;
   margin-top: -200px;
   clear: both;
-  background-color: #434444;
+  background-color: #000;
 }
 
 @media (min-width: 1200px) {
@@ -120,39 +122,90 @@ a:hover {
   }
 }
 
+main {
+  /* section#card {
+        background: #000;
+        opacity: 0.9;
+        color: #fff;
+        padding: 20px;
+        margin: 1em auto;
+        border-radius: $borders;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        text-align: justify;
+
+        @include desktop {
+            grid-area: card;
+            height: fit-content;
+            margin: 4em 0 4em 4em;
+        }
+
+        h1,
+        h2,
+        p {
+            text-align: center;
+        }
+
+        p#display {
+            color: color(primary);
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
+    }*/
+}
+
 main#bg {
-  background-image: url("../images/indexbg.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("../images/indexbg.jpg");
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("../images/indexbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
+  height: 850px;
 }
 
 main section#primary {
   color: #fff;
   padding: 15px;
   text-align: center;
-}
-
-@media (min-width: 1200px) {
-  main section#primary {
-    grid-area: primary;
-    text-align: left;
-    margin: 4em 0 0 4em;
-  }
+  /*@include desktop {
+            grid-area: primary;
+            text-align: left;
+            margin: 4em 0 0 4em;
+        }*/
 }
 
 main section#primary h1 {
   font-size: 3em;
   margin: 10px 0 20px 0;
   text-transform: uppercase;
+  /*@include desktop {
+                width: 80%;
+                font-size: 4em;
+                line-height: 0.9em;
+            }*/
+}
+
+main section#primary h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 
 @media (min-width: 1200px) {
   main section#primary h1 {
-    width: 80%;
     font-size: 4em;
-    line-height: 0.9em;
   }
 }
 
@@ -179,12 +232,9 @@ main section#primary div {
   width: max-content;
   color: #fff;
   overflow: hidden;
-}
-
-@media (min-width: 1200px) {
-  main section#primary div {
-    margin: 0 0 0 -18px;
-  }
+  /*@include desktop {
+                margin: 0 0 0 -18px;
+            }*/
 }
 
 main section#primary div * {
@@ -252,78 +302,38 @@ main section#primary div ul li p {
 }
 
 main section#primary a {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   color: white;
-  border-radius: 15px;
+  border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #61ce70;
+  background-color: #a343db;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
   display: block;
   text-align: center;
-  margin: 31px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 15px;
-  width: 305px;
+  font-weight: 500;
+  width: 250px;
 }
 
 @media (min-width: 1200px) {
   main section#primary a {
     display: inline-block;
-    margin: 100px auto 0 auto;
     padding: 15px 60px;
     width: 300px;
   }
 }
 
-main section#card {
-  background: #000;
-  opacity: 0.9;
-  color: #fff;
-  padding: 20px;
-  margin: 1em auto;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  text-align: justify;
-}
-
-@media (min-width: 1200px) {
-  main section#card {
-    grid-area: card;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 4em 0 4em 4em;
-  }
-}
-
-main section#card h1,
-main section#card h2,
-main section#card p {
-  text-align: center;
-}
-
-main section#card p#display {
-  color: #a36ac4;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-@media (min-width: 1200px) {
-  main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% auto;
-        grid-template-columns: 50% auto;
-        grid-template-areas: "primary card";
-  }
+main section#primary img {
+  margin: 2em;
 }
 
 #om-container {
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -334,11 +344,12 @@ main section#card p#display {
   text-align: center;
   width: 80%;
   margin: 0 auto 0 auto;
-  padding: 2.5em 0 2.5em 0;
+  padding: 6.5em 0 6.5em 0;
 }
 
 #om-container section#om p {
   text-align: justify;
+  font-size: 1.25em;
 }
 
 #om-container section#om h1 {
@@ -379,10 +390,9 @@ main section#card p#display {
 }
 
 #spel-container {
-  border-top: 5px #000 solid;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://image.redbull.com/rbcom/010/2013-10-05/1331614343538_4/0100/0/1/league-of-legfaker-of-skt-t1-atlol-world-championship-at-the-staples-center-lol-world-championshipends-world-championships.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://image.redbull.com/rbcom/010/2013-10-05/1331614343538_4/0100/0/1/league-of-legfaker-of-skt-t1-atlol-world-championship-at-the-staples-center-lol-world-championshipends-world-championships.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("../images/spelbg.jpg");
+  background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("../images/spelbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

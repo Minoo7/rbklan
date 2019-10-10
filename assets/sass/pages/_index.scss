@@ -3,11 +3,14 @@
 main {
 
     &#bg {
-        background-image: url("../images/indexbg.jpg");
+        background-image: linear-gradient(to top,
+                #000,
+                rgba(#000, 0)), url("../images/indexbg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         width: 100%;
+        height: 850px;
     }
 
     section#primary {
@@ -15,22 +18,40 @@ main {
         padding: $padding;
         text-align: center;
 
-        @include desktop {
+        /*@include desktop {
             grid-area: primary;
             text-align: left;
             margin: 4em 0 0 4em;
-        }
+        }*/
 
         h1 {
             font-size: 3em;
             margin: 10px 0 20px 0;
             text-transform: uppercase;
 
-            @include desktop {
+            /*@include desktop {
                 width: 80%;
                 font-size: 4em;
                 line-height: 0.9em;
+            }*/
+        }
+
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 10px;
+            //margin: 0px 0 50px 0;
+            margin-bottom: 0;
+            font-weight: 500;
+
+            @include desktop {
+                font-size: 4em;
             }
+
         }
 
         h2 {
@@ -56,9 +77,9 @@ main {
             color: #fff;
             overflow: hidden;
 
-            @include desktop {
+            /*@include desktop {
                 margin: 0 0 0 -18px;
-            }
+            }*/
 
             & * {
                 margin: 0;
@@ -121,30 +142,34 @@ main {
         }
 
         a {
-            font-family: 'Open Sans', sans-serif;
             font-size: 1.5em;
             color: white;
-            border-radius: $borders;
+            border-radius: 5px;
             text-decoration: none;
             text-transform: uppercase;
-            background-color: #61ce70;
+            background-color: color(primary);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
             display: block;
             text-align: center;
-            margin: 31px auto 0 auto;
+            margin: 50px auto 0 auto;
             padding: $padding;
-            width: 305px;
+            font-weight: 500;
+            width: 250px;
 
             @include desktop {
                 display: inline-block;
-                margin: 100px auto 0 auto;
                 padding: $padding $padding * 4;
                 width: 300px;
             }
         }
+
+        img {
+            margin: 2em;
+        }
     }
 
 
-    section#card {
+    /* section#card {
         background: #000;
         opacity: 0.9;
         color: #fff;
@@ -178,12 +203,17 @@ main {
         display: grid;
         grid-template-columns: 50% auto;
         grid-template-areas: "primary card";
-    }
+    }*/
 }
 
 #om-container {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+    background-image: linear-gradient(to bottom,
+            #000,
+            rgba(#000, 0)),
+        linear-gradient(to top,
+            #000,
+            rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -193,10 +223,11 @@ main {
         text-align: center;
         width: 80%;
         margin: 0 auto 0 auto;
-        padding: 2.5em 0 2.5em 0;
+        padding: 6.5em 0 6.5em 0;
 
         p {
             text-align: justify;
+            font-size:1.25em;
         }
 
         h1 {
@@ -227,11 +258,11 @@ main {
     }
 }
 
-#grid-container{
+#grid-container {
     margin: auto;
     width: 300px;
 
-    @include desktop{
+    @include desktop {
         width: 80%;
     }
 }
@@ -242,10 +273,14 @@ main {
         padding: 100px;
     }
 
-    border-top: 5px #000 solid;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://image.redbull.com/rbcom/010/2013-10-05/1331614343538_4/0100/0/1/league-of-legfaker-of-skt-t1-atlol-world-championship-at-the-staples-center-lol-world-championshipends-world-championships.jpg');
+    background: linear-gradient(to bottom,
+        #000,
+        rgba(#000, 0)),
+    linear-gradient(to top,
+        #000,
+        rgba(#000, 0)),
+    url("../images/spelbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -275,28 +310,26 @@ main {
         width: 300px;
         margin: auto;
         row-gap: 100px;
- 
 
-       
-        
 
-        @include desktop{
+
+
+
+        @include desktop {
             display: grid;
             width: 80%;
             grid-template-areas: "lol cs fortnite";
             grid-template-columns: 300px 300px 300px;
             grid-gap: 10%;
 
-            
-        }
-      
 
+        }
 
         #lol {
             grid-area: "lol";
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
             background: #333;
-            
+
         }
 
         #cs {
