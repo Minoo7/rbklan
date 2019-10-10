@@ -20,7 +20,6 @@ var x = setInterval(function () {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    $("#live").hide();
 
     // Display the result in the element with id="demo"
     //document.getElementById("countdown").innerHTML = days + "" + hours + " " +
@@ -43,28 +42,22 @@ var x = setInterval(function () {
     }
 }, 1000);
 
+var $document = $(document);
 
-//Animation
-window.addEventListener("scroll", function() {showFunction()});
+$(document).ready(function() {
+    if ($document.scrollTop() < 400) {
+        $("hr").eq(0).css("display", "none");
+        $("#spel img").css("opacity", "0");
+        $("#spel-container h1").css("opacity", "0");
 
-//Första HR
-function showFunction() {
-    /*if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-        document.getElementsByTagName("hr")[0].style.display = "block";
+        $document.scroll(function () {
+            if ($document.scrollTop() > 0) {
+                $("hr").eq(0).css("display", "block");
+            }
+            if ($document.scrollTop() > 400) {
+                $("#spel img").css("opacity", "1");
+                $("#spel-container h1").css("opacity", "1");
+            }
+        });
     }
-    else {
-        document.getElementsByTagName("hr")[0].style.display = "none";
-    }*/
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        $("#spel-container *").css("visibility", "inital");
-    }
-    else {
-        $("#spel-container *").css("visibility", "hidden");
-    }
-    /*if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-        document.getElementsByTagName("hr")[1].style.display = "block";
-    }
-    else {
-        document.getElementsByTagName("hr")[1].style.display = "none";
-    }*/
-}
+});

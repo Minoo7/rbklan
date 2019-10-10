@@ -26,7 +26,7 @@ main {
             margin: 4em 0 0 4em;
         }*/
 
-        h1 {
+        h2 {
             font-size: 3em;
             margin: 10px 0 20px 0;
             text-transform: uppercase;
@@ -39,7 +39,7 @@ main {
         }
 
 
-        h1 {
+        #rbk {
             color: #fff;
             text-align: center;
             font-size: 2em;
@@ -56,8 +56,8 @@ main {
 
         }
 
-        h2 {
-            //display: none;
+        h3 {
+            display: none;
             margin-top: 70px;
             font-size: 72px;
             font-family: 'ABeeZee', sans-serif;
@@ -264,10 +264,6 @@ hr {
     background-position: center center;
     padding: 25px;
 
-    * {
-        animation: fadeEffect 1s;
-    }
-
     h1 {
         color: #fff;
         text-align: center;
@@ -277,6 +273,7 @@ hr {
         padding: 10px;
         margin: 0px 0 100px 0;
         font-weight: 500;
+        transition: opacity 0.5s linear;
 
         @include desktop {
             font-size: 4em;
@@ -322,6 +319,7 @@ hr {
         }
 
         img {
+            transition: opacity 0.5s linear;
             width: 100%;
             height: 100%;
         }
@@ -398,18 +396,19 @@ hr {
             }
         }
 
-        h1 {
+        h2 {
             color: #fff;
             text-align: center;
-            font-size: 2em;
+            font-size: 2.0em;
             letter-spacing: 0.2em;
             text-transform: uppercase;
             padding: 10px;
-            margin: 0px 0 50px 0;
+            //margin: 0px 0 50px 0;
+            margin-bottom: 0;
             font-weight: 500;
 
             @include desktop {
-                font-size: 4em;
+                font-size: 3.0em;
             }
 
             @include desktop {
@@ -417,7 +416,6 @@ hr {
                 margin: auto;
                 margin-bottom: 50px;
                 width: 80%;
-
             }
         }
     }
