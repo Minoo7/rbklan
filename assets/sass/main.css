@@ -436,28 +436,8 @@ hr {
   border: 1px solid #fff;
   border-radius: 20px;
   width: 400px;
-  -webkit-animation: fadeEffect 3s;
-          animation: fadeEffect 3s;
-}
-
-@-webkit-keyframes fadeEffect {
-  /* from 0 to full opacity */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeEffect {
-  /* from 0 to full opacity */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
 }
 
 #spel-container {
