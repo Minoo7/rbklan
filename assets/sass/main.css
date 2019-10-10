@@ -61,7 +61,82 @@ footer a {
 html,
 body {
   height: 100%;
-  background: linear-gradient(50deg, rgba(146, 146, 146, 0.02) 0%, rgba(146, 146, 146, 0.02) 25%, rgba(82, 82, 82, 0.02) 25%, rgba(82, 82, 82, 0.02) 50%, rgba(217, 217, 217, 0.02) 50%, rgba(217, 217, 217, 0.02) 75%, rgba(41, 41, 41, 0.02) 75%, rgba(41, 41, 41, 0.02) 100%), linear-gradient(252deg, rgba(126, 126, 126, 0.01) 0%, rgba(126, 126, 126, 0.01) 25%, rgba(117, 117, 117, 0.01) 25%, rgba(117, 117, 117, 0.01) 50%, rgba(219, 219, 219, 0.01) 50%, rgba(219, 219, 219, 0.01) 75%, rgba(41, 41, 41, 0.01) 75%, rgba(41, 41, 41, 0.01) 100%), linear-gradient(272deg, rgba(166, 166, 166, 0.01) 0%, rgba(166, 166, 166, 0.01) 20%, rgba(187, 187, 187, 0.01) 20%, rgba(187, 187, 187, 0.01) 40%, rgba(238, 238, 238, 0.01) 40%, rgba(238, 238, 238, 0.01) 60%, rgba(204, 204, 204, 0.01) 60%, rgba(204, 204, 204, 0.01) 80%, rgba(5, 5, 5, 0.01) 80%, rgba(5, 5, 5, 0.01) 100%), linear-gradient(86deg, rgba(143, 143, 143, 0.02) 0%, rgba(143, 143, 143, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 25%, rgba(23, 23, 23, 0.02) 25%, rgba(23, 23, 23, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 50%, rgba(101, 101, 101, 0.02) 50%, rgba(101, 101, 101, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 75%, rgba(148, 148, 148, 0.02) 75%, rgba(148, 148, 148, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 100%), linear-gradient(25deg, rgba(2, 2, 2, 0.02) 0%, rgba(2, 2, 2, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 100.002%), linear-gradient(325deg, rgba(95, 95, 95, 0.03) 0%, rgba(95, 95, 95, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 100.002%), linear-gradient(90deg, #242424, #242424);
+  /*background: linear-gradient(50deg,
+            rgba(146, 146, 146, 0.02) 0%,
+            rgba(146, 146, 146, 0.02) 25%,
+            rgba(82, 82, 82, 0.02) 25%,
+            rgba(82, 82, 82, 0.02) 50%,
+            rgba(217, 217, 217, 0.02) 50%,
+            rgba(217, 217, 217, 0.02) 75%,
+            rgba(41, 41, 41, 0.02) 75%,
+            rgba(41, 41, 41, 0.02) 100%),
+        linear-gradient(252deg,
+            rgba(126, 126, 126, 0.01) 0%,
+            rgba(126, 126, 126, 0.01) 25%,
+            rgba(117, 117, 117, 0.01) 25%,
+            rgba(117, 117, 117, 0.01) 50%,
+            rgba(219, 219, 219, 0.01) 50%,
+            rgba(219, 219, 219, 0.01) 75%,
+            rgba(41, 41, 41, 0.01) 75%,
+            rgba(41, 41, 41, 0.01) 100%),
+        linear-gradient(272deg,
+            rgba(166, 166, 166, 0.01) 0%,
+            rgba(166, 166, 166, 0.01) 20%,
+            rgba(187, 187, 187, 0.01) 20%,
+            rgba(187, 187, 187, 0.01) 40%,
+            rgba(238, 238, 238, 0.01) 40%,
+            rgba(238, 238, 238, 0.01) 60%,
+            rgba(204, 204, 204, 0.01) 60%,
+            rgba(204, 204, 204, 0.01) 80%,
+            rgba(5, 5, 5, 0.01) 80%,
+            rgba(5, 5, 5, 0.01) 100%),
+        linear-gradient(86deg,
+            rgba(143, 143, 143, 0.02) 0%,
+            rgba(143, 143, 143, 0.02) 12.5%,
+            rgba(36, 36, 36, 0.02) 12.5%,
+            rgba(36, 36, 36, 0.02) 25%,
+            rgba(23, 23, 23, 0.02) 25%,
+            rgba(23, 23, 23, 0.02) 37.5%,
+            rgba(223, 223, 223, 0.02) 37.5%,
+            rgba(223, 223, 223, 0.02) 50%,
+            rgba(101, 101, 101, 0.02) 50%,
+            rgba(101, 101, 101, 0.02) 62.5%,
+            rgba(94, 94, 94, 0.02) 62.5%,
+            rgba(94, 94, 94, 0.02) 75%,
+            rgba(148, 148, 148, 0.02) 75%,
+            rgba(148, 148, 148, 0.02) 87.5%,
+            rgba(107, 107, 107, 0.02) 87.5%,
+            rgba(107, 107, 107, 0.02) 100%),
+        linear-gradient(25deg,
+            rgba(2, 2, 2, 0.02) 0%,
+            rgba(2, 2, 2, 0.02) 16.667%,
+            rgba(51, 51, 51, 0.02) 16.667%,
+            rgba(51, 51, 51, 0.02) 33.334%,
+            rgba(26, 26, 26, 0.02) 33.334%,
+            rgba(26, 26, 26, 0.02) 50.001000000000005%,
+            rgba(238, 238, 238, 0.02) 50.001%,
+            rgba(238, 238, 238, 0.02) 66.668%,
+            rgba(128, 128, 128, 0.02) 66.668%,
+            rgba(128, 128, 128, 0.02) 83.33500000000001%,
+            rgba(21, 21, 21, 0.02) 83.335%,
+            rgba(21, 21, 21, 0.02) 100.002%),
+        linear-gradient(325deg,
+            rgba(95, 95, 95, 0.03) 0%,
+            rgba(95, 95, 95, 0.03) 14.286%,
+            rgba(68, 68, 68, 0.03) 14.286%,
+            rgba(68, 68, 68, 0.03) 28.572%,
+            rgba(194, 194, 194, 0.03) 28.572%,
+            rgba(194, 194, 194, 0.03) 42.858%,
+            rgba(51, 51, 51, 0.03) 42.858%,
+            rgba(51, 51, 51, 0.03) 57.144%,
+            rgba(110, 110, 110, 0.03) 57.144%,
+            rgba(110, 110, 110, 0.03) 71.42999999999999%,
+            rgba(64, 64, 64, 0.03) 71.43%,
+            rgba(64, 64, 64, 0.03) 85.71600000000001%,
+            rgba(31, 31, 31, 0.03) 85.716%,
+            rgba(31, 31, 31, 0.03) 100.002%),
+        linear-gradient(90deg, hsl(80, 0%, 14%), hsl(80, 0%, 14%));*/
+  background-color: #000;
 }
 
 body {
@@ -120,6 +195,10 @@ a:hover {
     font-size: 2.5em;
     padding: 1rem;
   }
+}
+
+body {
+  height: 2000px !important;
 }
 
 main {
@@ -316,6 +395,10 @@ main section#primary a {
   padding: 15px;
   font-weight: 500;
   width: 250px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 @media (min-width: 1200px) {
@@ -326,56 +409,15 @@ main section#primary a {
   }
 }
 
+main section#primary a:hover {
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+}
+
 main section#primary img {
   margin: 2em;
-}
-
-#om-container {
-  width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
-  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-#om-container section#om {
-  color: #fff;
-  text-align: center;
-  width: 80%;
-  margin: 0 auto 0 auto;
-  padding: 6.5em 0 6.5em 0;
-}
-
-#om-container section#om p {
-  text-align: justify;
-  font-size: 1.25em;
-}
-
-#om-container section#om h1 {
-  color: #fff;
-  text-align: center;
-  font-size: 1.5em;
-  margin: 0px 0 50px 0;
-  text-transform: uppercase;
-  padding: 10px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-}
-
-@media (min-width: 1200px) {
-  #om-container section#om {
-    text-align: center;
-    margin: auto;
-    width: 50%;
-  }
-  #om-container section#om h1 {
-    font-size: 3em;
-  }
-  #om-container section#om h1 {
-    padding: 1em;
-    text-transform: uppercase;
-  }
 }
 
 #grid-container {
@@ -386,6 +428,34 @@ main section#primary img {
 @media (min-width: 1200px) {
   #grid-container {
     width: 80%;
+  }
+}
+
+hr {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  width: 400px;
+  -webkit-animation: fadeEffect 3s;
+          animation: fadeEffect 3s;
+}
+
+@-webkit-keyframes fadeEffect {
+  /* from 0 to full opacity */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  /* from 0 to full opacity */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -405,6 +475,11 @@ main section#primary img {
   }
 }
 
+#spel-container * {
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s;
+}
+
 #spel-container h1 {
   color: #fff;
   text-align: center;
@@ -412,7 +487,7 @@ main section#primary img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 10px;
-  margin: 0px 0 50px 0;
+  margin: 0px 0 100px 0;
   font-weight: 500;
 }
 
@@ -440,31 +515,32 @@ main section#primary img {
     display: grid;
     width: 80%;
         grid-template-areas: "lol cs fortnite";
-    -ms-grid-columns: 300px 300px 300px;
-        grid-template-columns: 300px 300px 300px;
+    -ms-grid-columns: 350px 350px 350px;
+        grid-template-columns: 350px 350px 350px;
     grid-gap: 10%;
   }
 }
 
-#spel-container section#spel #lol {
-  grid-area: "lol";
+#spel-container section#spel > div {
+  position: relative;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-  background: #333;
+}
+
+#spel-container section#spel > div:hover .overlay {
+  opacity: 0.75;
+}
+
+#spel-container section#spel #lol {
+  grid-area: "lol";
 }
 
 #spel-container section#spel #cs {
   grid-area: "cs";
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-  background: #333;
 }
 
 #spel-container section#spel #fortnite {
   grid-area: "fortine";
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-  background: #333;
 }
 
 #spel-container section#spel img {
@@ -476,8 +552,98 @@ main section#primary img {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  padding-top: 16px;
+  margin: 0;
+  padding: 16px 0 16px 0;
   color: #ccc;
+}
+
+#spel-container section#spel .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: black;
+}
+
+#spel-container section#spel .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#spel-container section#spel h2 {
+  margin-bottom: 50px;
+}
+
+#om-container {
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 1200px) {
+  #om-container {
+    padding: 100px;
+  }
+}
+
+#om-container section#om {
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+
+#om-container section#om p {
+  text-align: justify;
+  font-size: 1.15em;
+}
+
+@media (min-width: 1200px) {
+  #om-container section#om p {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+#om-container section#om h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0px 0 50px 0;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  #om-container section#om h1 {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #om-container section#om h1 {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+  }
 }
 
 #bglol {

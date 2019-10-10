@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+body {
+    height: 2000px !important;
+}
 main {
 
     &#bg {
@@ -155,12 +157,21 @@ main {
             padding: $padding;
             font-weight: 500;
             width: 250px;
+            transition: transform 0.5s;
 
             @include desktop {
                 display: inline-block;
                 padding: $padding $padding * 4;
                 width: 300px;
             }
+        }
+
+        a:hover {
+            -ms-transform: scale(1.2);
+            /* IE 9 */
+            -webkit-transform: scale(1.2);
+            /* Safari 3-8 */
+            transform: scale(1.2);
         }
 
         img {
@@ -206,64 +217,31 @@ main {
     }*/
 }
 
-#om-container {
-    width: 100%;
-    background-image: linear-gradient(to bottom,
-            #000,
-            rgba(#000, 0)),
-        linear-gradient(to top,
-            #000,
-            rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-
-    section#om {
-        color: #fff;
-        text-align: center;
-        width: 80%;
-        margin: 0 auto 0 auto;
-        padding: 6.5em 0 6.5em 0;
-
-        p {
-            text-align: justify;
-            font-size:1.25em;
-        }
-
-        h1 {
-            color: #fff;
-            text-align: center;
-            font-size: 1.5em;
-            margin: 0px 0 50px 0;
-            text-transform: uppercase;
-            padding: 10px;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-        }
-
-        @include desktop {
-            text-align: center;
-            margin: auto;
-            width: 50%;
-
-            h1 {
-                font-size: 3em;
-            }
-
-            h1 {
-                padding: 1em;
-                text-transform: uppercase;
-            }
-        }
-    }
-}
-
 #grid-container {
     margin: auto;
     width: 300px;
 
     @include desktop {
         width: 80%;
+    }
+}
+
+hr {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    width: 400px;
+    animation: fadeEffect 3s;
+}
+
+@keyframes fadeEffect {
+
+    /* from 0 to full opacity */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 
@@ -284,8 +262,11 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding:25px;
+    padding: 25px;
 
+    * {
+        animation: fadeEffect 1s;
+    }
 
     h1 {
         color: #fff;
@@ -294,7 +275,7 @@ main {
         letter-spacing: 0.2em;
         text-transform: uppercase;
         padding: 10px;
-        margin: 0px 0 50px 0;
+        margin: 0px 0 100px 0;
         font-weight: 500;
 
         @include desktop {
@@ -311,37 +292,33 @@ main {
         margin: auto;
         row-gap: 100px;
 
-
-
-
-
         @include desktop {
             display: grid;
             width: 80%;
             grid-template-areas: "lol cs fortnite";
-            grid-template-columns: 300px 300px 300px;
+            grid-template-columns: 350px 350px 350px;
             grid-gap: 10%;
+        }
 
+        >div {
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
 
+            &:hover .overlay {
+                opacity: 0.75;
+            }
         }
 
         #lol {
             grid-area: "lol";
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-            background: #333;
-
         }
 
         #cs {
             grid-area: "cs";
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-            background: #333;
         }
 
         #fortnite {
             grid-area: "fortine";
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-            background: #333;
         }
 
         img {
@@ -353,9 +330,95 @@ main {
             font-size: 20px;
             text-align: center;
             font-weight: bold;
-            padding-top: 16px;
+            margin: 0;
+            padding: 16px 0 16px 0;
             color: #ccc;
         }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+#om-container {
+    width: 100%;
+    background-image: linear-gradient(to bottom,
+            #000,
+            rgba(#000, 0)),
+        linear-gradient(to top,
+            #000,
+            rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include desktop {
+        padding: 100px;
     }
 
+    section#om {
+        color: #fff;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto 0 auto;
+
+        p {
+            text-align: justify;
+            font-size: 1.15em;
+
+            @include desktop {
+                margin: auto;
+                width: 80%;
+            }
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 0px 0 50px 0;
+            font-weight: 500;
+
+            @include desktop {
+                font-size: 4em;
+            }
+
+            @include desktop {
+                text-align: center;
+                margin: auto;
+                margin-bottom: 50px;
+                width: 80%;
+
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    background: linear-gradient(50deg,
+    /*background: linear-gradient(50deg,
             rgba(146, 146, 146, 0.02) 0%,
             rgba(146, 146, 146, 0.02) 25%,
             rgba(82, 82, 82, 0.02) 25%,
@@ -75,7 +75,8 @@ body {
             rgba(64, 64, 64, 0.03) 85.71600000000001%,
             rgba(31, 31, 31, 0.03) 85.716%,
             rgba(31, 31, 31, 0.03) 100.002%),
-        linear-gradient(90deg, hsl(80, 0%, 14%), hsl(80, 0%, 14%));
+        linear-gradient(90deg, hsl(80, 0%, 14%), hsl(80, 0%, 14%));*/
+        background-color: #000;
 }
 
 body {
