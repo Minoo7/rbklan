@@ -42,8 +42,9 @@ main {
         #rbk {
             color: #fff;
             text-align: center;
-            font-size: 2em;
-            letter-spacing: 0.2em;
+            font-size: 2.5em;
+            letter-spacing: normal;
+
             text-transform: uppercase;
             padding: 10px;
             //margin: 0px 0 50px 0;
@@ -52,6 +53,7 @@ main {
 
             @include desktop {
                 font-size: 4em;
+                letter-spacing: 0.2em;
             }
 
         }
@@ -79,10 +81,6 @@ main {
             color: #fff;
             overflow: hidden;
 
-            /*@include desktop {
-                margin: 0 0 0 -18px;
-            }*/
-
             & * {
                 margin: 0;
                 padding: 0;
@@ -109,10 +107,15 @@ main {
             }
 
             ul {
-                max-width: 400px;
+                max-width: 300px;
                 text-align: center;
-                width: 400px;
+                width: 300px;
                 display: inline-block;
+
+                @include desktop{
+                    max-width: 400px;
+                    width: 400px;
+                }
 
                 li {
                     display: block;
@@ -123,21 +126,29 @@ main {
                     span {
                         display: block;
                         text-align: center;
-                        font-size: 50px;
+                        font-size: 40px;
                         line-height: 50px;
                         padding: 21px 0 12px;
                         font-family: 'Aldrich', sans-serif;
+
+                        @include desktop{
+                            font-size: 50px;
+                        }
                     }
 
                     p {
                         font-family: 'Lato', sans-serif;
                         clear: both;
                         display: inline-block;
-                        font-size: 16px;
+                        font-size: 12px;
                         line-height: 20px;
                         padding: 0 4px;
                         text-transform: uppercase;
                         border-radius: 2px;
+
+                        @include desktop{
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -153,7 +164,7 @@ main {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
             display: block;
             text-align: center;
-            margin: 50px auto 0 auto;
+            margin: 3.5em auto 0 auto;
             padding: $padding;
             font-weight: 500;
             width: 250px;
@@ -167,15 +178,18 @@ main {
         }
 
         a:hover {
-            -ms-transform: scale(1.2);
-            /* IE 9 */
-            -webkit-transform: scale(1.2);
-            /* Safari 3-8 */
-            transform: scale(1.2);
+            @include desktop{
+                -ms-transform: scale(1.2);
+                /* IE 9 */
+                -webkit-transform: scale(1.2);
+                /* Safari 3-8 */
+                transform: scale(1.2);
+            }
+
         }
 
         img {
-            margin: 2em;
+            margin: 4em;
         }
     }
 
@@ -219,7 +233,7 @@ main {
 
 #grid-container {
     margin: auto;
-    width: 300px;
+    width: 250px;
 
     @include desktop {
         width: 80%;
@@ -229,8 +243,14 @@ main {
 hr {
     border: 1px solid #fff;
     border-radius: 20px;
-    width: 400px;
     transition: opacity 0.5s linear;
+    width: 250px;
+
+    @include desktop {
+       
+        width: 400px;
+       
+    }
 }
 
 #spel-container {
@@ -256,7 +276,7 @@ hr {
         color: #fff;
         text-align: center;
         font-size: 2em;
-        letter-spacing: 0.2em;
+
         text-transform: uppercase;
         padding: 10px;
         margin: 0px 0 100px 0;
@@ -265,6 +285,7 @@ hr {
 
         @include desktop {
             font-size: 4em;
+            letter-spacing: 0.2em;
         }
 
     }
@@ -273,7 +294,7 @@ hr {
         display: inline-grid;
         justify-content: center;
         justify-items: center;
-        width: 300px;
+        width: 250px;
         margin: auto;
         row-gap: 100px;
 
