@@ -43,8 +43,6 @@ main {
             color: #fff;
             text-align: center;
             font-size: 2.5em;
-            letter-spacing: normal;
-
             text-transform: uppercase;
             padding: 10px;
             //margin: 0px 0 50px 0;
@@ -409,7 +407,6 @@ hr {
             color: #fff;
             text-align: center;
             font-size: 2.0em;
-            letter-spacing: 0.2em;
             text-transform: uppercase;
             padding: 10px;
             //margin: 0px 0 50px 0;
@@ -418,6 +415,7 @@ hr {
 
             @include desktop {
                 font-size: 3.0em;
+                letter-spacing: 0.2em;
             }
 
             @include desktop {
