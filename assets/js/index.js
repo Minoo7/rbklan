@@ -49,6 +49,8 @@ $(document).ready(function() {
         $("hr").eq(0).css("display", "none");
         $("#spel img").css("opacity", "0");
         $("#spel-container h1").css("opacity", "0");
+        $("#om-container h1").css("opacity", "0");
+        $("#om-container p").css("opacity", "0");
 
         $document.scroll(function () {
             if ($document.scrollTop() > 0) {
@@ -57,6 +59,10 @@ $(document).ready(function() {
             if ($document.scrollTop() > 400) {
                 $("#spel img").css("opacity", "1");
                 $("#spel-container h1").css("opacity", "1");
+            }
+            if ($document.scrollTop() > 1450) {
+                $("#om-container h1").css("opacity", "1");
+                $("#om-container p").css("opacity", "1");
             }
         });
     }
