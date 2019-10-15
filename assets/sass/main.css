@@ -464,7 +464,7 @@ a:hover {
 }
 
 body {
-  height: 2000px !important;
+  height: 100vh !important;
 }
 
 main#bg {
@@ -663,8 +663,19 @@ main section#primary a {
   }
 }
 
-main section#primary img {
-  margin: 4em;
+main section#primary #logo-container {
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+main section#primary #logo-container img {
+  width: 250px;
+}
+
+@media (min-width: 1200px) {
+  main section#primary #logo-container img {
+    width: 400px;
+  }
 }
 
 #grid-container {
@@ -936,7 +947,9 @@ hr {
         }*/
 }
 
-#om-container .card h1, #om-container .card h2, #om-container .card p {
+#om-container .card h1,
+#om-container .card h2,
+#om-container .card p {
   text-align: center;
 }
 

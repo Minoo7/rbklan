@@ -66,7 +66,7 @@ header {
 
     a {
         background-color: transparent;
-        color: #fff;
+        color: color(white);
         text-decoration: none;
         padding: 0 4px;
         transition: color 0.2s ease;
@@ -133,7 +133,7 @@ header {
 
                         &:hover {
                             background: 0 0;
-                            color: #fff;
+                            color: color(white);
 
                             &:before {
                                 opacity: 1;
@@ -154,7 +154,7 @@ header {
                         }
 
                         &.active {
-                            color: #fff;
+                            color: color(white);
 
                             &:before {
                                 opacity: 1;
