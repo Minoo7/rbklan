@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+    height: 2000px !important;
+}
+
+main {
+
+    &#bg {
+        background-image: linear-gradient(to top,
+                #000,
+                rgba(#000, 0)), url("../images/indexbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 850px;
+    }
+
+    section#primary {
+        color: #fff;
+        padding: $padding;
+        text-align: center;
+
+        /*@include desktop {
+            grid-area: primary;
+            text-align: left;
+            margin: 4em 0 0 4em;
+        }*/
+
+        h2 {
+            font-size: 3em;
+            margin: 10px 0 20px 0;
+            text-transform: uppercase;
+
+            /*@include desktop {
+                width: 80%;
+                font-size: 4em;
+                line-height: 0.9em;
+            }*/
+        }
+
+
+        #rbk {
+            color: #fff;
+            text-align: center;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            padding: 10px;
+            //margin: 0px 0 50px 0;
+            margin-bottom: 0;
+            font-weight: 500;
+
+            @include desktop {
+                font-size: 4em;
+                letter-spacing: 0.2em;
+            }
+
+        }
+
+        h3 {
+            display: none;
+            margin-top: 70px;
+            font-size: 72px;
+            font-family: 'ABeeZee', sans-serif;
+        }
+
+        p {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+        }
+
+        div {
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 1.7;
+            //border-style: dashed;
+            padding: 0;
+            margin: 0 auto;
+            width: max-content;
+            color: #fff;
+            overflow: hidden;
+
+            & * {
+                margin: 0;
+                padding: 0;
+            }
+
+            *,
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            ::selection {
+                color: #fff;
+                background: #333;
+                text-shadow: none;
+            }
+
+            ::-moz-selection {
+                color: #fff;
+                background: #333;
+                text-shadow: none;
+            }
+
+            ul {
+                max-width: 300px;
+                text-align: center;
+                width: 300px;
+                display: inline-block;
+
+                @include desktop{
+                    max-width: 400px;
+                    width: 400px;
+                }
+
+                li {
+                    display: block;
+                    margin: 0 0px;
+                    float: left;
+                    width: 25%;
+
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-size: 40px;
+                        line-height: 50px;
+                        padding: 21px 0 12px;
+                        font-family: 'Aldrich', sans-serif;
+
+                        @include desktop{
+                            font-size: 50px;
+                        }
+                    }
+
+                    p {
+                        font-family: 'Lato', sans-serif;
+                        clear: both;
+                        display: inline-block;
+                        font-size: 12px;
+                        line-height: 20px;
+                        padding: 0 4px;
+                        text-transform: uppercase;
+                        border-radius: 2px;
+
+                        @include desktop{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        a {
+            font-size: 1.5em;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: color(primary);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+            display: block;
+            text-align: center;
+            margin: 3.5em auto 0 auto;
+            padding: $padding;
+            font-weight: 500;
+            width: 250px;
+            transition: transform 0.5s;
+
+            @include desktop {
+                display: inline-block;
+                padding: $padding $padding * 4;
+                width: 300px;
+            }
+        }
+
+        a:hover {
+            @include desktop{
+                -ms-transform: scale(1.2);
+                /* IE 9 */
+                -webkit-transform: scale(1.2);
+                /* Safari 3-8 */
+                transform: scale(1.2);
+            }
+
+        }
+
+        img {
+            margin: 4em;
+        }
+    }
+}
+
+#grid-container {
+    margin: auto;
+    width: 250px;
+
+    @include desktop {
+        width: 80%;
+    }
+}
+
+hr {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    transition: opacity 0.5s linear;
+    width: 250px;
+
+    @include desktop {
+       
+        width: 400px;
+       
+    }
+}
+
+#spel-container {
+
+    @include desktop {
+        padding: 100px;
+    }
+
+    width: 100%;
+    background: linear-gradient(to bottom,
+        #000,
+        rgba(#000, 0)),
+    linear-gradient(to top,
+        #000,
+        rgba(#000, 0)),
+    url("../images/spelbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 25px;
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0px 0 100px 0;
+        font-weight: 500;
+        transition: opacity 0.5s linear;
+
+        @include desktop {
+            font-size: 4em;
+            letter-spacing: 0.2em;
+        }
+
+    }
+
+    section#spel {
+        display: inline-grid;
+        justify-content: center;
+        justify-items: center;
+        width: 250px;
+        margin: auto;
+        row-gap: 100px;
+
+        @include desktop {
+            display: grid;
+            width: 80%;
+            grid-template-areas: "lol cs fortnite";
+            grid-template-columns: 350px 350px 350px;
+            grid-gap: 10%;
+        }
+
+        >div {
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+
+            &:hover .overlay {
+                opacity: 0.75;
+            }
+        }
+
+        #lol {
+            grid-area: "lol";
+        }
+
+        #cs {
+            grid-area: "cs";
+        }
+
+        #fortnite {
+            grid-area: "fortine";
+        }
+
+        img {
+            transition: opacity 0.5s linear;
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+            padding: 16px 0 16px 0;
+            color: #ccc;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+#om-container {
+    width: 100%;
+    background-image: linear-gradient(to bottom,
+            #000,
+            rgba(#000, 0)),
+        linear-gradient(to top,
+            #000,
+            rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include desktop {
+        padding: 150px 300px;
+    }
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0px 0 100px 0;
+        font-weight: 500;
+        transition: opacity 0.5s linear;
+
+        @include desktop {
+            font-size: 3.5em;
+            letter-spacing: 0.2em;
+        }
+    }
+
+    p {
+        color: #fff;
+        text-align: justify;
+        font-size: 1.15em;
+        transition: opacity 0.5s linear;
+    }
+
+    section#om {
+        width: 250px;
+        row-gap: 0.5em;
+
+        @include desktop {
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 1em;
+        }
+
+        >div {
+            padding: 1em;
+        }
+
+        .om-text{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        .adress{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .biljett{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .boka{
+            grid-column: 1/3;
+        }
+    }
+
+    .card {
+        background: #000;
+        opacity: 0.6;
+        color: #fff;
+        padding: 20px;
+        border-radius: $borders;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        text-align: justify;
+    
+        
+        /*
+        @include desktop {
+            grid-area: card;
+            height: fit-content;
+        }*/
+    
+        h1, h2, p {
+            text-align: center;
+        }
+    
+        h1{
+            margin: 0 !important;
+        }
+    
+        p#display {
+            color: color(primary);
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    .boka{
+        width: 100%;
+        text-align: center;
+        a {
+            font-size: 1.5em;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color:color(primary);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+            display: block;
+            text-align: center;
+            padding: $padding;
+            margin-top: 1em;
+            font-weight: 500;
+            width: 250px;
+            transition: transform 0.5s;
+    
+            @include desktop {
+                display: inline-block;
+                padding: $padding $padding * 4;
+                width: 300px;
+            }
+        }
+    
+        a:hover {
+            @include desktop{
+                -ms-transform: scale(1.2);
+                /* IE 9 */
+                -webkit-transform: scale(1.2);
+                /* Safari 3-8 */
+                transform: scale(1.2);
+            }
+    
+        }
+    }
+}
+
+
+
