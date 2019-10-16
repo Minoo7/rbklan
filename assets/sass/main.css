@@ -478,7 +478,13 @@ main#bg {
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 850px;
+  height: 800px;
+}
+
+@media (min-width: 1200px) {
+  main#bg {
+    height: 1000px;
+  }
 }
 
 main section#primary {
@@ -834,7 +840,9 @@ hr {
 }
 
 #om-container {
-  padding: 50px 50px 0px 50px;
+  padding: 50px 50px 50px 50px;
+  -webkit-box-shadow: 0px 2px 10px 1px #000 inset;
+          box-shadow: 0px 2px 10px 1px #000 inset;
   /*background-image: linear-gradient(to bottom,
             #000,
             rgba(#000, 0)),
@@ -849,7 +857,7 @@ hr {
 
 @media (min-width: 1200px) {
   #om-container {
-    padding: 150px 150px 0px 150px;
+    padding: 150px 150px 150px 150px;
     width: 100%;
   }
 }
@@ -893,8 +901,8 @@ hr {
     margin: auto;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     grid-gap: 1em;
     row-gap: 1em;
   }
@@ -955,6 +963,133 @@ hr {
   color: #fff;
   padding: 20px;
   width: 100%;
+  border-style: none;
+}
+
+#om-container .card h2 {
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+#biljetter-container {
+  padding: 50px;
+  background-color: #323639;
+  -webkit-box-shadow: 0px 2px 10px 1px #000 inset;
+          box-shadow: 0px 2px 10px 1px #000 inset;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  #biljetter-container {
+    padding: 100px;
+  }
+}
+
+#biljetter-container h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0px 0 100px 0;
+  font-weight: 500;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+@media (min-width: 1200px) {
+  #biljetter-container h1 {
+    font-size: 3.5em;
+    letter-spacing: 0.2em;
+  }
+}
+
+#biljetter-container p {
+  color: #fff;
+  text-align: center;
+  font-size: 1.15em;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+@media (min-width: 1200px) {
+  #biljetter-container section#biljett {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 1em;
+    row-gap: 1em;
+  }
+}
+
+#biljetter-container section#biljett > div {
+  padding: 1em;
+}
+
+#biljetter-container section#biljett .om-text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#biljetter-container section#biljett .adress {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#biljetter-container section#biljett .standard-biljett {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#biljetter-container section#biljett .vip-biljett {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#biljetter-container section#biljett .boka {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+#biljetter-container .om-text {
+  padding: 2.5em !important;
+}
+
+#biljetter-container .card {
+  background: transparent;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  border-style: none;
   /*
         @include desktop {
             grid-area: card;
@@ -962,32 +1097,38 @@ hr {
         }*/
 }
 
-#om-container .card h1,
-#om-container .card h2,
-#om-container .card p {
+#biljetter-container .card h1,
+#biljetter-container .card h2,
+#biljetter-container .card p {
   text-align: center;
 }
 
-#om-container .card h1 {
+#biljetter-container .card h2 {
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+#biljetter-container .card h1 {
   margin: 0 !important;
 }
 
-#om-container .card p#display {
+#biljetter-container .card p#display {
   color: #a343db;
   font-size: 2.5em;
+  font-weight: bold;
 }
 
-#om-container .card p#price {
+#biljetter-container .card p#price {
   font-weight: bold;
   font-size: 2em;
 }
 
-#om-container .boka {
+#biljetter-container .boka {
   width: 100%;
   text-align: center;
 }
 
-#om-container .boka a {
+#biljetter-container .boka a {
   font-size: 1.5em;
   color: white;
   border-radius: 5px;
@@ -996,11 +1137,10 @@ hr {
   background-color: #a343db;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-  display: block;
+  display: inline-block;
   text-align: center;
   padding: 15px;
   margin-top: 1em;
-  margin-bottom: 100px;
   font-weight: 500;
   width: 250px;
   -webkit-transition: -webkit-transform 0.5s;
@@ -1010,15 +1150,14 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #om-container .boka a {
-    display: inline-block;
+  #biljetter-container .boka a {
     padding: 15px 60px;
     width: 300px;
   }
 }
 
 @media (min-width: 1200px) {
-  #om-container .boka a:hover {
+  #biljetter-container .boka a:hover {
     /* IE 9 */
     -webkit-transform: scale(1.2);
     /* Safari 3-8 */

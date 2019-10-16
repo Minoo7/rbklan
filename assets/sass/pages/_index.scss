@@ -16,7 +16,12 @@ main {
         background-size: cover;
         background-position: center center;
         width: 100%;
-        height: 850px;
+        height: 800px;
+        
+
+        @include desktop{
+            height: 1000px;
+        }
     }
 
     section#primary {
@@ -349,7 +354,8 @@ hr {
 
 #om-container {
 
-    padding: 50px 50px 0px 50px;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 0px 2px 10px 1px #000 inset;
 
     /*background-image: linear-gradient(to bottom,
             #000,
@@ -363,7 +369,7 @@ hr {
     background-color: rgb(50, 54, 57);
 
     @include desktop {
-        padding: 150px 150px 0px 150px;
+        padding: 150px 150px 150px 150px;
         width: 100%;
     }
 
@@ -401,7 +407,7 @@ hr {
             width: 80%;
             margin: auto;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
             grid-gap: 1em;
             row-gap: 1em;
         }
@@ -439,12 +445,114 @@ hr {
         padding: 2.5em !important;
     }
 
+
     //Info-box
     .card {
         background: transparent;
         color: #fff;
         padding: 20px;
         width: 100%;
+        border-style:none;
+
+        h2{
+            text-align: justify;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+#biljetter-container{
+    padding: 50px;
+    background-color: rgb(50, 54, 57);
+    box-shadow: 0px 2px 10px 1px #000 inset;
+    width: 100%;
+
+    @include desktop {
+        padding: 100px;
+       
+    }
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0px 0 100px 0;
+        font-weight: 500;
+        transition: opacity 0.5s linear;
+
+        @include desktop {
+            font-size: 3.5em;
+            letter-spacing: 0.2em;
+        }
+    }
+
+    p {
+        color: #fff;
+        text-align: center;
+        font-size: 1.15em;
+        transition: opacity 0.5s linear;
+    }
+
+    section#biljett {
+
+
+        @include desktop {
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            width: 80%;
+            margin: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 1em;
+            row-gap: 1em;
+        }
+
+        >div {
+            padding: 1em;
+        }
+
+        .om-text {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .adress {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .standard-biljett {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .vip-biljett {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .boka {
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+    }
+
+    .om-text {
+        padding: 2.5em !important;
+    }
+
+    //Info-box
+    .card {
+        background: transparent;
+        color: #fff;
+        padding: 20px;
+        width: 100%;
+        border-style:none;
 
 
         /*
@@ -459,6 +567,11 @@ hr {
             text-align: center;
         }
 
+        h2{
+            text-align: justify;
+            text-transform: uppercase;
+        }
+
         h1 {
             margin: 0 !important;
         }
@@ -466,6 +579,7 @@ hr {
         p#display {
             color: color(primary);
             font-size: 2.5em;
+            font-weight: bold;
         }
 
         p#price {
@@ -487,17 +601,15 @@ hr {
             text-transform: uppercase;
             background-color: color(primary);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-            display: block;
+            display: inline-block;
             text-align: center;
             padding: $padding;
             margin-top: 1em;
-            margin-bottom: 100px;
             font-weight: 500;
             width: 250px;
             transition: transform 0.5s;
 
             @include desktop {
-                display: inline-block;
                 padding: $padding $padding * 4;
                 width: 300px;
             }
@@ -515,6 +627,7 @@ hr {
         }
     }
 }
+
 
 //Pil
 .arrow-down {
