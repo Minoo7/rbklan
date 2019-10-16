@@ -2,6 +2,10 @@ body {
     height: 100vh !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
 
     &#bg {
@@ -344,8 +348,10 @@ hr {
 }
 
 #om-container {
-    width: 100%;
-    background-image: linear-gradient(to bottom,
+
+    padding: 50px 50px 0px 50px;
+
+    /*background-image: linear-gradient(to bottom,
             #000,
             rgba(#000, 0)),
         linear-gradient(to top,
@@ -353,10 +359,12 @@ hr {
             rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center center;*/
+    background-color: rgb(50, 54, 57);
 
     @include desktop {
-        padding: 150px 300px;
+        padding: 150px 150px 0px 150px;
+        width: 100%;
     }
 
     h1 {
@@ -378,23 +386,24 @@ hr {
 
     p {
         color: #fff;
-        text-align: justify;
+        text-align: center;
         font-size: 1.15em;
         transition: opacity 0.5s linear;
     }
 
     section#om {
-        width: 250px;
-        row-gap: 0.5em;
+
 
         @include desktop {
             display: grid;
             justify-content: center;
             justify-items: center;
-            width: 100%;
+            width: 80%;
+            margin: auto;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 1fr 1fr;
             grid-gap: 1em;
+            row-gap: 1em;
         }
 
         >div {
@@ -402,16 +411,21 @@ hr {
         }
 
         .om-text {
-            grid-column: 1/3;
+            grid-column: 1/2;
             grid-row: 1/2;
         }
 
         .adress {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .standard-biljett {
             grid-column: 1/2;
             grid-row: 2/3;
         }
 
-        .biljett {
+        .vip-biljett {
             grid-column: 2/3;
             grid-row: 2/3;
         }
@@ -421,15 +435,16 @@ hr {
         }
     }
 
+    .om-text {
+        padding: 2.5em !important;
+    }
+
+    //Info-box
     .card {
-        background: #000;
-        opacity: 1;
+        background: transparent;
         color: #fff;
         padding: 20px;
-        border-radius: $borders;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         width: 100%;
-        text-align: justify;
 
 
         /*
@@ -450,11 +465,16 @@ hr {
 
         p#display {
             color: color(primary);
+            font-size: 2.5em;
+        }
+
+        p#price {
             font-weight: bold;
-            font-size: 20px;
+            font-size: 2em;
         }
     }
 
+    //Knapp
     .boka {
         width: 100%;
         text-align: center;
@@ -471,6 +491,7 @@ hr {
             text-align: center;
             padding: $padding;
             margin-top: 1em;
+            margin-bottom: 100px;
             font-weight: 500;
             width: 250px;
             transition: transform 0.5s;
@@ -494,3 +515,28 @@ hr {
         }
     }
 }
+
+//Pil
+.arrow-down {
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+
+    border-top: 50px solid #000;
+}
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    
+    border-bottom: 50px solid #000;
+  }
