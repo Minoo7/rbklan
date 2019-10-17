@@ -857,7 +857,7 @@ hr {
 
 @media (min-width: 1200px) {
   #om-container {
-    padding: 150px 150px 150px 150px;
+    padding: 150px 50px 150px 50px;
     width: 100%;
   }
 }
