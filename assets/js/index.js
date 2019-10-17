@@ -49,20 +49,29 @@ $(document).ready(function() {
         $("hr").eq(0).css("display", "none");
         $("#spel img").css("opacity", "0");
         $("#spel-container h1").css("opacity", "0");
-        $("#om-container h1").css("opacity", "0");
+        $("#om-container h2").css("opacity", "0");
         $("#om-container p").css("opacity", "0");
+        $("#om-container img").css("opacity", "0");
+        $("#biljetter-container h1").css("opacity", "0");
+        $("#biljetter-container p").css("opacity", "0");
 
         $document.scroll(function () {
             if ($document.scrollTop() > 0) {
                 $("hr").eq(0).css("display", "block");
             }
-            if ($document.scrollTop() > 400) {
+            if ($document.scrollTop() > 1400) {
                 $("#spel img").css("opacity", "1");
                 $("#spel-container h1").css("opacity", "1");
             }
-            if ($document.scrollTop() > 1450) {
-                $("#om-container h1").css("opacity", "1");
+            if ($document.scrollTop() > 400) {
+                $("#om-container h2").css("opacity", "1");
                 $("#om-container p").css("opacity", "1");
+                $("#om-container img").css("opacity", "1");
+                
+            }
+            if ($document.scrollTop() > 2200){
+                $("#biljetter-container h1").css("opacity", "1");
+                $("#biljetter-container p").css("opacity", "1");
             }
         });
     }
