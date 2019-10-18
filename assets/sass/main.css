@@ -674,8 +674,8 @@ main section#primary a {
 }
 
 main section#primary #logo-container {
-  margin-top: 6em;
-  margin-bottom: 6em;
+  margin-top: 8em;
+  margin-bottom: 8em;
 }
 
 main section#primary #logo-container img {
@@ -841,8 +841,6 @@ hr {
 
 #om-container {
   padding: 50px 50px 50px 50px;
-  -webkit-box-shadow: 0px 2px 10px 1px #000 inset;
-          box-shadow: 0px 2px 10px 1px #000 inset;
   /*background-image: linear-gradient(to bottom,
             #000,
             rgba(#000, 0)),
@@ -974,8 +972,6 @@ hr {
 #biljetter-container {
   padding: 50px;
   background-color: #323639;
-  -webkit-box-shadow: 0px 2px 10px 1px #000 inset;
-          box-shadow: 0px 2px 10px 1px #000 inset;
   width: 100%;
 }
 
@@ -1173,8 +1169,8 @@ hr {
   margin-right: auto;
   left: 0;
   right: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
   border-top: 50px solid #000;
 }
 
