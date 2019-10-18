@@ -463,7 +463,7 @@ hr {
 
 #biljetter-container{
     padding: 50px;
-    background-color: rgb(50, 54, 57);
+    background-color: color(black);
     width: 100%;
 
     @include desktop {
@@ -574,15 +574,17 @@ hr {
             margin: 0 !important;
         }
 
-        p#display {
+        p.display {
             color: color(primary);
-            font-size: 2.5em;
-            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: 500;
         }
 
-        p#price {
-            font-weight: bold;
-            font-size: 2em;
+        p.price {
+            font-size: 4em;
+            margin-bottom: 0;
+            font-family: 'Aldrich', sans-serif;
         }
     }
 
@@ -627,27 +629,3 @@ hr {
 }
 
 
-//Pil
-.arrow-down {
-    width: 0;
-    height: 0;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-
-    border-top: 50px solid #000;
-}
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    
-    border-bottom: 50px solid #000;
-  }
