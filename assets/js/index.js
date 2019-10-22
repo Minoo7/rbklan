@@ -65,12 +65,11 @@ $(document).ready(function() {
                 $("#spel img").css("opacity", "1");
                 $("#spel-container h1").css("opacity", "1");
             }
-            if ($document.scrollTop() > 400) {
+            /*if ($document.scrollTop() > 400) {
                 $("#om-container h2").css("opacity", "1");
                 $("#om-container p").css("opacity", "1");
                 $("#om-container img").css("opacity", "1");
-                
-            }
+            }*/
             if ($document.scrollTop() > 900){
                 $("#biljetter-container h1").css("opacity", "1");
                 $("#biljetter-container p").css("opacity", "1");
