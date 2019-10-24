@@ -470,6 +470,49 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a343DB !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: white !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track:active {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent !important;
+}
+
 main#bg {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("../images/indexbg.jpg");
   background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("../images/indexbg.jpg");
