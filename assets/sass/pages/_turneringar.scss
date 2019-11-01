@@ -1,27 +1,65 @@
 #turneringar-content {
     color: color(white);
-    background-color: color(black);
-    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.9);
     width: 70%;
     margin: 200px auto;
     padding: 5em 0;
 
     h1 {
+        text-align: center;
+        margin: auto;
         text-transform: uppercase;
+
+       /* @include desktop{
+            text-align: left;
+            margin: 0;
+        }*/
+    }
+
+    p{
+        text-align: center;
+
+       /* @include desktop{
+            margin-bottom: 0;
+        }*/
     }
 
     .wrapper {
         width: 80%;
-        margin: auto;
+        margin: 2em auto;
         border-bottom: 1px solid color(white);
-        display: grid;
-        grid-template-areas: "lol cs fortnite";
+        border-radius: 1px;
+
+       /* @include desktop {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-areas: "lol cs fortnite";
+            grid-template-columns: 50% auto;
+        }*/
+
 
     }
 
-    ul{
-        text-align: justify;
-       
+    .wrapper:last-of-type{
+        border-bottom: none;
+    }
+
+    ul {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding:0;
+        list-style: none;
+
+
+        @include desktop {
+          width: 300px;
+        }
+
+
+
     }
 
 
@@ -30,8 +68,17 @@
 
 
 .logos {
-    width: 300px;
-    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    opacity: 1;
+    
+
+    @include desktop {
+        width: 300px;
+    }
+
 }
 
 .bg-turneringar {
