@@ -1208,9 +1208,15 @@ hr {
 #turneringar-content {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.9);
-  width: 70%;
+  width: 90%;
   margin: 200px auto;
   padding: 5em 0;
+}
+
+@media (min-width: 1200px) {
+  #turneringar-content {
+    width: 70%;
+  }
 }
 
 #turneringar-content h1 {

@@ -1,9 +1,13 @@
 #turneringar-content {
     color: color(white);
     background-color: rgba(0, 0, 0, 0.9);
-    width: 70%;
+    width: 90%;
     margin: 200px auto;
     padding: 5em 0;
+
+    @include desktop{
+        width: 70%;
+    }
 
     h1 {
         text-align: center;
