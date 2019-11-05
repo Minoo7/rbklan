@@ -62,6 +62,9 @@ footer a {
 }
 
 header {
+  /* Firefox < 16 */
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Internet Explorer */
   height: 70px;
   padding: 0 15px 0 5px;
   z-index: 101;
@@ -79,6 +82,82 @@ header {
   -ms-flex-align: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
+}
+
+header .overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-animation: fadein 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+header .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .overlay a:hover, header .overlay a:focus {
+  color: #f1f1f1;
+}
+
+header .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  header .overlay a {
+    font-size: 20px;
+  }
+  header .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
 
 @media (min-width: 767px) {
@@ -133,8 +212,16 @@ header .left nav {
 header .left nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin: 0;
+}
+
+@media (min-width: 1200px) {
+  header .left nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 header .left nav ul li {
@@ -222,6 +309,12 @@ header .right button {
   padding: 10px;
   width: 38px;
   height: 35px;
+}
+
+@media (min-width: 1200px) {
+  header .right button {
+    display: none;
+  }
 }
 
 header .right button::-moz-focus-inner {
@@ -1261,6 +1354,7 @@ hr {
   width: 50%;
   padding: 0;
   list-style: none;
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -1275,6 +1369,7 @@ hr {
   margin-right: auto;
   width: 50%;
   opacity: 1;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 1200px) {

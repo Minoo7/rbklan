@@ -56,6 +56,7 @@
         width: 50%;
         padding:0;
         list-style: none;
+        text-align: center;
 
 
         @include desktop {
@@ -77,6 +78,7 @@
     margin-right: auto;
     width: 50%;
     opacity: 1;
+    margin-bottom: 1em;
     
 
     @include desktop {
