@@ -62,9 +62,6 @@ footer a {
 }
 
 header {
-  /* Firefox < 16 */
-  /* Safari, Chrome and Opera > 12.1 */
-  /* Internet Explorer */
   height: 70px;
   padding: 0 15px 0 5px;
   z-index: 101;
@@ -82,6 +79,61 @@ header {
   -ms-flex-align: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
+  /* Firefox < 16 */
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Internet Explorer */
+}
+
+@media (min-width: 767px) {
+  header {
+    height: 80px;
+    padding: 0 30px;
+  }
+}
+
+header #hamburger {
+  overflow: hidden;
+  width: 41px;
+  height: 38px;
+  margin-top: 0px;
+}
+
+header #hamburger div svg {
+  margin-top: -15.5px;
+  margin-left: -14px;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+header #hamburger div svg path {
+  fill: none;
+  -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  stroke-width: 40px;
+  stroke-linecap: round;
+  stroke: #a343db;
+  stroke-dashoffset: 0px;
+}
+
+header #hamburger div svg path#top, header #hamburger div svg path#bottom {
+  stroke-dasharray: 240px 950px;
+}
+
+header #hamburger div svg path#middle {
+  stroke-dasharray: 240px 240px;
+}
+
+header #hamburger.cross path#top, header #hamburger.cross path#bottom {
+  stroke-dashoffset: -650px;
+  stroke-dashoffset: -650px;
+}
+
+header #hamburger.cross path#middle {
+  stroke-dashoffset: -115px;
+  stroke-dasharray: 1px 220px;
 }
 
 header .overlay {
@@ -102,6 +154,49 @@ header .overlay {
   animation: fadein 0.5s;
 }
 
+header .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (min-height: 450px) {
+  header .overlay a {
+    font-size: 36px;
+  }
+}
+
+header .overlay a:hover, header .overlay a:focus {
+  color: #f1f1f1;
+}
+
+header .overlay .closebtn {
+  position: absolute;
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+}
+
+@media screen and (min-height: 450px) {
+  header .overlay .closebtn {
+    font-size: 60px;
+    top: 20px;
+    right: 45px;
+  }
+}
+
+header .overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -117,53 +212,6 @@ header .overlay {
   }
   to {
     opacity: 1;
-  }
-}
-
-header .overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-header .overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-header .overlay a:hover, header .overlay a:focus {
-  color: #f1f1f1;
-}
-
-header .overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  header .overlay a {
-    font-size: 20px;
-  }
-  header .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
-@media (min-width: 767px) {
-  header {
-    height: 80px;
-    padding: 0 30px;
   }
 }
 

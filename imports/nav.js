@@ -1,18 +1,7 @@
-"use strict"
-
-function openNav() {
-	document.getElementById("myNav").style.display = "block";
-}
-
-function closeNav() {
-	document.getElementById("myNav").style.display = "none";
-}
-
 (function () {
 	var resize;
 
 	$("#hamburger").click(function () {
-		openNav();
 		return $("#hamburger").toggleClass("cross");
 	});
 
