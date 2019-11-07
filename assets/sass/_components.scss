@@ -37,6 +37,10 @@ footer {
     }
 }
 
+.show{
+    display: none;
+}
+
 header {
 
     height: 70px;
@@ -70,6 +74,7 @@ header {
         width: 41px;
         height: 38px;
         margin-top: 0px;
+        z-index: 1;
 
         div {
 
@@ -126,11 +131,10 @@ header {
         }
     }
 
-
     .overlay {
         height: 100%;
         width: 100%;
-        display: none;
+        //display: none;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -151,7 +155,7 @@ header {
             padding: 8px;
             text-decoration: none;
             font-size: 20px;
-            color: #818181;
+            color: color(white);
             display: block;
             transition: 0.3s;
 
@@ -475,3 +479,4 @@ header {
 :-ms-input-placeholder {
     color: #676e8a;
 }
+

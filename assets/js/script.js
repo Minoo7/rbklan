@@ -12,11 +12,11 @@ function closeNav() {
 	var resize;
 
 	$("#hamburger").click(function () {
-		openNav();
+		$( "div.overlay" ).toggleClass( "show" );
 		return $("#hamburger").toggleClass("cross");
 	});
 
-	resize = function () {
+	/*resize = function () {
 		return $("body").css({
 			"margin-top": ~~((window.innerHeight - 150) / 2) + "px"
 		});
@@ -25,6 +25,6 @@ function closeNav() {
 
 	//$(window).resize(resize);
 
-	resize();
+	resize();*/
 
 }).call(this);
