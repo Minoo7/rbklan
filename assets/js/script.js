@@ -1,30 +1,20 @@
 "use strict"
 
-function openNav() {
-	document.getElementById("myNav").style.display = "block";
-}
-
-function closeNav() {
-	document.getElementById("myNav").style.display = "none";
-}
+$(document).ready(function(){
+	$("#hamburger").click(function (){
+	  $("div.overlay").fadeToggle( "fast", "linear" ) ;
+	});
+});
 
 (function () {
-	var resize;
 
 	$("#hamburger").click(function () {
-		$( "div.overlay" ).toggleClass( "show" );
 		return $("#hamburger").toggleClass("cross");
 	});
 
-	/*resize = function () {
-		return $("body").css({
-			"margin-top": ~~((window.innerHeight - 150) / 2) + "px"
-		});
-
-	};
-
-	//$(window).resize(resize);
-
-	resize();*/
+	$(document).scroll(function () {
+		var $nav = $("header");
+		$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	  });
 
 }).call(this);

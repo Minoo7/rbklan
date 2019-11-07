@@ -54,12 +54,10 @@ $(document).ready(function() {
         $("#om-container img").css("opacity", "0");
         $("#biljetter-container h1").css("opacity", "0");
         $("#biljetter-container p").css("opacity", "0");
-        $("header").css("background", "transparent");
 
         $document.scroll(function () {
             if ($document.scrollTop() > 0) {
                 $("hr").eq(0).css("display", "block");
-                $("header").css("background", "#000");
             }
             if ($document.scrollTop() > 700) {
                 $("#spel img").css("opacity", "1");

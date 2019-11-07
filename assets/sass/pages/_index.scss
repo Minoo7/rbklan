@@ -59,7 +59,7 @@ main {
         background-size: cover;
         background-position: center center;
         width: 100%;
-        height: 800px;
+        height: 100%;
 
 
         @include desktop {
@@ -69,7 +69,7 @@ main {
 
     section#primary {
         color: color(white);
-        padding: $padding;
+        padding: 25px;
         text-align: center;
 
         /*@include desktop {
@@ -248,7 +248,7 @@ main {
             }
 
             margin-top:8em;
-            margin-bottom:8em;
+            margin-bottom:3.5em;
         }
     }
 }
@@ -293,17 +293,23 @@ hr {
     background-size: cover;
     background-position: center center;
     padding: 25px;
+    height: 100%;
+
+
+        @include desktop {
+            height: 1000px;
+        }
 
     h1 {
         color: #fff;
         text-align: center;
         font-size: 2em;
-
         text-transform: uppercase;
         padding: 10px;
-        margin: 0px 0 100px 0;
+        margin: 0px 0 1.5em 0;
         font-weight: 500;
         transition: opacity 0.5s linear;
+        letter-spacing: 0.2em;
 
         @include desktop {
             font-size: 4em;
@@ -318,7 +324,7 @@ hr {
         justify-items: center;
         width: 250px;
         margin: auto;
-        row-gap: 100px;
+        row-gap: 3em;
 
         @include desktop {
             display: grid;
@@ -505,9 +511,19 @@ hr {
 
 
 #biljetter-container {
-    padding: 50px;
-    background-color: color(black);
+    padding: 1em;
+    //background-color: color(black);
     width: 100%;
+    /*background-image: linear-gradient(to bottom,
+        #000,
+        rgba(#000, 0)),
+        linear-gradient(to top,
+        #000,
+        rgba(#000, 0)), url("https://sftextures.com/texture/6185/1/6183/snow-background-cartoon-image-blue-top-white-bottom-curve-hill-lines-winter-stock-512x362.png");*/
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
     @include desktop {
         padding: 100px;
