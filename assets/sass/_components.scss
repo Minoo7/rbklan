@@ -8,14 +8,14 @@
 }*/
 
 footer {
-    color: #fff;
+    color: #000;
     padding-top: 2rem;
     text-align: center;
     position: relative;
     height: auto;
     margin-top: -200px;
     clear: both;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.89);
 
     @include desktop {
         height: 325px;
@@ -33,13 +33,28 @@ footer {
     }
 
     a {
-        color: #fff;
+        color: #000;
     }
+
+    .fa-instagram,
+    .fa-discord,
+    .fa-instagram,
+    .fa-facebook {
+        color: #000;
+    }
+
+    .fa-discord:hover,
+    .fa-discord:hover,
+    .fa-instagram:hover,
+    .fa-facebook-square:hover {
+        color: #c7c7c7;
+    }
+    
 }
 
 header.scrolled {
     background-color: #000 !important;
-    transition: background-color 200ms ease;
+    transition: all 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
   }
 
@@ -49,6 +64,7 @@ header {
     padding: 0 15px 0 5px;
     z-index: 101;
     position: fixed;
+    transition: all 0.3s;
     top: 0;
     left: 0;
     right: 0;

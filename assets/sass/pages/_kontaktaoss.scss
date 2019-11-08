@@ -1,10 +1,15 @@
 .kontakt{
-   background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+    /*background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     width: 100%;
     height: 100%;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(163,67,219,1) 100%, rgba(255,255,255,1) 100%);*/
+
+    background-color: #101011;
 }
 section#kontakt {
     width: 100%;
@@ -40,8 +45,12 @@ section#kontakt {
     img#skola{
         width: 100%;
         border: 1px solid #fff;
-        max-height: 350px;
+        height: auto;
         margin-bottom: 20px;
+
+        @include desktop{
+            height: 350px;
+        }
     }
 
     h1,h2{
@@ -51,6 +60,16 @@ section#kontakt {
     iframe{
         margin-bottom: 20px;
         border: 1px solid #fff;
+        height: 200px;
+
+        @include tablet{
+            height: 400px;
+        }
+      
+
+        @include desktop{
+            height: 350px;
+        }
     }
 
 }

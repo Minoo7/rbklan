@@ -44,7 +44,7 @@ var x = setInterval(function () {
 
 var $document = $(document);
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     if ($document.scrollTop() < 400) {
         $("hr").eq(0).css("display", "none");
         $("#spel img").css("opacity", "0");
@@ -63,15 +63,15 @@ $(document).ready(function() {
                 $("#spel img").css("opacity", "1");
                 $("#spel-container h1").css("opacity", "1");
             }
-            /*if ($document.scrollTop() > 400) {
+            if ($document.scrollTop() > 400) {
                 $("#om-container h2").css("opacity", "1");
                 $("#om-container p").css("opacity", "1");
                 $("#om-container img").css("opacity", "1");
-            }*/
+            }
             if ($document.scrollTop() > 900){
                 $("#biljetter-container h1").css("opacity", "1");
                 $("#biljetter-container p").css("opacity", "1");
             }
         });
     }
-});
+});*/

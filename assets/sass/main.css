@@ -4,19 +4,6 @@
 @import url("https://fonts.googleapis.com/css?family=ABeeZee%7CFrancois+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-.fa-envelope,
-.fa-discord,
-.fa-instagram,
-.fa-facebook-square {
-  color: #fff;
-}
-
-.fa-discord:hover,
-.fa-envelope:hover,
-.fa-instagram:hover .fa-facebook-square:hover {
-  color: #d5d5d5;
-}
-
 /*nav {
     background-color: #000;
     box-shadow: 0px 5px 10px #000;
@@ -26,14 +13,14 @@
     }
 }*/
 footer {
-  color: #fff;
+  color: #000;
   padding-top: 2rem;
   text-align: center;
   position: relative;
   height: auto;
   margin-top: -200px;
   clear: both;
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.89);
 }
 
 @media (min-width: 1200px) {
@@ -58,13 +45,27 @@ footer {
 }
 
 footer a {
-  color: #fff;
+  color: #000;
+}
+
+footer .fa-instagram,
+footer .fa-discord,
+footer .fa-instagram,
+footer .fa-facebook {
+  color: #000;
+}
+
+footer .fa-discord:hover,
+footer .fa-discord:hover,
+footer .fa-instagram:hover,
+footer .fa-facebook-square:hover {
+  color: #c7c7c7;
 }
 
 header.scrolled {
   background-color: #000 !important;
-  -webkit-transition: background-color 200ms ease;
-  transition: background-color 200ms ease;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
 }
@@ -74,6 +75,8 @@ header {
   padding: 0 15px 0 5px;
   z-index: 101;
   position: fixed;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   top: 0;
   left: 0;
   right: 0;
@@ -1146,13 +1149,8 @@ hr {
 #biljetter-container {
   padding: 1em;
   width: 100%;
-  /*background-image: linear-gradient(to bottom,
-        #000,
-        rgba(#000, 0)),
-        linear-gradient(to top,
-        #000,
-        rgba(#000, 0)), url("https://sftextures.com/texture/6185/1/6183/snow-background-cartoon-image-blue-top-white-bottom-curve-hill-lines-winter-stock-512x362.png");*/
-  background-color: #000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1467,12 +1465,16 @@ hr {
 }
 
 .kontakt {
-  background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
+  /*background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(163,67,219,1) 100%, rgba(255,255,255,1) 100%);*/
+  background-color: #101011;
 }
 
 section#kontakt {
@@ -1514,8 +1516,14 @@ section#kontakt .row:after {
 section#kontakt img#skola {
   width: 100%;
   border: 1px solid #fff;
-  max-height: 350px;
+  height: auto;
   margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  section#kontakt img#skola {
+    height: 350px;
+  }
 }
 
 section#kontakt h1, section#kontakt h2 {
@@ -1525,5 +1533,18 @@ section#kontakt h1, section#kontakt h2 {
 section#kontakt iframe {
   margin-bottom: 20px;
   border: 1px solid #fff;
+  height: 200px;
+}
+
+@media (min-width: 767px) {
+  section#kontakt iframe {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section#kontakt iframe {
+    height: 350px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
