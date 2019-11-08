@@ -1,0 +1,56 @@
+.kontakt{
+   background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+section#kontakt {
+    width: 100%;
+    margin: 80px auto;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+
+    @include desktop{
+        width: 70%;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 100%;
+        padding: 50px 50px 0 50px;
+        height: 100%;
+        background-color: transparent;
+
+        @include desktop{
+            width: 50%;
+            text-align: justify;
+        }
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    img#skola{
+        width: 100%;
+        border: 1px solid #fff;
+        max-height: 350px;
+        margin-bottom: 20px;
+    }
+
+    h1,h2{
+        font-weight: bold;
+    }
+
+    iframe{
+        margin-bottom: 20px;
+        border: 1px solid #fff;
+    }
+
+}

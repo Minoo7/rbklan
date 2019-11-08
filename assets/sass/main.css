@@ -70,7 +70,7 @@ header.scrolled {
 }
 
 header {
-  height: 70px;
+  height: 80px;
   padding: 0 15px 0 5px;
   z-index: 101;
   position: fixed;
@@ -1464,5 +1464,66 @@ hr {
   width: 70%;
   margin: auto;
   padding: 2.5em 0 2.5em 0;
+}
+
+.kontakt {
+  background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+section#kontakt {
+  width: 100%;
+  margin: 80px auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  /* Create two equal columns that floats next to each other */
+  /* Clear floats after the columns */
+}
+
+@media (min-width: 1200px) {
+  section#kontakt {
+    width: 70%;
+  }
+}
+
+section#kontakt .column {
+  float: left;
+  width: 100%;
+  padding: 50px 50px 0 50px;
+  height: 100%;
+  background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  section#kontakt .column {
+    width: 50%;
+    text-align: justify;
+  }
+}
+
+section#kontakt .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section#kontakt img#skola {
+  width: 100%;
+  border: 1px solid #fff;
+  max-height: 350px;
+  margin-bottom: 20px;
+}
+
+section#kontakt h1, section#kontakt h2 {
+  font-weight: bold;
+}
+
+section#kontakt iframe {
+  margin-bottom: 20px;
+  border: 1px solid #fff;
 }
 /*# sourceMappingURL=main.css.map */
