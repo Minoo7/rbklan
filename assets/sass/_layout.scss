@@ -1,3 +1,9 @@
+.ham_on {
+    overflow-y: hidden;
+    height: 100%;
+    //margin-right: 10px;
+}
+
 html,
 body {
     height: 100%;
@@ -76,12 +82,55 @@ body {
             rgba(31, 31, 31, 0.03) 85.716%,
             rgba(31, 31, 31, 0.03) 100.002%),
         linear-gradient(90deg, hsl(80, 0%, 14%), hsl(80, 0%, 14%));*/
-        background-color: #000;
+    background-color: #000;
 }
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px !important;
+    height: 0px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a343DB !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: white !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-track:active {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent !important;
 }
 
 #container {

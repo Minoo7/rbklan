@@ -1,105 +1,271 @@
-body {
-    height: 100vh !important;
-}
-
-html {
+.smooth-scroll {
     scroll-behavior: smooth;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px !important;
-    height: 10px !important;
-}
+body#body_index {
+    height: 100vh !important;
 
-::-webkit-scrollbar-button {
-    width: 0px !important;
-    height: 0px !important;
-}
+    main {
 
-::-webkit-scrollbar-thumb {
-    background: #a343DB !important;
-    border: none !important;
-    border-radius: 0px !important;
-}
+        &#bg {
+            background-image: linear-gradient(to top,
+                    #000,
+                    rgba(#000, 0)), url("../images/indexbg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
 
-::-webkit-scrollbar-thumb:hover {
-    background: white !important;
-}
 
-::-webkit-scrollbar-thumb:active {
-    background: white !important;
-}
+            @include desktop {
+                height: 1000px;
+            }
+        }
 
-::-webkit-scrollbar-track {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0px !important;
-}
+        section#primary {
+            color: color(white);
+            padding: 25px;
+            text-align: center;
 
-::-webkit-scrollbar-track:hover {
-    background: transparent !important;
-}
+            /*@include desktop {
+            grid-area: primary;
+            text-align: left;
+            margin: 4em 0 0 4em;
+        }*/
 
-::-webkit-scrollbar-track:active {
-    background: transparent !important;
-}
+            h2 {
+                font-size: 3em;
+                margin: 10px 0 20px 0;
+                text-transform: uppercase;
 
-::-webkit-scrollbar-corner {
-    background: transparent !important;
-}
+                /*@include desktop {
+                width: 80%;
+                font-size: 4em;
+                line-height: 0.9em;
+            }*/
+            }
 
-main {
 
-    &#bg {
-        background-image: linear-gradient(to top,
-                #000,
-                rgba(#000, 0)), url("../images/indexbg.jpg");
+            #rbk {
+                color: color(white);
+                text-align: center;
+                font-size: 2.5em;
+                text-transform: uppercase;
+                padding: 10px;
+                //margin: 0px 0 50px 0;
+                margin-bottom: 0;
+                font-weight: 500;
+
+                @include desktop {
+                    font-size: 4em;
+                    letter-spacing: 0.2em;
+                }
+
+            }
+
+            h3 {
+                display: none;
+                margin-top: 70px;
+                font-size: 72px;
+                font-family: 'ABeeZee', sans-serif;
+            }
+
+            p {
+                font-size: 1.4em;
+                margin-bottom: 12px;
+            }
+
+            div {
+                text-align: center;
+                box-sizing: border-box;
+                line-height: 1.7;
+                //border-style: dashed;
+                padding: 0;
+                margin: 0 auto;
+                width: max-content;
+                color: color(white);
+                overflow: hidden;
+
+                & * {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                *,
+                *:before,
+                *:after {
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                ::selection {
+                    color: color(white);
+                    background: color(accent);
+                    text-shadow: none;
+                }
+
+                ::-moz-selection {
+                    color: #fff;
+                    background: #333;
+                    text-shadow: none;
+                }
+
+                ul {
+                    max-width: 300px;
+                    text-align: center;
+                    width: 300px;
+                    display: inline-block;
+
+                    @include desktop {
+                        max-width: 400px;
+                        width: 400px;
+                    }
+
+                    li {
+                        display: block;
+                        margin: 0 0px;
+                        float: left;
+                        width: 25%;
+
+                        span {
+                            display: block;
+                            text-align: center;
+                            font-size: 40px;
+                            line-height: 50px;
+                            padding: 21px 0 12px;
+                            font-family: 'Aldrich', sans-serif;
+
+                            @include desktop {
+                                font-size: 50px;
+                            }
+                        }
+
+                        p {
+                            font-family: 'Lato', sans-serif;
+                            clear: both;
+                            display: inline-block;
+                            font-size: 12px;
+                            line-height: 20px;
+                            padding: 0 4px;
+                            text-transform: uppercase;
+                            border-radius: 2px;
+
+                            @include desktop {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            a {
+                font-size: 1.5em;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-color: color(primary);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                display: block;
+                text-align: center;
+                margin: 3.5em auto 0 auto;
+                padding: $padding;
+                font-weight: 500;
+                width: 250px;
+                transition: transform 0.5s;
+
+                @include desktop {
+                    display: inline-block;
+                    padding: $padding $padding * 4;
+                    width: 300px;
+                }
+            }
+
+            a:hover {
+                @include desktop {
+                    -ms-transform: scale(1.2);
+                    /* IE 9 */
+                    -webkit-transform: scale(1.2);
+                    /* Safari 3-8 */
+                    transform: scale(1.2);
+                }
+
+            }
+
+            #logo-container {
+                img {
+                    width: 250px;
+
+                    @include desktop {
+                        width: 400px;
+                    }
+                }
+
+                margin-top:8em;
+                margin-bottom:3.5em;
+            }
+        }
+    }
+
+    #grid-container {
+        margin: auto;
+        width: 250px;
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    hr {
+        border: 1px solid color(white);
+        border-radius: 20px;
+        transition: opacity 0.5s linear;
+        width: 250px;
+
+        @include desktop {
+
+            width: 400px;
+
+        }
+    }
+
+    #spel-container {
+
+        @include desktop {
+            padding: 100px;
+        }
+
+        width: 100%;
+        background: linear-gradient(to bottom,
+            #000,
+            rgba(#000, 0)),
+        linear-gradient(to top,
+            #000,
+            rgba(#000, 0)),
+        url("../images/spelbg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        width: 100%;
+        padding: 25px;
         height: 100%;
 
 
         @include desktop {
             height: 1000px;
         }
-    }
 
-    section#primary {
-        color: color(white);
-        padding: 25px;
-        text-align: center;
-
-        /*@include desktop {
-            grid-area: primary;
-            text-align: left;
-            margin: 4em 0 0 4em;
-        }*/
-
-        h2 {
-            font-size: 3em;
-            margin: 10px 0 20px 0;
-            text-transform: uppercase;
-
-            /*@include desktop {
-                width: 80%;
-                font-size: 4em;
-                line-height: 0.9em;
-            }*/
-        }
-
-
-        #rbk {
-            color: color(white);
+        h1 {
+            color: #fff;
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2em;
             text-transform: uppercase;
             padding: 10px;
-            //margin: 0px 0 50px 0;
-            margin-bottom: 0;
+            margin: 0px 0 1.5em 0;
             font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.2em;
 
             @include desktop {
                 font-size: 4em;
@@ -108,304 +274,94 @@ main {
 
         }
 
-        h3 {
-            display: none;
-            margin-top: 70px;
-            font-size: 72px;
-            font-family: 'ABeeZee', sans-serif;
-        }
-
-        p {
-            font-size: 1.4em;
-            margin-bottom: 12px;
-        }
-
-        div {
-            text-align: center;
-            box-sizing: border-box;
-            line-height: 1.7;
-            //border-style: dashed;
-            padding: 0;
-            margin: 0 auto;
-            width: max-content;
-            color: color(white);
-            overflow: hidden;
-
-            & * {
-                margin: 0;
-                padding: 0;
-            }
-
-            *,
-            *:before,
-            *:after {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-            }
-
-            ::selection {
-                color: color(white);
-                background: color(accent);
-                text-shadow: none;
-            }
-
-            ::-moz-selection {
-                color: #fff;
-                background: #333;
-                text-shadow: none;
-            }
-
-            ul {
-                max-width: 300px;
-                text-align: center;
-                width: 300px;
-                display: inline-block;
-
-                @include desktop {
-                    max-width: 400px;
-                    width: 400px;
-                }
-
-                li {
-                    display: block;
-                    margin: 0 0px;
-                    float: left;
-                    width: 25%;
-
-                    span {
-                        display: block;
-                        text-align: center;
-                        font-size: 40px;
-                        line-height: 50px;
-                        padding: 21px 0 12px;
-                        font-family: 'Aldrich', sans-serif;
-
-                        @include desktop {
-                            font-size: 50px;
-                        }
-                    }
-
-                    p {
-                        font-family: 'Lato', sans-serif;
-                        clear: both;
-                        display: inline-block;
-                        font-size: 12px;
-                        line-height: 20px;
-                        padding: 0 4px;
-                        text-transform: uppercase;
-                        border-radius: 2px;
-
-                        @include desktop {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
-
-        a {
-            font-size: 1.5em;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            text-transform: uppercase;
-            background-color: color(primary);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-            display: block;
-            text-align: center;
-            margin: 3.5em auto 0 auto;
-            padding: $padding;
-            font-weight: 500;
+        section#spel {
+            display: inline-grid;
+            justify-content: center;
+            justify-items: center;
             width: 250px;
-            transition: transform 0.5s;
+            margin: auto;
+            row-gap: 3em;
 
             @include desktop {
-                display: inline-block;
-                padding: $padding $padding * 4;
-                width: 300px;
-            }
-        }
-
-        a:hover {
-            @include desktop {
-                -ms-transform: scale(1.2);
-                /* IE 9 */
-                -webkit-transform: scale(1.2);
-                /* Safari 3-8 */
-                transform: scale(1.2);
+                display: grid;
+                width: 80%;
+                grid-template-areas: "lol cs fortnite";
+                grid-template-columns: 350px 350px 350px;
+                grid-gap: 10%;
             }
 
-        }
+            >div {
+                position: relative;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
 
-        #logo-container {
-            img {
-                width: 250px;
-
-                @include desktop {
-                    width: 400px;
+                &:hover .overlay {
+                    opacity: 0.75;
                 }
             }
 
-            margin-top:8em;
-            margin-bottom:3.5em;
-        }
-    }
-}
+            #lol {
+                grid-area: "lol";
+            }
 
-#grid-container {
-    margin: auto;
-    width: 250px;
+            #cs {
+                grid-area: "cs";
+            }
 
-    @include desktop {
-        width: 80%;
-    }
-}
+            #fortnite {
+                grid-area: "fortine";
+            }
 
-hr {
-    border: 1px solid color(white);
-    border-radius: 20px;
-    transition: opacity 0.5s linear;
-    width: 250px;
+            img {
+                transition: opacity 0.5s linear;
+                width: 100%;
+                height: 100%;
+            }
 
-    @include desktop {
+            p {
+                font-size: 20px;
+                text-align: center;
+                font-weight: bold;
+                margin: 0;
+                padding: 16px 0 16px 0;
+                color: #ccc;
+            }
 
-        width: 400px;
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgb(0, 0, 0);
+            }
 
-    }
-}
+            .text {
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
 
-#spel-container {
-
-    @include desktop {
-        padding: 100px;
-    }
-
-    width: 100%;
-    background: linear-gradient(to bottom,
-        #000,
-        rgba(#000, 0)),
-    linear-gradient(to top,
-        #000,
-        rgba(#000, 0)),
-    url("../images/spelbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 25px;
-    height: 100%;
-
-
-        @include desktop {
-            height: 1000px;
-        }
-
-    h1 {
-        color: #fff;
-        text-align: center;
-        font-size: 2em;
-        text-transform: uppercase;
-        padding: 10px;
-        margin: 0px 0 1.5em 0;
-        font-weight: 500;
-        transition: opacity 0.5s linear;
-        letter-spacing: 0.2em;
-
-        @include desktop {
-            font-size: 4em;
-            letter-spacing: 0.2em;
-        }
-
-    }
-
-    section#spel {
-        display: inline-grid;
-        justify-content: center;
-        justify-items: center;
-        width: 250px;
-        margin: auto;
-        row-gap: 3em;
-
-        @include desktop {
-            display: grid;
-            width: 80%;
-            grid-template-areas: "lol cs fortnite";
-            grid-template-columns: 350px 350px 350px;
-            grid-gap: 10%;
-        }
-
-        >div {
-            position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-
-            &:hover .overlay {
-                opacity: 0.75;
+            h2 {
+                margin-bottom: 50px;
             }
         }
-
-        #lol {
-            grid-area: "lol";
-        }
-
-        #cs {
-            grid-area: "cs";
-        }
-
-        #fortnite {
-            grid-area: "fortine";
-        }
-
-        img {
-            transition: opacity 0.5s linear;
-            width: 100%;
-            height: 100%;
-        }
-
-        p {
-            font-size: 20px;
-            text-align: center;
-            font-weight: bold;
-            margin: 0;
-            padding: 16px 0 16px 0;
-            color: #ccc;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: rgb(0, 0, 0);
-        }
-
-        .text {
-            color: white;
-            font-size: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        h2 {
-            margin-bottom: 50px;
-        }
     }
-}
 
-#om-container {
+    #om-container {
 
-    padding: 50px 50px 50px 50px;
+        padding: 50px 50px 50px 50px;
 
-    /*background-image: linear-gradient(to bottom,
+        /*background-image: linear-gradient(to bottom,
             #000,
             rgba(#000, 0)),
         linear-gradient(to top,
@@ -414,275 +370,275 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;*/
-    background-color: rgb(50, 54, 57);
-
-    @include desktop {
-        padding: 150px 50px 150px 50px;
-        width: 100%;
-    }
-
-    h1 {
-        color: #fff;
-        text-align: center;
-        font-size: 2em;
-
-        text-transform: uppercase;
-        padding: 10px;
-        margin: 0px 0 100px 0;
-        font-weight: 500;
-        transition: opacity 0.5s linear;
+        background-color: rgb(50, 54, 57);
 
         @include desktop {
-            font-size: 3.5em;
-            letter-spacing: 0.2em;
-        }
-    }
-
-    p {
-        color: #fff;
-        text-align: center;
-        font-size: 1.15em;
-        transition: opacity 0.5s linear;
-    }
-
-    section#om {
-
-
-        @include desktop {
-            display: grid;
-            justify-content: center;
-            justify-items: center;
-            width: 80%;
-            margin: auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            grid-gap: 1em;
-            row-gap: 1em;
+            padding: 150px 50px 150px 50px;
+            width: 100%;
         }
 
-        >div {
-            padding: 1em;
-        }
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
 
-        .om-text {
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-
-        .adress {
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-
-        .standard-biljett {
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-
-        .vip-biljett {
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-
-        .boka {
-            grid-column: 1/3;
-        }
-    }
-
-    .om-text {
-        padding: 2.5em !important;
-    }
-
-
-    //Info-box
-    .card {
-        background: transparent;
-        color: #fff;
-        padding: 20px;
-        width: 100%;
-        border-style: none;
-
-        h2 {
-            text-align: justify;
             text-transform: uppercase;
-        }
-    }
-}
+            padding: 10px;
+            margin: 0px 0 100px 0;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
 
-
-#biljetter-container {
-    padding: 1em;
-    //background-color: color(black);
-    width: 100%;
-    background-image: linear-gradient(to bottom,
-        #000,
-        rgba(#000, 0)),
-        linear-gradient(to top,
-        #000,
-        rgba(#000, 0)), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-
-    @include desktop {
-        padding: 100px;
-
-    }
-
-    h1 {
-        color: #fff;
-        text-align: center;
-        font-size: 2em;
-
-        text-transform: uppercase;
-        padding: 10px;
-        margin: 0px 0 100px 0;
-        font-weight: 500;
-        transition: opacity 0.5s linear;
-
-        @include desktop {
-            font-size: 3.5em;
-            letter-spacing: 0.2em;
-        }
-    }
-
-    p {
-        color: #fff;
-        text-align: center;
-        font-size: 1.15em;
-        transition: opacity 0.5s linear;
-    }
-
-    section#biljett {
-
-
-        @include desktop {
-            display: grid;
-            justify-content: center;
-            justify-items: center;
-            width: 80%;
-            margin: auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            grid-gap: 1em;
-            row-gap: 1em;
+            @include desktop {
+                font-size: 3.5em;
+                letter-spacing: 0.2em;
+            }
         }
 
-        >div {
-            padding: 1em;
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 1.15em;
+            transition: opacity 0.5s linear;
+        }
+
+        section#om {
+
+
+            @include desktop {
+                display: grid;
+                justify-content: center;
+                justify-items: center;
+                width: 80%;
+                margin: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 1em;
+                row-gap: 1em;
+            }
+
+            >div {
+                padding: 1em;
+            }
+
+            .om-text {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .adress {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            .standard-biljett {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            .vip-biljett {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+
+            .boka {
+                grid-column: 1/3;
+            }
         }
 
         .om-text {
-            grid-column: 1/2;
-            grid-row: 1/2;
+            padding: 2.5em !important;
         }
 
-        .adress {
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
 
-        .standard-biljett {
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
+        //Info-box
+        .card {
+            background: transparent;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            border-style: none;
 
-        .vip-biljett {
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-
-        .boka {
-            grid-column: 1/3;
-            grid-row: 2/3;
+            h2 {
+                text-align: justify;
+                text-transform: uppercase;
+            }
         }
     }
 
-    .om-text {
-        padding: 2.5em !important;
-    }
 
-    //Info-box
-    .card {
-        background: transparent;
-        color: #fff;
-        padding: 20px;
+    #biljetter-container {
+        padding: 1em;
+        //background-color: color(black);
         width: 100%;
-        border-style: none;
+        background-image: linear-gradient(to bottom,
+                #000,
+                rgba(#000, 0)),
+            linear-gradient(to top,
+                #000,
+                rgba(#000, 0)), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include desktop {
+            padding: 100px;
+
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 0px 0 100px 0;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+
+            @include desktop {
+                font-size: 3.5em;
+                letter-spacing: 0.2em;
+            }
+        }
+
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 1.15em;
+            transition: opacity 0.5s linear;
+        }
+
+        section#biljett {
 
 
-        /*
+            @include desktop {
+                display: grid;
+                justify-content: center;
+                justify-items: center;
+                width: 80%;
+                margin: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 1em;
+                row-gap: 1em;
+            }
+
+            >div {
+                padding: 1em;
+            }
+
+            .om-text {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .adress {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            .standard-biljett {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .vip-biljett {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            .boka {
+                grid-column: 1/3;
+                grid-row: 2/3;
+            }
+        }
+
+        .om-text {
+            padding: 2.5em !important;
+        }
+
+        //Info-box
+        .card {
+            background: transparent;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            border-style: none;
+
+
+            /*
         @include desktop {
             grid-area: card;
             height: fit-content;
         }*/
 
-        h1,
-        h2,
-        p {
-            text-align: center;
-        }
+            h1,
+            h2,
+            p {
+                text-align: center;
+            }
 
-        h2 {
-            text-align: justify;
-            text-transform: uppercase;
-        }
+            h2 {
+                text-align: justify;
+                text-transform: uppercase;
+            }
 
-        h1 {
-            margin: 0 !important;
-        }
+            h1 {
+                margin: 0 !important;
+            }
 
-        p.display {
-            color: color(primary);
-            font-size: 1.5em;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
+            p.display {
+                color: color(primary);
+                font-size: 1.5em;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
 
-        p.price {
-            font-size: 4em;
-            margin-bottom: 0;
-            font-family: 'Aldrich', sans-serif;
-        }
-    }
-
-    //Knapp
-    .boka {
-        width: 100%;
-        text-align: center;
-
-        a {
-            font-size: 1.5em;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            text-transform: uppercase;
-            background-color: color(primary);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-            display: inline-block;
-            text-align: center;
-            padding: $padding;
-            margin-top: 1em;
-            font-weight: 500;
-            width: 250px;
-            transition: transform 0.5s;
-
-            @include desktop {
-                padding: $padding $padding * 4;
-                width: 300px;
+            p.price {
+                font-size: 4em;
+                margin-bottom: 0;
+                font-family: 'Aldrich', sans-serif;
             }
         }
 
-        a:hover {
-            @include desktop {
-                -ms-transform: scale(1.2);
-                /* IE 9 */
-                -webkit-transform: scale(1.2);
-                /* Safari 3-8 */
-                transform: scale(1.2);
+        //Knapp
+        .boka {
+            width: 100%;
+            text-align: center;
+
+            a {
+                font-size: 1.5em;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-color: color(primary);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                display: inline-block;
+                text-align: center;
+                padding: $padding;
+                margin-top: 1em;
+                font-weight: 500;
+                width: 250px;
+                transition: transform 0.5s;
+
+                @include desktop {
+                    padding: $padding $padding * 4;
+                    width: 300px;
+                }
             }
 
+            a:hover {
+                @include desktop {
+                    -ms-transform: scale(1.2);
+                    /* IE 9 */
+                    -webkit-transform: scale(1.2);
+                    /* Safari 3-8 */
+                    transform: scale(1.2);
+                }
+
+            }
         }
     }
 }
-

@@ -49,17 +49,16 @@ footer {
     .fa-facebook-square:hover {
         color: #c7c7c7;
     }
-    
+
 }
 
 header.scrolled {
     background-color: #000 !important;
     transition: all 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-  }
+}
 
 header {
-
     height: 80px;
     padding: 0 15px 0 5px;
     z-index: 101;
@@ -155,8 +154,8 @@ header {
         top: 0;
         left: 0;
         background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.98);
-        
+        background-color: rgba(0, 0, 0, 0.9);
+
         a {
             padding: 16px 8px;
             text-decoration: none;
@@ -221,7 +220,7 @@ header {
 
         .logo {
             width: 130px;
-            
+
 
             a {
                 display: block;
@@ -233,7 +232,7 @@ header {
                 display: block;
                 border: 0;
                 max-width: 100%;
-                
+
             }
         }
 
@@ -404,7 +403,7 @@ header {
     }
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
@@ -444,5 +443,4 @@ header {
 :-moz-placeholder,
 :-ms-input-placeholder {
     color: #676e8a;
-}
-
+}*/

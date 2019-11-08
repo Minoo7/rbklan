@@ -154,7 +154,7 @@ header .overlay {
   top: 0;
   left: 0;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.98);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 header .overlay a {
@@ -407,47 +407,50 @@ header * {
   outline: 0;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+/*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-button {
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a8aeca;
-  border: 0 none #fff;
-  border-radius: 10px;
-  -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
-}
+    background: #a8aeca;
+    border: 0 none #fff;
+    border-radius: 10px;
+    transition: background 0.2s ease;
 
-::-webkit-scrollbar-thumb:hover {
-  background: #969bb3;
-}
+    &:hover {
+        background: #969bb3;
+    }
 
-::-webkit-scrollbar-thumb:active {
-  background: #787d92;
+    &:active {
+        background: #787d92;
+    }
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2233;
-  border: 0 none #fff;
-  border-radius: 50px;
+    background: #1f2233;
+    border: 0 none #fff;
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-corner {
-  background: 0 0;
+    background: 0 0;
 }
 
 ::-webkit-input-placeholder,
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-  color: #676e8a;
+    color: #676e8a;
+}*/
+.ham_on {
+  overflow-y: hidden;
+  height: 100%;
 }
 
 html,
@@ -536,6 +539,49 @@ body {
   margin: 0;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a343DB !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: white !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track:active {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent !important;
+}
+
 #container {
   min-height: 100%;
 }
@@ -589,58 +635,15 @@ a:hover {
   }
 }
 
-body {
-  height: 100vh !important;
-}
-
-html {
+.smooth-scroll {
   scroll-behavior: smooth;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px !important;
-  height: 10px !important;
+body#body_index {
+  height: 100vh !important;
 }
 
-::-webkit-scrollbar-button {
-  width: 0px !important;
-  height: 0px !important;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #a343DB !important;
-  border: none !important;
-  border-radius: 0px !important;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: white !important;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: white !important;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0px !important;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: transparent !important;
-}
-
-::-webkit-scrollbar-track:active {
-  background: transparent !important;
-}
-
-::-webkit-scrollbar-corner {
-  background: transparent !important;
-}
-
-main#bg {
+body#body_index main#bg {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("../images/indexbg.jpg");
   background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("../images/indexbg.jpg");
   background-repeat: no-repeat;
@@ -651,12 +654,12 @@ main#bg {
 }
 
 @media (min-width: 1200px) {
-  main#bg {
+  body#body_index main#bg {
     height: 1000px;
   }
 }
 
-main section#primary {
+body#body_index main section#primary {
   color: #fff;
   padding: 25px;
   text-align: center;
@@ -667,7 +670,7 @@ main section#primary {
         }*/
 }
 
-main section#primary h2 {
+body#body_index main section#primary h2 {
   font-size: 3em;
   margin: 10px 0 20px 0;
   text-transform: uppercase;
@@ -678,7 +681,7 @@ main section#primary h2 {
             }*/
 }
 
-main section#primary #rbk {
+body#body_index main section#primary #rbk {
   color: #fff;
   text-align: center;
   font-size: 2.5em;
@@ -689,25 +692,25 @@ main section#primary #rbk {
 }
 
 @media (min-width: 1200px) {
-  main section#primary #rbk {
+  body#body_index main section#primary #rbk {
     font-size: 4em;
     letter-spacing: 0.2em;
   }
 }
 
-main section#primary h3 {
+body#body_index main section#primary h3 {
   display: none;
   margin-top: 70px;
   font-size: 72px;
   font-family: 'ABeeZee', sans-serif;
 }
 
-main section#primary p {
+body#body_index main section#primary p {
   font-size: 1.4em;
   margin-bottom: 12px;
 }
 
-main section#primary div {
+body#body_index main section#primary div {
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -721,37 +724,37 @@ main section#primary div {
   overflow: hidden;
 }
 
-main section#primary div * {
+body#body_index main section#primary div * {
   margin: 0;
   padding: 0;
 }
 
-main section#primary div *,
-main section#primary div *:before,
-main section#primary div *:after {
+body#body_index main section#primary div *,
+body#body_index main section#primary div *:before,
+body#body_index main section#primary div *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-main section#primary div ::-moz-selection {
+body#body_index main section#primary div ::-moz-selection {
   color: #fff;
   background: #333;
   text-shadow: none;
 }
 
-main section#primary div ::selection {
+body#body_index main section#primary div ::selection {
   color: #fff;
   background: #333;
   text-shadow: none;
 }
 
-main section#primary div ::-moz-selection {
+body#body_index main section#primary div ::-moz-selection {
   color: #fff;
   background: #333;
   text-shadow: none;
 }
 
-main section#primary div ul {
+body#body_index main section#primary div ul {
   max-width: 300px;
   text-align: center;
   width: 300px;
@@ -759,20 +762,20 @@ main section#primary div ul {
 }
 
 @media (min-width: 1200px) {
-  main section#primary div ul {
+  body#body_index main section#primary div ul {
     max-width: 400px;
     width: 400px;
   }
 }
 
-main section#primary div ul li {
+body#body_index main section#primary div ul li {
   display: block;
   margin: 0 0px;
   float: left;
   width: 25%;
 }
 
-main section#primary div ul li span {
+body#body_index main section#primary div ul li span {
   display: block;
   text-align: center;
   font-size: 40px;
@@ -782,12 +785,12 @@ main section#primary div ul li span {
 }
 
 @media (min-width: 1200px) {
-  main section#primary div ul li span {
+  body#body_index main section#primary div ul li span {
     font-size: 50px;
   }
 }
 
-main section#primary div ul li p {
+body#body_index main section#primary div ul li p {
   font-family: 'Lato', sans-serif;
   clear: both;
   display: inline-block;
@@ -799,12 +802,12 @@ main section#primary div ul li p {
 }
 
 @media (min-width: 1200px) {
-  main section#primary div ul li p {
+  body#body_index main section#primary div ul li p {
     font-size: 16px;
   }
 }
 
-main section#primary a {
+body#body_index main section#primary a {
   font-size: 1.5em;
   color: white;
   border-radius: 5px;
@@ -826,7 +829,7 @@ main section#primary a {
 }
 
 @media (min-width: 1200px) {
-  main section#primary a {
+  body#body_index main section#primary a {
     display: inline-block;
     padding: 15px 60px;
     width: 300px;
@@ -834,7 +837,7 @@ main section#primary a {
 }
 
 @media (min-width: 1200px) {
-  main section#primary a:hover {
+  body#body_index main section#primary a:hover {
     /* IE 9 */
     -webkit-transform: scale(1.2);
     /* Safari 3-8 */
@@ -842,33 +845,33 @@ main section#primary a {
   }
 }
 
-main section#primary #logo-container {
+body#body_index main section#primary #logo-container {
   margin-top: 8em;
   margin-bottom: 3.5em;
 }
 
-main section#primary #logo-container img {
+body#body_index main section#primary #logo-container img {
   width: 250px;
 }
 
 @media (min-width: 1200px) {
-  main section#primary #logo-container img {
+  body#body_index main section#primary #logo-container img {
     width: 400px;
   }
 }
 
-#grid-container {
+body#body_index #grid-container {
   margin: auto;
   width: 250px;
 }
 
 @media (min-width: 1200px) {
-  #grid-container {
+  body#body_index #grid-container {
     width: 80%;
   }
 }
 
-hr {
+body#body_index hr {
   border: 1px solid #fff;
   border-radius: 20px;
   -webkit-transition: opacity 0.5s linear;
@@ -877,12 +880,12 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  hr {
+  body#body_index hr {
     width: 400px;
   }
 }
 
-#spel-container {
+body#body_index #spel-container {
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("../images/spelbg.jpg");
   background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("../images/spelbg.jpg");
@@ -894,18 +897,18 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #spel-container {
+  body#body_index #spel-container {
     padding: 100px;
   }
 }
 
 @media (min-width: 1200px) {
-  #spel-container {
+  body#body_index #spel-container {
     height: 1000px;
   }
 }
 
-#spel-container h1 {
+body#body_index #spel-container h1 {
   color: #fff;
   text-align: center;
   font-size: 2em;
@@ -919,13 +922,13 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #spel-container h1 {
+  body#body_index #spel-container h1 {
     font-size: 4em;
     letter-spacing: 0.2em;
   }
 }
 
-#spel-container section#spel {
+body#body_index #spel-container section#spel {
   display: -ms-inline-grid;
   display: inline-grid;
   -webkit-box-pack: center;
@@ -938,7 +941,7 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #spel-container section#spel {
+  body#body_index #spel-container section#spel {
     display: -ms-grid;
     display: grid;
     width: 80%;
@@ -949,36 +952,36 @@ hr {
   }
 }
 
-#spel-container section#spel > div {
+body#body_index #spel-container section#spel > div {
   position: relative;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
 }
 
-#spel-container section#spel > div:hover .overlay {
+body#body_index #spel-container section#spel > div:hover .overlay {
   opacity: 0.75;
 }
 
-#spel-container section#spel #lol {
+body#body_index #spel-container section#spel #lol {
   grid-area: "lol";
 }
 
-#spel-container section#spel #cs {
+body#body_index #spel-container section#spel #cs {
   grid-area: "cs";
 }
 
-#spel-container section#spel #fortnite {
+body#body_index #spel-container section#spel #fortnite {
   grid-area: "fortine";
 }
 
-#spel-container section#spel img {
+body#body_index #spel-container section#spel img {
   -webkit-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
   width: 100%;
   height: 100%;
 }
 
-#spel-container section#spel p {
+body#body_index #spel-container section#spel p {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
@@ -987,7 +990,7 @@ hr {
   color: #ccc;
 }
 
-#spel-container section#spel .overlay {
+body#body_index #spel-container section#spel .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1001,7 +1004,7 @@ hr {
   background-color: black;
 }
 
-#spel-container section#spel .text {
+body#body_index #spel-container section#spel .text {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -1012,11 +1015,11 @@ hr {
   text-align: center;
 }
 
-#spel-container section#spel h2 {
+body#body_index #spel-container section#spel h2 {
   margin-bottom: 50px;
 }
 
-#om-container {
+body#body_index #om-container {
   padding: 50px 50px 50px 50px;
   /*background-image: linear-gradient(to bottom,
             #000,
@@ -1031,13 +1034,13 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #om-container {
+  body#body_index #om-container {
     padding: 150px 50px 150px 50px;
     width: 100%;
   }
 }
 
-#om-container h1 {
+body#body_index #om-container h1 {
   color: #fff;
   text-align: center;
   font-size: 2em;
@@ -1050,13 +1053,13 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #om-container h1 {
+  body#body_index #om-container h1 {
     font-size: 3.5em;
     letter-spacing: 0.2em;
   }
 }
 
-#om-container p {
+body#body_index #om-container p {
   color: #fff;
   text-align: center;
   font-size: 1.15em;
@@ -1065,7 +1068,7 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #om-container section#om {
+  body#body_index #om-container section#om {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
@@ -1083,11 +1086,11 @@ hr {
   }
 }
 
-#om-container section#om > div {
+body#body_index #om-container section#om > div {
   padding: 1em;
 }
 
-#om-container section#om .om-text {
+body#body_index #om-container section#om .om-text {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -1096,7 +1099,7 @@ hr {
   grid-row: 1/2;
 }
 
-#om-container section#om .adress {
+body#body_index #om-container section#om .adress {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -1105,7 +1108,7 @@ hr {
   grid-row: 1/2;
 }
 
-#om-container section#om .standard-biljett {
+body#body_index #om-container section#om .standard-biljett {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -1114,7 +1117,7 @@ hr {
   grid-row: 2/3;
 }
 
-#om-container section#om .vip-biljett {
+body#body_index #om-container section#om .vip-biljett {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -1123,17 +1126,17 @@ hr {
   grid-row: 2/3;
 }
 
-#om-container section#om .boka {
+body#body_index #om-container section#om .boka {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
 }
 
-#om-container .om-text {
+body#body_index #om-container .om-text {
   padding: 2.5em !important;
 }
 
-#om-container .card {
+body#body_index #om-container .card {
   background: transparent;
   color: #fff;
   padding: 20px;
@@ -1141,12 +1144,12 @@ hr {
   border-style: none;
 }
 
-#om-container .card h2 {
+body#body_index #om-container .card h2 {
   text-align: justify;
   text-transform: uppercase;
 }
 
-#biljetter-container {
+body#body_index #biljetter-container {
   padding: 1em;
   width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
@@ -1157,12 +1160,12 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #biljetter-container {
+  body#body_index #biljetter-container {
     padding: 100px;
   }
 }
 
-#biljetter-container h1 {
+body#body_index #biljetter-container h1 {
   color: #fff;
   text-align: center;
   font-size: 2em;
@@ -1175,13 +1178,13 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #biljetter-container h1 {
+  body#body_index #biljetter-container h1 {
     font-size: 3.5em;
     letter-spacing: 0.2em;
   }
 }
 
-#biljetter-container p {
+body#body_index #biljetter-container p {
   color: #fff;
   text-align: center;
   font-size: 1.15em;
@@ -1190,7 +1193,7 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #biljetter-container section#biljett {
+  body#body_index #biljetter-container section#biljett {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
@@ -1208,11 +1211,11 @@ hr {
   }
 }
 
-#biljetter-container section#biljett > div {
+body#body_index #biljetter-container section#biljett > div {
   padding: 1em;
 }
 
-#biljetter-container section#biljett .om-text {
+body#body_index #biljetter-container section#biljett .om-text {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -1221,7 +1224,7 @@ hr {
   grid-row: 1/2;
 }
 
-#biljetter-container section#biljett .adress {
+body#body_index #biljetter-container section#biljett .adress {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -1230,7 +1233,7 @@ hr {
   grid-row: 1/2;
 }
 
-#biljetter-container section#biljett .standard-biljett {
+body#body_index #biljetter-container section#biljett .standard-biljett {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -1239,7 +1242,7 @@ hr {
   grid-row: 1/2;
 }
 
-#biljetter-container section#biljett .vip-biljett {
+body#body_index #biljetter-container section#biljett .vip-biljett {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -1248,7 +1251,7 @@ hr {
   grid-row: 1/2;
 }
 
-#biljetter-container section#biljett .boka {
+body#body_index #biljetter-container section#biljett .boka {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
@@ -1257,11 +1260,11 @@ hr {
   grid-row: 2/3;
 }
 
-#biljetter-container .om-text {
+body#body_index #biljetter-container .om-text {
   padding: 2.5em !important;
 }
 
-#biljetter-container .card {
+body#body_index #biljetter-container .card {
   background: transparent;
   color: #fff;
   padding: 20px;
@@ -1274,40 +1277,40 @@ hr {
         }*/
 }
 
-#biljetter-container .card h1,
-#biljetter-container .card h2,
-#biljetter-container .card p {
+body#body_index #biljetter-container .card h1,
+body#body_index #biljetter-container .card h2,
+body#body_index #biljetter-container .card p {
   text-align: center;
 }
 
-#biljetter-container .card h2 {
+body#body_index #biljetter-container .card h2 {
   text-align: justify;
   text-transform: uppercase;
 }
 
-#biljetter-container .card h1 {
+body#body_index #biljetter-container .card h1 {
   margin: 0 !important;
 }
 
-#biljetter-container .card p.display {
+body#body_index #biljetter-container .card p.display {
   color: #a343db;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-#biljetter-container .card p.price {
+body#body_index #biljetter-container .card p.price {
   font-size: 4em;
   margin-bottom: 0;
   font-family: 'Aldrich', sans-serif;
 }
 
-#biljetter-container .boka {
+body#body_index #biljetter-container .boka {
   width: 100%;
   text-align: center;
 }
 
-#biljetter-container .boka a {
+body#body_index #biljetter-container .boka a {
   font-size: 1.5em;
   color: white;
   border-radius: 5px;
@@ -1329,14 +1332,14 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  #biljetter-container .boka a {
+  body#body_index #biljetter-container .boka a {
     padding: 15px 60px;
     width: 300px;
   }
 }
 
 @media (min-width: 1200px) {
-  #biljetter-container .boka a:hover {
+  body#body_index #biljetter-container .boka a:hover {
     /* IE 9 */
     -webkit-transform: scale(1.2);
     /* Safari 3-8 */
