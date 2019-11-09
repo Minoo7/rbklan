@@ -450,7 +450,6 @@ header * {
 }*/
 .ham_on {
   overflow-y: hidden;
-  height: 100%;
 }
 
 html,
@@ -938,28 +937,64 @@ body#body_index #spel-container section#spel {
   width: 250px;
   margin: auto;
   row-gap: 3em;
+  /*>div {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+
+                animation: none;
+
+                &:hover .overlay {
+                    opacity: 0.75;
+                }
+            }*/
 }
 
 @media (min-width: 1200px) {
   body#body_index #spel-container section#spel {
     display: -ms-grid;
     display: grid;
-    width: 80%;
+    width: 100%;
         grid-template-areas: "lol cs fortnite";
     -ms-grid-columns: 350px 350px 350px;
         grid-template-columns: 350px 350px 350px;
-    grid-gap: 10%;
   }
 }
 
-body#body_index #spel-container section#spel > div {
+body#body_index #spel-container section#spel #lol {
   position: relative;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+  cursor: pointer;
 }
 
-body#body_index #spel-container section#spel > div:hover .overlay {
+body#body_index #spel-container section#spel #lol:hover > .overlay {
   opacity: 0.75;
+}
+
+body#body_index #spel-container section#spel .move {
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
 }
 
 body#body_index #spel-container section#spel #lol {
@@ -1002,6 +1037,10 @@ body#body_index #spel-container section#spel .overlay {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   background-color: black;
+}
+
+body#body_index #spel-container section#spel .overlay#myNav {
+  height: 0;
 }
 
 body#body_index #spel-container section#spel .text {
@@ -1347,23 +1386,24 @@ body#body_index #biljetter-container .boka a {
   }
 }
 
-#turneringar-content {
+body#body_turneringar #turneringar-content {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.9);
   width: 90%;
   margin: 200px auto;
-  padding: 5em 0;
+  padding: 1em 0;
 }
 
 @media (min-width: 1200px) {
-  #turneringar-content {
+  body#body_turneringar #turneringar-content {
     width: 70%;
   }
 }
 
-#turneringar-content h1 {
+body#body_turneringar #turneringar-content h1 {
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
+  font-size: 58px;
   text-transform: uppercase;
   /* @include desktop{
             text-align: left;
@@ -1371,14 +1411,16 @@ body#body_index #biljetter-container .boka a {
         }*/
 }
 
-#turneringar-content p {
+body#body_turneringar #turneringar-content p {
   text-align: center;
+  margin: 20px 0 25px 0;
+  font-size: 24px;
   /* @include desktop{
             margin-bottom: 0;
-        }*/
+            }*/
 }
 
-#turneringar-content .wrapper {
+body#body_turneringar #turneringar-content .wrapper {
   width: 80%;
   margin: 2em auto;
   border-bottom: 1px solid #fff;
@@ -1392,11 +1434,11 @@ body#body_index #biljetter-container .boka a {
         }*/
 }
 
-#turneringar-content .wrapper:last-of-type {
+body#body_turneringar #turneringar-content .wrapper:last-of-type {
   border-bottom: none;
 }
 
-#turneringar-content ul {
+body#body_turneringar #turneringar-content ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1407,12 +1449,12 @@ body#body_index #biljetter-container .boka a {
 }
 
 @media (min-width: 1200px) {
-  #turneringar-content ul {
+  body#body_turneringar #turneringar-content ul {
     width: 300px;
   }
 }
 
-.logos {
+body#body_turneringar .logos {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1422,12 +1464,12 @@ body#body_index #biljetter-container .boka a {
 }
 
 @media (min-width: 1200px) {
-  .logos {
+  body#body_turneringar .logos {
     width: 300px;
   }
 }
 
-.bg-turneringar {
+body#body_turneringar .bg-turneringar {
   background-image: url("../images/spelbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1436,7 +1478,7 @@ body#body_index #biljetter-container .boka a {
   height: 100%;
 }
 
-.banner {
+body#body_regler .banner {
   width: 100%;
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
@@ -1450,7 +1492,7 @@ body#body_index #biljetter-container .boka a {
   position: relative;
 }
 
-.banner h1 {
+body#body_regler .banner h1 {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -1460,14 +1502,14 @@ body#body_index #biljetter-container .boka a {
   font-size: 4em;
 }
 
-#regler-container {
+body#body_regler #regler-container {
   color: #fff;
   width: 70%;
   margin: auto;
   padding: 2.5em 0 2.5em 0;
 }
 
-.kontakt {
+body#body_kontakt .kontakt {
   /*background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1480,7 +1522,7 @@ body#body_index #biljetter-container .boka a {
   background-color: #101011;
 }
 
-section#kontakt {
+body#body_kontakt section#kontakt {
   width: 100%;
   margin: 80px auto;
   color: #fff;
@@ -1490,12 +1532,12 @@ section#kontakt {
 }
 
 @media (min-width: 1200px) {
-  section#kontakt {
+  body#body_kontakt section#kontakt {
     width: 70%;
   }
 }
 
-section#kontakt .column {
+body#body_kontakt section#kontakt .column {
   float: left;
   width: 100%;
   padding: 50px 50px 0 50px;
@@ -1504,19 +1546,19 @@ section#kontakt .column {
 }
 
 @media (min-width: 1200px) {
-  section#kontakt .column {
+  body#body_kontakt section#kontakt .column {
     width: 50%;
     text-align: justify;
   }
 }
 
-section#kontakt .row:after {
+body#body_kontakt section#kontakt .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-section#kontakt img#skola {
+body#body_kontakt section#kontakt img#skola {
   width: 100%;
   border: 1px solid #fff;
   height: auto;
@@ -1524,29 +1566,30 @@ section#kontakt img#skola {
 }
 
 @media (min-width: 1200px) {
-  section#kontakt img#skola {
+  body#body_kontakt section#kontakt img#skola {
     height: 350px;
   }
 }
 
-section#kontakt h1, section#kontakt h2 {
+body#body_kontakt section#kontakt h1,
+body#body_kontakt section#kontakt h2 {
   font-weight: bold;
 }
 
-section#kontakt iframe {
+body#body_kontakt section#kontakt iframe {
   margin-bottom: 20px;
   border: 1px solid #fff;
   height: 200px;
 }
 
 @media (min-width: 767px) {
-  section#kontakt iframe {
+  body#body_kontakt section#kontakt iframe {
     height: 400px;
   }
 }
 
 @media (min-width: 1200px) {
-  section#kontakt iframe {
+  body#body_kontakt section#kontakt iframe {
     height: 350px;
   }
 }

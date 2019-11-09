@@ -1,97 +1,90 @@
-#turneringar-content {
-    color: color(white);
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 90%;
-    margin: 200px auto;
-    padding: 5em 0;
+body#body_turneringar {
+    #turneringar-content {
+        color: color(white);
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 90%;
+        margin: 200px auto;
+        padding: 1em 0;
 
-    @include desktop{
-        width: 70%;
-    }
+        @include desktop {
+            width: 70%;
+        }
 
-    h1 {
-        text-align: center;
-        margin: auto;
-        text-transform: uppercase;
+        h1 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 58px;
+            text-transform: uppercase;
 
-       /* @include desktop{
+            /* @include desktop{
             text-align: left;
             margin: 0;
         }*/
-    }
+        }
 
-    p{
-        text-align: center;
+        p {
+            text-align: center;
+            margin: 20px 0 25px 0;
+            font-size: 24px;
 
-       /* @include desktop{
+            /* @include desktop{
             margin-bottom: 0;
-        }*/
-    }
+            }*/
+        }
 
-    .wrapper {
-        width: 80%;
-        margin: 2em auto;
-        border-bottom: 1px solid color(white);
-        border-radius: 1px;
+        .wrapper {
+            width: 80%;
+            margin: 2em auto;
+            border-bottom: 1px solid color(white);
+            border-radius: 1px;
 
-       /* @include desktop {
+            /* @include desktop {
             width: 80%;
             margin: auto;
             display: grid;
             grid-template-areas: "lol cs fortnite";
             grid-template-columns: 50% auto;
         }*/
+        }
 
+        .wrapper:last-of-type {
+            border-bottom: none;
+        }
 
+        ul {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+
+            @include desktop {
+                width: 300px;
+            }
+        }
     }
 
-    .wrapper:last-of-type{
-        border-bottom: none;
-    }
-
-    ul {
+    .logos {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-        padding:0;
-        list-style: none;
-        text-align: center;
-
+        opacity: 1;
+        margin-bottom: 1em;
 
         @include desktop {
-          width: 300px;
+            width: 300px;
         }
-
-
-
     }
 
-
-}
-
-
-
-.logos {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    opacity: 1;
-    margin-bottom: 1em;
-    
-
-    @include desktop {
-        width: 300px;
+    .bg-turneringar {
+        background-image: url("../images/spelbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
     }
-
-}
-
-.bg-turneringar {
-    background-image: url("../images/spelbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
 }

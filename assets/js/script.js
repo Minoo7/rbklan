@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 	$("#hamburger").click(function () {
-		$("div.overlay").fadeToggle("fast", "linear");
+		$("div#myNav.overlay").fadeToggle("fast", "linear");
 	});
 });
 

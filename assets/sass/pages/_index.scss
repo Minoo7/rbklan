@@ -284,20 +284,62 @@ body#body_index {
 
             @include desktop {
                 display: grid;
-                width: 80%;
+                //width: 80%;
+                width: 100%;
                 grid-template-areas: "lol cs fortnite";
                 grid-template-columns: 350px 350px 350px;
-                grid-gap: 10%;
+                //grid-gap: 10%;
             }
 
-            >div {
-                position: relative;
+            /*>div {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+
+                animation: none;
 
                 &:hover .overlay {
                     opacity: 0.75;
                 }
+            }*/
+
+            #lol {
+                position: relative;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                cursor: pointer;
+
+                &:hover >.overlay {
+                    opacity: 0.75;
+                }
             }
+
+            .move {
+                -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+
+            @-webkit-keyframes slide-right {
+                0% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                }
+
+                100% {
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+            }
+
+            @keyframes slide-right {
+                0% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                }
+
+                100% {
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+            }
+
 
             #lol {
                 grid-area: "lol";
@@ -337,6 +379,10 @@ body#body_index {
                 opacity: 0;
                 transition: .5s ease;
                 background-color: rgb(0, 0, 0);
+
+                &#myNav {
+                    height: 0;
+                }
             }
 
             .text {
