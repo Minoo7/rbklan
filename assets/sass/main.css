@@ -937,64 +937,29 @@ body#body_index #spel-container section#spel {
   width: 250px;
   margin: auto;
   row-gap: 3em;
-  /*>div {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-
-                animation: none;
-
-                &:hover .overlay {
-                    opacity: 0.75;
-                }
-            }*/
 }
 
 @media (min-width: 1200px) {
   body#body_index #spel-container section#spel {
     display: -ms-grid;
     display: grid;
-    width: 100%;
+    width: 80%;
         grid-template-areas: "lol cs fortnite";
     -ms-grid-columns: 350px 350px 350px;
         grid-template-columns: 350px 350px 350px;
+    grid-gap: 10%;
   }
 }
 
-body#body_index #spel-container section#spel #lol {
+body#body_index #spel-container section#spel .game {
   position: relative;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
   cursor: pointer;
 }
 
-body#body_index #spel-container section#spel #lol:hover > .overlay {
+body#body_index #spel-container section#spel .game:hover .overlay {
   opacity: 0.75;
-}
-
-body#body_index #spel-container section#spel .move {
-  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
 }
 
 body#body_index #spel-container section#spel #lol {
@@ -1552,6 +1517,11 @@ body#body_kontakt section#kontakt .column {
   }
 }
 
+body#body_kontakt section#kontakt .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 body#body_kontakt section#kontakt .row:after {
   content: "";
   display: table;
@@ -1592,5 +1562,51 @@ body#body_kontakt section#kontakt iframe {
   body#body_kontakt section#kontakt iframe {
     height: 350px;
   }
+}
+
+.information {
+  background-color: #101011;
+}
+
+.information section#information {
+  width: 100%;
+  margin: 80px auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  /* Create two equal columns that floats next to each other */
+  /* Clear floats after the columns */
+}
+
+@media (min-width: 1200px) {
+  .information section#information {
+    width: 70%;
+  }
+}
+
+.information section#information .column {
+  float: left;
+  width: 100%;
+  padding: 50px 50px 0 50px;
+  height: 100%;
+  background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  .information section#information .column {
+    width: 50%;
+    text-align: justify;
+  }
+}
+
+.information section#information .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.information section#information h1 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */
