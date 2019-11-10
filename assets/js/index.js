@@ -1,3 +1,103 @@
+$(document).ready(function () {
+    var lol = $("#lol");
+    var csgo = $("#cs");
+    var fortnite = $("#fortnite");
+    var game = $(".game");
+
+    game.children("a").click(function(e) {
+        e.preventDefault();
+     });
+
+    game.click(function () {
+
+        var gap = (($("#spel").width()) * 0.1);
+        var width = 350 + gap;
+
+        $("#cs,#fortnite").css("box-shadow", "unset");
+
+        lol.css("z-index", "1").transition({
+            x: width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        fortnite.transition({
+            x: '-' + width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        var y = $(this).scrollTop();
+        alert(y);
+    });
+
+    /*lol.children("a").click(function (event) {
+        var elmnt = document.getElementById("myDIV");
+        var y = elmnt.scrollTop;
+        event.preventDefault();
+        $("#cs,#fortnite").css("box-shadow", "unset");
+        var gap = (($("#spel").width()) * 0.1);
+        var width = 350 + gap;
+
+        lol.css("z-index", "1").transition({
+            x: width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        fortnite.transition({
+            x: '-' + width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        setTimeout(function () {
+            window.location = "./turneringar.html#lol";
+        }, 500);
+
+        return false;
+    });
+
+    csgo.children("a").click(function (event) {
+        event.preventDefault();
+        $("#lol,#fortnite").css("box-shadow", "unset");
+        var gap = (($("#spel").width()) * 0.1);
+        var width = 350 + gap;
+
+        //csgo.children("a").children("img").css("width", "351px");
+
+        csgo.css("z-index", "5");
+
+        lol.transition({
+            x: width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        fortnite.transition({
+            x: '-' + width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        setTimeout(function () {
+            window.location = "./turneringar.html#csgo";
+        }, 500);
+
+        return false;
+    });
+
+    fortnite.children("a").click(function (event) {
+        event.preventDefault();
+        $("#lol,#cs").css("box-shadow", "unset");
+        var gap = (($("#spel").width()) * 0.1);
+        var width = 350 + gap;
+
+        lol.transition({
+            x: width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        fortnite.css("z-index", "5").transition({
+            x: '-' + width
+        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+        setTimeout(function () {
+            $("#lol,#cs").css("visibility", "hidden");
+            window.location = "./turneringar.html#csgo";
+        }, 500);
+
+        return false;
+    });*/
+});
+
 function minTwoDigits(n) {
     return (n < 10 ? '0' : '') + n;
 }

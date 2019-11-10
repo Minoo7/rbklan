@@ -6,36 +6,59 @@
         margin: 80px auto;
         color: #fff;
         font-family: 'Montserrat', sans-serif;
+        padding: 50px 50px 0 50px;
 
         @include desktop {
             width: 70%;
         }
 
         /* Create two equal columns that floats next to each other */
-        .column {
+        /*.column {
             float: left;
             width: 100%;
             padding: 50px 50px 0 50px;
             height: 100%;
             background-color: transparent;
-
-            @include desktop {
-                width: 50%;
-                text-align: justify;
-            }
-        }
+            text-align: justify;
+        }*/
 
         /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+        /*.row {
+            margin-left: 0;
+            margin-right: 0;
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }*/
 
         h1 {
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
+            margin-bottom:40px;
+            font-size:1.5em;
+
+            @include desktop{
+                font-size:2em;
+            }
+        }
+
+        .info {
+            -webkit-column-count: 1; /* Old Chrome, Safari and Opera */
+            -moz-column-count: 1; /* Old Firefox */
+            column-count: 1;
+
+            @include desktop{
+                -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
+                -moz-column-count: 2; /* Old Firefox */
+                column-count: 2;
+                -webkit-column-gap: 4em;
+                -moz-column-gap: 4em;
+                column-gap: 4em;
+            }
         }
     }
 }

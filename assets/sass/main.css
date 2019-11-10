@@ -1373,7 +1373,7 @@ body#body_turneringar #turneringar-content h1 {
   /* @include desktop{
             text-align: left;
             margin: 0;
-        }*/
+            }*/
 }
 
 body#body_turneringar #turneringar-content p {
@@ -1396,7 +1396,11 @@ body#body_turneringar #turneringar-content .wrapper {
             display: grid;
             grid-template-areas: "lol cs fortnite";
             grid-template-columns: 50% auto;
-        }*/
+            }*/
+}
+
+body#body_turneringar #turneringar-content .wrapper img {
+  width: 350px;
 }
 
 body#body_turneringar #turneringar-content .wrapper:last-of-type {
@@ -1573,8 +1577,27 @@ body#body_kontakt section#kontakt iframe {
   margin: 80px auto;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
+  padding: 50px 50px 0 50px;
   /* Create two equal columns that floats next to each other */
+  /*.column {
+            float: left;
+            width: 100%;
+            padding: 50px 50px 0 50px;
+            height: 100%;
+            background-color: transparent;
+            text-align: justify;
+        }*/
   /* Clear floats after the columns */
+  /*.row {
+            margin-left: 0;
+            margin-right: 0;
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }*/
 }
 
 @media (min-width: 1200px) {
@@ -1583,30 +1606,35 @@ body#body_kontakt section#kontakt iframe {
   }
 }
 
-.information section#information .column {
-  float: left;
-  width: 100%;
-  padding: 50px 50px 0 50px;
-  height: 100%;
-  background-color: transparent;
-}
-
-@media (min-width: 1200px) {
-  .information section#information .column {
-    width: 50%;
-    text-align: justify;
-  }
-}
-
-.information section#information .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .information section#information h1 {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+}
+
+@media (min-width: 1200px) {
+  .information section#information h1 {
+    font-size: 2em;
+  }
+}
+
+.information section#information .info {
+  -webkit-column-count: 1;
+  /* Old Chrome, Safari and Opera */
+  /* Old Firefox */
+  column-count: 1;
+}
+
+@media (min-width: 1200px) {
+  .information section#information .info {
+    -webkit-column-count: 2;
+    /* Old Chrome, Safari and Opera */
+    /* Old Firefox */
+    column-count: 2;
+    -webkit-column-gap: 4em;
+    column-gap: 4em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
