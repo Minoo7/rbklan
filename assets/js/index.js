@@ -1,9 +1,8 @@
 $(document).ready(function () {
     var lol = $("#lol");
-    var csgo = $("#cs");
+    var csgo = $("#csgo");
     var fortnite = $("#fortnite");
     var game = $(".game");
-
     game.children("a").click(function (e) {
         e.preventDefault();
     });
@@ -16,16 +15,13 @@ $(document).ready(function () {
         game.not(this).css("box-shadow", "unset");
 
         if (id == "lol") {
-            lol.css("z-index", "1").transition({
-                x: width
-            }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-            fortnite.transition({
-                x: '-' + width
-            }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+            lol.css("z-index", "1");
+        }
+        if (id == "csgo") {
+            csgo.css("z-index", "5");
         }
 
-        lol.css("z-index", "1").transition({
+        lol.transition({
             x: width
         }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
 

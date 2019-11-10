@@ -1,66 +1,156 @@
-  .information {
-      background-color: #101011;
+.information {
+    background-color: #101011;
 
-      section#information {
+    section#information {
+        width: 100%;
+        margin: 80px auto;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        padding: 50px 50px 0 50px;
+        line-height: 2;
+
+        @include desktop {
+            width: 70%;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        /*.column {
+          float: left;
           width: 100%;
-          margin: 80px auto;
-          color: #fff;
-          font-family: 'Montserrat', sans-serif;
           padding: 50px 50px 0 50px;
-          line-height: 2;
+          height: 100%;
+          background-color: transparent;
+          text-align: justify;
+      }*/
 
-          @include desktop {
-              width: 70%;
+        /* Clear floats after the columns */
+        /*.row {
+          margin-left: 0;
+          margin-right: 0;
+
+          &:after {
+              content: "";
+              display: table;
+              clear: both;
           }
+      }*/
 
-          /* Create two equal columns that floats next to each other */
-          /*.column {
-            float: left;
-            width: 100%;
-            padding: 50px 50px 0 50px;
-            height: 100%;
-            background-color: transparent;
-            text-align: justify;
-        }*/
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            font-size: 1.5em;
 
-          /* Clear floats after the columns */
-          /*.row {
-            margin-left: 0;
-            margin-right: 0;
-
-            &:after {
-                content: "";
-                display: table;
-                clear: both;
+            @include desktop {
+                font-size: 2.5em;
             }
-        }*/
+        }
 
-          h1 {
-              text-align: center;
-              font-weight: bold;
-              text-transform: uppercase;
-              margin-bottom: 40px;
-              margin-top: 40px;
-              font-size: 1.5em;
+        ul {
+            list-style: none;
+            padding: 0;
 
-              @include desktop {
-                  font-size: 2em;
-              }
-          }
+            /*li {
+                border-bottom: 1px solid #fff;
+            }*/
+        }
 
-          ul {
-              list-style: none;
-              padding: 0;
+        .fa-check,
+        .fa-ban {
+            color: color(primary);
+            margin-right: 5px;
+        }
 
-              li {
-                  border-bottom: 1px solid #fff;
-              }
-          }
+        #faq {
+            div {
+                position: relative;
+                border-left: 5px solid gray;
+                box-sizing: border-box;
 
-          .faq{
-              font-size:4em;
-              color:color(primary);
-          }
+                &:first-child {
+                    margin-top: 0;
+                }
 
-      }
-  }
+                &.q:before,
+                &.a:before {
+                    box-sizing: border-box;
+                    font-size: 2.5em;
+                    color: gray;
+                    //padding-left: 30px;
+                    font-weight: bold;
+                    display: block;
+                    width: 6vw;
+                    //padding: .25rem .25vw 0;
+                    position: absolute;
+                    text-align: center;
+
+                    /*@media (max-width: 768px) and (min-width: 571px) {
+                        font-size: 15vw;
+                        width: 20vw;
+                    }*/
+                }
+
+                &.q {
+                    border-color: color(primary);
+                    margin-top: 40px;
+
+                    &:before {
+                        content: attr(data-decor) "Q. ";
+                        color: color(primary);
+                        //border-left: 5px solid color(primary);
+                    }
+                }
+
+                &.a {
+                    //border-bottom: 1px solid gray;
+                    
+                    &:before {
+                        content: attr(data-decor) "A. ";
+                    }
+                }
+
+                p {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .question {
+
+                    span {
+                        font-size: 1.2em;
+                        font-weight: bold;
+                    }
+
+                    margin-left: 5.542rem;
+                    width: calc(100% - 5.542rem);
+
+                    display: block;
+                    position: relative;
+                    padding: 1.5em 20px 17.5px 0;
+                }
+
+                .ans {
+                    margin-left: 5.542rem;
+                    width: calc(100% - 5.542rem);
+
+                    display: block;
+                    position: relative;
+                    padding: 1.5em 30px 1.5em 0;
+                    //padding-right: 30px;
+
+                    /*span {
+                        font-size: 16px;
+                        font-weight: 400;
+                        //display: inline-block;
+                    }*/
+                }
+
+                /*p {
+                    margin-bottom: 0;
+                }*/
+            }
+        }
+    }
+}

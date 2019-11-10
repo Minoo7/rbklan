@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=ABeeZee%7CFrancois+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 /*nav {
     background-color: #000;
     box-shadow: 0px 5px 10px #000;
@@ -1350,7 +1351,7 @@ body#body_turneringar #turneringar-content {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.9);
   width: 90%;
-  margin: 200px auto;
+  margin: 150px auto;
   padding: 1em 0;
 }
 
@@ -1381,9 +1382,11 @@ body#body_turneringar #turneringar-content p {
 }
 
 body#body_turneringar #turneringar-content .wrapper {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
   width: 80%;
   margin: 2em auto;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #a343db;
   border-radius: 1px;
   /* @include desktop {
             width: 80%;
@@ -1394,26 +1397,33 @@ body#body_turneringar #turneringar-content .wrapper {
             }*/
 }
 
-body#body_turneringar #turneringar-content .wrapper img {
-  width: 350px;
-}
-
 body#body_turneringar #turneringar-content .wrapper:last-of-type {
   border-bottom: none;
 }
 
-body#body_turneringar #turneringar-content ul {
+body#body_turneringar #turneringar-content .wrapper img {
+  width: 350px;
+}
+
+body#body_turneringar #turneringar-content .wrapper h2 {
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+}
+
+body#body_turneringar #turneringar-content .wrapper ul {
+  font-size: 20px;
+  color: #a8a8a8;
+  letter-spacing: 0.5px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 20px auto;
   width: 50%;
   padding: 0;
   list-style: none;
-  text-align: center;
 }
 
 @media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content ul {
+  body#body_turneringar #turneringar-content .wrapper ul {
     width: 300px;
   }
 }
@@ -1490,7 +1500,7 @@ body#body_kontakt section#kontakt {
   width: 100%;
   margin: 80px auto;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* Create two equal columns that floats next to each other */
   /* Clear floats after the columns */
 }
@@ -1571,29 +1581,29 @@ body#body_kontakt section#kontakt iframe {
   width: 100%;
   margin: 80px auto;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 50px 50px 0 50px;
   line-height: 2;
   /* Create two equal columns that floats next to each other */
   /*.column {
-            float: left;
-            width: 100%;
-            padding: 50px 50px 0 50px;
-            height: 100%;
-            background-color: transparent;
-            text-align: justify;
-        }*/
+          float: left;
+          width: 100%;
+          padding: 50px 50px 0 50px;
+          height: 100%;
+          background-color: transparent;
+          text-align: justify;
+      }*/
   /* Clear floats after the columns */
   /*.row {
-            margin-left: 0;
-            margin-right: 0;
+          margin-left: 0;
+          margin-right: 0;
 
-            &:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-        }*/
+          &:after {
+              content: "";
+              display: table;
+              clear: both;
+          }
+      }*/
 }
 
 @media (min-width: 1200px) {
@@ -1613,21 +1623,96 @@ body#body_kontakt section#kontakt iframe {
 
 @media (min-width: 1200px) {
   .information section#information h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
 
 .information section#information ul {
   list-style: none;
   padding: 0;
+  /*li {
+                border-bottom: 1px solid #fff;
+            }*/
 }
 
-.information section#information ul li {
-  border-bottom: 1px solid #fff;
-}
-
-.information section#information .faq {
-  font-size: 2em;
+.information section#information .fa-check,
+.information section#information .fa-ban {
   color: #a343db;
+  margin-right: 5px;
+}
+
+.information section#information #faq div {
+  position: relative;
+  border-left: 5px solid gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*p {
+                    margin-bottom: 0;
+                }*/
+}
+
+.information section#information #faq div:first-child {
+  margin-top: 0;
+}
+
+.information section#information #faq div.q:before, .information section#information #faq div.a:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 2.5em;
+  color: gray;
+  font-weight: bold;
+  display: block;
+  width: 6vw;
+  position: absolute;
+  text-align: center;
+  /*@media (max-width: 768px) and (min-width: 571px) {
+                        font-size: 15vw;
+                        width: 20vw;
+                    }*/
+}
+
+.information section#information #faq div.q {
+  border-color: #a343db;
+  margin-top: 40px;
+}
+
+.information section#information #faq div.q:before {
+  content: attr(data-decor) "Q. ";
+  color: #a343db;
+}
+
+.information section#information #faq div.a:before {
+  content: attr(data-decor) "A. ";
+}
+
+.information section#information #faq div p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.information section#information #faq div .question {
+  margin-left: 5.542rem;
+  width: calc(100% - 5.542rem);
+  display: block;
+  position: relative;
+  padding: 1.5em 20px 17.5px 0;
+}
+
+.information section#information #faq div .question span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.information section#information #faq div .ans {
+  margin-left: 5.542rem;
+  width: calc(100% - 5.542rem);
+  display: block;
+  position: relative;
+  padding: 1.5em 30px 1.5em 0;
+  /*span {
+                        font-size: 16px;
+                        font-weight: 400;
+                        //display: inline-block;
+                    }*/
 }
 /*# sourceMappingURL=main.css.map */
