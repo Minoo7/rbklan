@@ -8,18 +8,55 @@
 }*/
 
 footer {
-    color: #000;
+    color: #fff;
     padding-top: 2rem;
-    text-align: center;
+    text-align: justify; 
     position: relative;
     height: auto;
+    font-family: 'Roboto', sans-serif;
     margin-top: -200px;
-    clear: both;
-    background-color: rgba(255, 255, 255, 0.89);
+    background-color: #000;
+
+    .container{
+    margin-top:25px !important;
+    }
+
+    a{
+        text-decoration: none;
+        color:gray;
+
+        &:hover{
+            color:#d5d5d5;
+        }
+    }
+
+    img{
+        width:25%; 
+        margin-bottom: 50px;
+
+        @include desktop{
+            width: 50%;
+        }
+
+        &:first-of-type{
+            margin-bottom: 50px;
+        }
+    }
+
+    h5{
+        font-weight: bold;
+        margin-bottom: 15px;
+        color:#fff;
+    }
+
+    p{
+        color:gray;
+    }
 
     @include desktop {
         height: 325px;
         margin-top: -325px;
+        margin-left: 0;
     }
 
     @include desktop {
@@ -30,24 +67,6 @@ footer {
     @include zoom {
         height: 550px;
         margin-top: -550px;
-    }
-
-    a {
-        color: #000;
-    }
-
-    .fa-instagram,
-    .fa-discord,
-    .fa-instagram,
-    .fa-facebook {
-        color: #000;
-    }
-
-    .fa-discord:hover,
-    .fa-discord:hover,
-    .fa-instagram:hover,
-    .fa-facebook-square:hover {
-        color: #c7c7c7;
     }
 
 }
