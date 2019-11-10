@@ -454,7 +454,6 @@ header * {
 
 html,
 body {
-  height: 100%;
   /*background: linear-gradient(50deg,
             rgba(146, 146, 146, 0.02) 0%,
             rgba(146, 146, 146, 0.02) 25%,
@@ -636,10 +635,6 @@ a:hover {
 
 .smooth-scroll {
   scroll-behavior: smooth;
-}
-
-body#body_index {
-  height: 100vh !important;
 }
 
 body#body_index main#bg {
@@ -966,7 +961,7 @@ body#body_index #spel-container section#spel #lol {
   grid-area: "lol";
 }
 
-body#body_index #spel-container section#spel #cs {
+body#body_index #spel-container section#spel #csgo {
   grid-area: "cs";
 }
 
@@ -1578,6 +1573,7 @@ body#body_kontakt section#kontakt iframe {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   padding: 50px 50px 0 50px;
+  line-height: 2;
   /* Create two equal columns that floats next to each other */
   /*.column {
             float: left;
@@ -1611,6 +1607,7 @@ body#body_kontakt section#kontakt iframe {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 40px;
   font-size: 1.5em;
 }
 
@@ -1620,21 +1617,17 @@ body#body_kontakt section#kontakt iframe {
   }
 }
 
-.information section#information .info {
-  -webkit-column-count: 1;
-  /* Old Chrome, Safari and Opera */
-  /* Old Firefox */
-  column-count: 1;
+.information section#information ul {
+  list-style: none;
+  padding: 0;
 }
 
-@media (min-width: 1200px) {
-  .information section#information .info {
-    -webkit-column-count: 2;
-    /* Old Chrome, Safari and Opera */
-    /* Old Firefox */
-    column-count: 2;
-    -webkit-column-gap: 4em;
-    column-gap: 4em;
-  }
+.information section#information ul li {
+  border-bottom: 1px solid #fff;
+}
+
+.information section#information .faq {
+  font-size: 2em;
+  color: #a343db;
 }
 /*# sourceMappingURL=main.css.map */

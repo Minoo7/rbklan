@@ -4,16 +4,26 @@ $(document).ready(function () {
     var fortnite = $("#fortnite");
     var game = $(".game");
 
-    game.children("a").click(function(e) {
+    game.children("a").click(function (e) {
         e.preventDefault();
-     });
+    });
 
     game.click(function () {
-
+        var id = $(this).attr("id");
         var gap = (($("#spel").width()) * 0.1);
         var width = 350 + gap;
 
-        $("#cs,#fortnite").css("box-shadow", "unset");
+        game.not(this).css("box-shadow", "unset");
+
+        if (id == "lol") {
+            lol.css("z-index", "1").transition({
+                x: width
+            }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+            fortnite.transition({
+                x: '-' + width
+            }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+        }
 
         lol.css("z-index", "1").transition({
             x: width
@@ -23,15 +33,20 @@ $(document).ready(function () {
             x: '-' + width
         }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
 
-        var y = $(this).scrollTop();
-        alert(y);
+        sessionStorage.setItem("scrollPos", $("html").scrollTop());
+
+        setTimeout(function () {
+            window.location = "./turneringar.html#" + id;
+        }, 500);
+
+        return false;
     });
 
     /*lol.children("a").click(function (event) {
         var elmnt = document.getElementById("myDIV");
         var y = elmnt.scrollTop;
         event.preventDefault();
-        $("#cs,#fortnite").css("box-shadow", "unset");
+        $("#csgo,#fortnite").css("box-shadow", "unset");
         var gap = (($("#spel").width()) * 0.1);
         var width = 350 + gap;
 
@@ -77,7 +92,7 @@ $(document).ready(function () {
 
     fortnite.children("a").click(function (event) {
         event.preventDefault();
-        $("#lol,#cs").css("box-shadow", "unset");
+        $("#lol,#csgo").css("box-shadow", "unset");
         var gap = (($("#spel").width()) * 0.1);
         var width = 350 + gap;
 
@@ -90,7 +105,7 @@ $(document).ready(function () {
         }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
 
         setTimeout(function () {
-            $("#lol,#cs").css("visibility", "hidden");
+            $("#lol,#csgo").css("visibility", "hidden");
             window.location = "./turneringar.html#csgo";
         }, 500);
 
