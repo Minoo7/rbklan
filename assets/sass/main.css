@@ -956,6 +956,18 @@ body#body_index #spel-container section#spel {
   row-gap: 3em;
 }
 
+@media (min-width: 767px) {
+  body#body_index #spel-container section#spel {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+        grid-template-areas: "lol cs fortnite";
+    -ms-grid-columns: 225px 225px 225px;
+        grid-template-columns: 225px 225px 225px;
+    grid-gap: 35px;
+  }
+}
+
 @media (min-width: 1200px) {
   body#body_index #spel-container section#spel {
     display: -ms-grid;

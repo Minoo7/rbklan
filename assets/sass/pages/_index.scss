@@ -280,6 +280,16 @@ body#body_index {
             margin: auto;
             row-gap: 3em;
 
+            @include tablet {
+                display: grid;
+                //padding-left: 30px;
+                //padding-right: 30px;
+                width: 100%;
+                grid-template-areas: "lol cs fortnite";
+                grid-template-columns: 225px 225px 225px;
+                grid-gap: 35px;
+            }
+
             @include desktop {
                 display: grid;
                 //padding-left: 30px;
