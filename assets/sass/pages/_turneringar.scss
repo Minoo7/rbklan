@@ -121,10 +121,18 @@ body#body_turneringar {
         img {
             display: block;
             margin:auto;
-            width: 40%;
+            width: 80%;
             max-height: 500px;
             border: 1px solid #fff;
             margin-bottom:2em;
+
+            @include tablet{
+                width: 60%;
+            }
+
+            @include desktop{
+                width: 40%;
+            }
 
         }
 
@@ -163,9 +171,16 @@ body#body_turneringar {
             letter-spacing: 0.1em;
         }
 
-        #lolcontainer{
-            padding: 4em 0;
 
+        #lolcontainer{
+            padding-top: 4em;
+        }
+        #lolcontainer,#csgocontainer,#fortnitecontainer{
+            height: auto;
+            @include desktop{
+                height: 1000px;
+            }
+           
         }
 
         h4{
