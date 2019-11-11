@@ -6,11 +6,12 @@
         margin: 80px auto;
         color: #fff;
         font-family: 'Roboto', sans-serif;
-        padding: 50px 50px 0 50px;
+        padding: 30px 20px 0px 20px;
         line-height: 2;
 
         @include desktop {
             width: 70%;
+            padding: 50px 50px 0 50px;
         }
 
         /* Create two equal columns that floats next to each other */
@@ -46,6 +47,10 @@
             @include desktop {
                 font-size: 2.5em;
             }
+        }
+
+        p{
+            text-align: justify;
         }
 
         ul {
@@ -114,6 +119,7 @@
                 p {
                     margin-bottom: 0;
                     padding-bottom: 0;
+                    text-align: initial;
                 }
 
                 .question {
@@ -146,10 +152,6 @@
                         //display: inline-block;
                     }*/
                 }
-
-                /*p {
-                    margin-bottom: 0;
-                }*/
             }
         }
     }

@@ -283,14 +283,14 @@ header {
                         background: 0 0;
                         font-weight: 600;
                         //color: #7880a4;
-                        color: #808080;
+                        color: #fff;
                         cursor: pointer;
                         font-family: Montserrat, sans-serif;
                         transition: color 0.25s;
 
                         &:hover {
                             background: 0 0;
-                            color: color(white);
+                            color: #808080;
 
                             &:before {
                                 opacity: 1;
