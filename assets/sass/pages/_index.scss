@@ -115,7 +115,8 @@ body#body_index {
                 ul {
                     max-width: 300px;
                     text-align: center;
-                    width: 300px;
+                    //width: 300px;
+                    width: 100%;
                     display: inline-block;
 
                     @include desktop {
@@ -128,18 +129,59 @@ body#body_index {
                         margin: 0 0px;
                         float: left;
                         width: 25%;
+                        list-style-type: none;
 
-                        span {
+                        /*span {
+
                             display: block;
                             text-align: center;
-                            font-size: 40px;
+                            font-size: 50px;
                             line-height: 50px;
                             padding: 21px 0 12px;
                             font-family: 'Aldrich', sans-serif;
 
+                            /*margin: 0;
+                            overflow-wrap: break-word;
+                            //display: inline-block;
+                            display: block;
+                            //display: inline-block;
+                            text-align: center;
+                            //ogfont-size: 40px;
+                            font-size: 50px;
+                            line-height: 50px;
+                            padding: 21px 0 12px;
+                            font-family: 'Aldrich', sans-serif;
+                            //vertical-align: baseline;
+                            width: 100%;
+                            //max-width: 100px;
+                            -webkit-font-smoothing: antialiased;
+                            -webkit-box-direction: normal;
+
+                            text-size-adjust: 100%;
+                            
+
+                            //font test
+
+                            font-stretch: 100%;
+
+                            
                             @include desktop {
                                 font-size: 50px;
-                            }
+                            }*/
+
+                            /*margin: 0;
+                            padding: 0;
+                            border: 0;
+                            outline: 0;*/
+                        //}
+
+                        span {
+                            display: block;
+                            text-align: center;
+                            font-size: 50px;
+                            line-height: 50px;
+                            padding: 21px 0 12px;
+                            font-family: 'Aldrich', sans-serif;
                         }
 
                         p {
@@ -231,6 +273,7 @@ body#body_index {
 
     #spel-container {
         margin-bottom: 1.5em;
+
         @include desktop {
             padding: 100px;
         }
@@ -657,3 +700,23 @@ body#body_index {
         }
     }
 }
+
+/*! CSS Used from: https://dreamhack.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.0 ; media=all */
+/*@media all {*
+
+    div,
+    span {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        font-family: inherit;
+        font-size: 100%;
+        font-style: inherit;
+        font-weight: inherit;
+    }
+}
+*/

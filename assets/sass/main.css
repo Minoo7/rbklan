@@ -774,7 +774,7 @@ body#body_index main section#primary div ::-moz-selection {
 body#body_index main section#primary div ul {
   max-width: 300px;
   text-align: center;
-  width: 300px;
+  width: 100%;
   display: inline-block;
 }
 
@@ -790,21 +790,57 @@ body#body_index main section#primary div ul li {
   margin: 0 0px;
   float: left;
   width: 25%;
+  list-style-type: none;
+  /*span {
+
+                            display: block;
+                            text-align: center;
+                            font-size: 50px;
+                            line-height: 50px;
+                            padding: 21px 0 12px;
+                            font-family: 'Aldrich', sans-serif;
+
+                            /*margin: 0;
+                            overflow-wrap: break-word;
+                            //display: inline-block;
+                            display: block;
+                            //display: inline-block;
+                            text-align: center;
+                            //ogfont-size: 40px;
+                            font-size: 50px;
+                            line-height: 50px;
+                            padding: 21px 0 12px;
+                            font-family: 'Aldrich', sans-serif;
+                            //vertical-align: baseline;
+                            width: 100%;
+                            //max-width: 100px;
+                            -webkit-font-smoothing: antialiased;
+                            -webkit-box-direction: normal;
+
+                            text-size-adjust: 100%;
+                            
+
+                            //font test
+
+                            font-stretch: 100%;
+
+                            
+                            @include desktop {
+                                font-size: 50px;
+                            }*/
+  /*margin: 0;
+                            padding: 0;
+                            border: 0;
+                            outline: 0;*/
 }
 
 body#body_index main section#primary div ul li span {
   display: block;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 50px;
   padding: 21px 0 12px;
   font-family: 'Aldrich', sans-serif;
-}
-
-@media (min-width: 1200px) {
-  body#body_index main section#primary div ul li span {
-    font-size: 50px;
-  }
 }
 
 body#body_index main section#primary div ul li p {
@@ -1382,6 +1418,25 @@ body#body_index #biljetter-container .boka a {
   }
 }
 
+/*! CSS Used from: https://dreamhack.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.0 ; media=all */
+/*@media all {*
+
+    div,
+    span {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        font-family: inherit;
+        font-size: 100%;
+        font-style: inherit;
+        font-weight: inherit;
+    }
+}
+*/
 body#body_turneringar #turneringar-content {
   background-color: #101011;
   /*color: color(white);
