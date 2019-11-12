@@ -1438,197 +1438,103 @@ body#body_index #biljetter-container .boka a {
 }
 */
 body#body_turneringar #turneringar-content {
-  background-color: #101011;
-  /*color: color(white);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 90%;
+  margin: 150px auto;
+  padding: 1em 0;
+}
 
-        //background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
+@media (min-width: 1200px) {
+  body#body_turneringar #turneringar-content {
+    width: 70%;
+  }
+}
 
-        h1 {
-            text-align: center;
-            margin: 0 auto;
-            font-size: 58px;
-            text-transform: uppercase;
-
-            /* @include desktop{
+body#body_turneringar #turneringar-content h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 58px;
+  text-transform: uppercase;
+  /* @include desktop{
             text-align: left;
             margin: 0;
-            }
-        }
+            }*/
+}
 
-        p {
-            text-align: center;
-            margin: 20px 0 25px 0;
-            font-size: 24px;
-
-             @include desktop{
+body#body_turneringar #turneringar-content p {
+  text-align: center;
+  margin: 20px 0 25px 0;
+  font-size: 24px;
+  /* @include desktop{
             margin-bottom: 0;
-            }
-        }
+            }*/
+}
 
-        }
-
-        .wrapper {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            width: 80%;
-            margin: 2em auto;
-            border-bottom: 1px solid color(primary);
-            border-radius: 1px;
-
-            @include desktop {
+body#body_turneringar #turneringar-content .wrapper {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  width: 80%;
+  margin: 2em auto;
+  border-bottom: 1px solid #a343db;
+  border-radius: 1px;
+  /* @include desktop {
             width: 80%;
             margin: auto;
             display: grid;
             grid-template-areas: "lol cs fortnite";
             grid-template-columns: 50% auto;
-            }
+            }*/
+}
 
-            &:last-of-type {
-                border-bottom: none;
-            }
+body#body_turneringar #turneringar-content .wrapper:last-of-type {
+  border-bottom: none;
+}
 
-            img {
-                width: 350px;
-            }
-
-            h2 {
-                text-align: center;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 700;
-            }
-
-            ul {
-                font-size: 20px;
-                color: #a8a8a8;
-                letter-spacing: 0.5px;
-                display: block;
-                margin: 0 auto 20px auto;
-                width: 50%;
-                padding: 0;
-                list-style: none;
-
-                @include desktop {
-                    width: 300px;
+body#body_turneringar #turneringar-content .wrapper .wrapper-bg {
+  /*&#lol-bg {
+                    background: url("https://maas.museum/app/uploads/2017/08/splashart1.jpg");
                 }
-            }
-        }*/
+
+                filter: blur(8px);
+                -webkit-filter: blur(8px);
+
+                width: 100%;
+                height: 100%;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;*/
 }
 
-body#body_turneringar #turneringar-content ul {
-  color: #fff;
-  display: block;
-  list-style: none;
-  width: 100%;
-  margin: auto;
-  text-align: justify;
-  padding: 0;
-}
-
-body#body_turneringar #turneringar-content hr {
-  border: 1px solid #fff;
-  border-radius: 20px;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
-  width: 250px;
-}
-
-@media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content hr {
-    width: 400px;
-  }
-}
-
-body#body_turneringar #turneringar-content h1 {
-  color: #fff;
-  text-align: center;
-  font-size: 2em;
-  text-transform: uppercase;
-  padding: 10px;
-  margin-top: .5em;
-  margin-bottom: .5em;
-  font-weight: 500;
-}
-
-@media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content h1 {
-    font-size: 4em;
-    letter-spacing: 0.2em;
-  }
-}
-
-body#body_turneringar #turneringar-content img {
-  display: block;
-  margin: auto;
+body#body_turneringar #turneringar-content .wrapper .wrapper-text {
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
   width: 80%;
-  max-height: 500px;
-  border: 1px solid #fff;
-  margin-bottom: 2em;
-}
-
-@media (min-width: 767px) {
-  body#body_turneringar #turneringar-content img {
-    width: 60%;
-  }
-}
-
-@media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content img {
-    width: 40%;
-  }
-}
-
-body#body_turneringar #turneringar-content .fa-circle {
-  color: #a343db;
-  margin-right: 5px;
-}
-
-body#body_turneringar #turneringar-content h2 {
-  color: #fff;
+  padding: 20px;
   text-align: center;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  padding: 10px;
-  margin: auto;
-  margin-bottom: 0;
-  font-weight: 400;
 }
 
-@media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content h2 {
-    width: 50%;
-    margin-top: 150px;
-    font-size: 3em;
-    letter-spacing: 0.1em;
-  }
+body#body_turneringar #turneringar-content .wrapper img {
+  width: 350px;
 }
 
-body#body_turneringar #turneringar-content h5 {
-  color: #fff;
+body#body_turneringar #turneringar-content .wrapper h2 {
   text-align: center;
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
 }
 
-body#body_turneringar #turneringar-content #lolcontainer {
-  padding-top: 4em;
-}
-
-body#body_turneringar #turneringar-content #lolcontainer, body#body_turneringar #turneringar-content #csgocontainer, body#body_turneringar #turneringar-content #fortnitecontainer {
-  height: auto;
-}
-
-@media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content #lolcontainer, body#body_turneringar #turneringar-content #csgocontainer, body#body_turneringar #turneringar-content #fortnitecontainer {
-    height: 1000px;
-  }
-}
-
-body#body_turneringar #turneringar-content h4 {
+body#body_turneringar #turneringar-content .wrapper ul {
   font-size: 20px;
-  color: #fff;
+  color: #a8a8a8;
   letter-spacing: 0.5px;
   display: block;
   margin: 0 auto 20px auto;
@@ -1638,9 +1544,33 @@ body#body_turneringar #turneringar-content h4 {
 }
 
 @media (min-width: 1200px) {
-  body#body_turneringar #turneringar-content h4 {
-    width: 70%;
+  body#body_turneringar #turneringar-content .wrapper ul {
+    width: 300px;
   }
+}
+
+body#body_turneringar .logos {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  opacity: 1;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 1200px) {
+  body#body_turneringar .logos {
+    width: 300px;
+  }
+}
+
+body#body_turneringar .bg-turneringar {
+  background-image: url("../images/spelbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }
 
 body#body_regler .banner {

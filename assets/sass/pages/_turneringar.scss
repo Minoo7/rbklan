@@ -1,10 +1,14 @@
 body#body_turneringar {
     #turneringar-content {
-        background-color: #101011;
-        /*color: color(white);
+        color: color(white);
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 90%;
+        margin: 150px auto;
+        padding: 1em 0;
 
-        //background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
+        @include desktop {
+            width: 70%;
+        }
 
         h1 {
             text-align: center;
@@ -15,7 +19,7 @@ body#body_turneringar {
             /* @include desktop{
             text-align: left;
             margin: 0;
-            }
+            }*/
         }
 
         p {
@@ -23,31 +27,60 @@ body#body_turneringar {
             margin: 20px 0 25px 0;
             font-size: 24px;
 
-             @include desktop{
+            /* @include desktop{
             margin-bottom: 0;
-            }
-        }
-
+            }*/
         }
 
         .wrapper {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400;
             width: 80%;
             margin: 2em auto;
             border-bottom: 1px solid color(primary);
             border-radius: 1px;
 
-            @include desktop {
+            /* @include desktop {
             width: 80%;
             margin: auto;
             display: grid;
             grid-template-areas: "lol cs fortnite";
             grid-template-columns: 50% auto;
-            }
+            }*/
 
             &:last-of-type {
                 border-bottom: none;
+            }
+
+
+            .wrapper-bg {
+                /*&#lol-bg {
+                    background: url("https://maas.museum/app/uploads/2017/08/splashart1.jpg");
+                }
+
+                filter: blur(8px);
+                -webkit-filter: blur(8px);
+
+                width: 100%;
+                height: 100%;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;*/
+            }
+
+            .wrapper-text {
+                color: white;
+                font-weight: bold;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
             }
 
             img {
@@ -74,134 +107,28 @@ body#body_turneringar {
                     width: 300px;
                 }
             }
-        }*/
-
-        
-
-        ul {
-            color: #fff;
-            display: block;
-            list-style: none;
-            width:100%;
-            margin:auto;
-            text-align: justify;
-            padding:0;
-        }
-
-
-        
-        hr {
-            border: 1px solid color(white);
-            border-radius: 20px;
-            transition: opacity 0.5s linear;
-            width: 250px;
-    
-            @include desktop {
-                width: 400px;
-            }
-        }
-
-        h1 {
-            color: color(white);
-            text-align: center;
-            font-size: 2em;
-            text-transform: uppercase;
-            padding: 10px;
-            //margin: 0px 0 50px 0;
-            margin-top:.5em;
-            margin-bottom:.5em;
-            font-weight: 500;
-
-            @include desktop {
-                font-size: 4em;
-                letter-spacing: 0.2em;
-            }
-        }
-
-        img {
-            display: block;
-            margin:auto;
-            width: 80%;
-            max-height: 500px;
-            border: 1px solid #fff;
-            margin-bottom:2em;
-
-            @include tablet{
-                width: 60%;
-            }
-
-            @include desktop{
-                width: 40%;
-            }
-
-        }
-
-        .fa-circle{
-            color: color(primary);
-            margin-right: 5px;
-        }
-
-        h2 {
-            color: color(white);
-            text-align: center;
-            font-size: 1.5em;
-            text-transform: uppercase;
-            padding: 10px;
-            
-            margin: auto;
-            //margin: 0px 0 50px 0;
-            margin-bottom: 0;
-            
-            font-weight: 400;
-
-            @include desktop {
-                width: 50%;
-                margin-top: 150px;
-                font-size: 3em;
-                letter-spacing: 0.1em;
-            }
-        }
-
-        h5{
-            color: color(white);
-            text-align: center;
-            font-size: 2em;
-            text-transform: uppercase;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-        }
-
-
-        #lolcontainer{
-            padding-top: 4em;
-        }
-        #lolcontainer,#csgocontainer,#fortnitecontainer{
-            height: auto;
-            @include desktop{
-                height: 1000px;
-            }
-           
-        }
-
-        h4{
-            font-size: 20px;
-            color: #fff;
-            letter-spacing: 0.5px;
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 50%;
-            padding: 0;
-            list-style: none;
-
-            @include desktop {
-                width: 70%;
-            }  
         }
     }
 
+    .logos {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        opacity: 1;
+        margin-bottom: 1em;
 
+        @include desktop {
+            width: 300px;
+        }
+    }
 
-
-
-
+    .bg-turneringar {
+        background-image: url("../images/spelbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+    }
 }
