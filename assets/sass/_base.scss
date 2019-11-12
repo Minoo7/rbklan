@@ -7,6 +7,7 @@ $borders: 15px;
 $tablet: 767px;
 $desktop: 1200px;
 $zoom: 4000px;
+$desktopxl: 1400px;
 
 @function color($color-name) {
     @return map-get($colors, $color-name);
@@ -23,6 +24,13 @@ $zoom: 4000px;
         @content;
     }
 }
+
+@mixin desktopxl {
+    @media (min-width: #{$desktopxl}) {
+        @content;
+    }
+}
+
 
 @mixin zoom {
     @media (min-width: #{$zoom}) {

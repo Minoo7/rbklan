@@ -20,7 +20,12 @@ body#body_kontakt {
         font-family: 'Roboto', sans-serif;
 
         @include desktop {
-            width: 70%;
+            width: 100%;
+        }
+
+        @include desktopxl {
+            width: 80%;
+            padding: 50px 50px 0 50px;
         }
 
         /* Create two equal columns that floats next to each other */

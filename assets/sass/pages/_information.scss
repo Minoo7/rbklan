@@ -10,7 +10,7 @@
         line-height: 2;
 
         @include desktop {
-            width: 70%;
+            width: 80%;
             padding: 50px 50px 0 50px;
         }
 
@@ -86,7 +86,10 @@
                     //padding-left: 30px;
                     font-weight: bold;
                     display: block;
-                    width: 6vw;
+                    width: 90px;
+                    @include desktop{
+                        width: 6vw;
+                    }
                     //padding: .25rem .25vw 0;
                     position: absolute;
                     text-align: center;
