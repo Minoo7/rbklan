@@ -4,7 +4,7 @@ body#body_turneringar {
         //background-color: rgba(0, 0, 0, 0.9);
         background-color: #101011;
         //width: 500px;
-        width: 80%;
+        width: 90%;
         height: 100%;
         margin: 150px auto;
         //padding: 1em 0;
@@ -132,8 +132,12 @@ body#body_turneringar {
 
                 p {
                     color: #a8a8a8;
-                    font-size: 24px;
+                    font-size: 16px;
                     text-align: start;
+
+                    @include desktop{
+                        font-size: 24px;
+                    }
                 }
 
                 .logos {
@@ -141,8 +145,12 @@ body#body_turneringar {
                     margin-left: auto;
                     margin-right: auto;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-                    width: 350px;
+                    width: 250px;
                     height: 100%;
+
+                    @include desktop{
+                        width: 350px;
+                    }
                 }
 
                 .text {
@@ -155,7 +163,7 @@ body#body_turneringar {
                     }
 
                     ul {
-                        font-size: 20px;
+                        font-size: 16px;
                         letter-spacing: 0.5px;
                         color: #a8a8a8;
                         display: block;
@@ -164,9 +172,9 @@ body#body_turneringar {
                         padding: 0;
                         list-style: none;
 
-                        /*@include desktop {
-                            width: 300px;
-                        }*/
+                        @include desktop {
+                            font-size: 20px;
+                        }
 
                         li {
                             display: block;

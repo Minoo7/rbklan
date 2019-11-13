@@ -1433,7 +1433,7 @@ body#body_index #biljetter-container .boka a {
 body#body_turneringar #turneringar-content {
   color: #fff;
   background-color: #101011;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin: 150px auto;
   /*p {
@@ -1541,8 +1541,14 @@ body#body_turneringar #turneringar-content .wrapper .content:last-of-type {
 
 body#body_turneringar #turneringar-content .wrapper .content p {
   color: #a8a8a8;
-  font-size: 24px;
+  font-size: 16px;
   text-align: start;
+}
+
+@media (min-width: 1200px) {
+  body#body_turneringar #turneringar-content .wrapper .content p {
+    font-size: 24px;
+  }
 }
 
 body#body_turneringar #turneringar-content .wrapper .content .logos {
@@ -1551,8 +1557,14 @@ body#body_turneringar #turneringar-content .wrapper .content .logos {
   margin-right: auto;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
-  width: 350px;
+  width: 250px;
   height: 100%;
+}
+
+@media (min-width: 1200px) {
+  body#body_turneringar #turneringar-content .wrapper .content .logos {
+    width: 350px;
+  }
 }
 
 body#body_turneringar #turneringar-content .wrapper .content .text {
@@ -1565,16 +1577,19 @@ body#body_turneringar #turneringar-content .wrapper .content .text h2 {
 }
 
 body#body_turneringar #turneringar-content .wrapper .content .text ul {
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   color: #a8a8a8;
   display: block;
   width: 100%;
   padding: 0;
   list-style: none;
-  /*@include desktop {
-                            width: 300px;
-                        }*/
+}
+
+@media (min-width: 1200px) {
+  body#body_turneringar #turneringar-content .wrapper .content .text ul {
+    font-size: 20px;
+  }
 }
 
 body#body_turneringar #turneringar-content .wrapper .content .text ul li {
