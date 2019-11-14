@@ -1465,6 +1465,7 @@ body#body_turneringar #turneringar-content h1 {
 @media (min-width: 1200px) {
   body#body_turneringar #turneringar-content h1 {
     font-size: 2.5em;
+    letter-spacing: 0.2em;
   }
 }
 
@@ -1652,6 +1653,7 @@ body#body_kontakt section#kontakt {
   margin: 80px auto;
   color: #fff;
   font-family: 'Roboto', sans-serif;
+  padding: 30px 20px 0px 20px;
   /* Create two equal columns that floats next to each other */
   /* Clear floats after the columns */
 }
@@ -1672,7 +1674,8 @@ body#body_kontakt section#kontakt {
 body#body_kontakt section#kontakt .column {
   float: left;
   width: 100%;
-  padding: 50px 50px 0 50px;
+  padding-right: 15px;
+  padding-left: 15px;
   height: 100%;
   background-color: transparent;
 }
@@ -1711,6 +1714,21 @@ body#body_kontakt section#kontakt img#skola {
 body#body_kontakt section#kontakt h1,
 body#body_kontakt section#kontakt h2 {
   font-weight: bold;
+}
+
+body#body_kontakt section#kontakt h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-size: 1.5em;
+}
+
+@media (min-width: 1200px) {
+  body#body_kontakt section#kontakt h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+  }
 }
 
 body#body_kontakt section#kontakt iframe {
@@ -1783,6 +1801,7 @@ body#body_kontakt section#kontakt iframe {
 @media (min-width: 1200px) {
   .information section#information h1 {
     font-size: 2.5em;
+    letter-spacing: 0.2em;
   }
 }
 
