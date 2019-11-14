@@ -765,16 +765,21 @@ body#body_index main section#primary div ::-moz-selection {
 }
 
 body#body_index main section#primary div ul {
-  max-width: 300px;
-  text-align: center;
+  max-width: unset;
   width: 100%;
   display: inline-block;
+  text-align: center;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 350px) {
+  body#body_index main section#primary div ul {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 420px) {
   body#body_index main section#primary div ul {
     max-width: 400px;
-    width: 400px;
   }
 }
 
@@ -782,58 +787,46 @@ body#body_index main section#primary div ul li {
   display: block;
   margin: 0 0px;
   float: left;
-  width: 25%;
+  width: 20%;
   list-style-type: none;
-  /*span {
+}
 
-                            display: block;
-                            text-align: center;
-                            font-size: 50px;
-                            line-height: 50px;
-                            padding: 21px 0 12px;
-                            font-family: 'Aldrich', sans-serif;
+@media screen and (min-width: 350px) {
+  body#body_index main section#primary div ul li {
+    width: 25%;
+  }
+}
 
-                            /*margin: 0;
-                            overflow-wrap: break-word;
-                            //display: inline-block;
-                            display: block;
-                            //display: inline-block;
-                            text-align: center;
-                            //ogfont-size: 40px;
-                            font-size: 50px;
-                            line-height: 50px;
-                            padding: 21px 0 12px;
-                            font-family: 'Aldrich', sans-serif;
-                            //vertical-align: baseline;
-                            width: 100%;
-                            //max-width: 100px;
-                            -webkit-font-smoothing: antialiased;
-                            -webkit-box-direction: normal;
+body#body_index main section#primary div ul li#seconds-container span {
+  display: inline-block;
+  width: 29px;
+  padding-left: 0;
+  padding-right: 0;
+}
 
-                            text-size-adjust: 100%;
-                            
+body#body_index main section#primary div ul li#seconds-container span:nth-of-type(2) {
+  margin-left: -5px;
+}
 
-                            //font test
-
-                            font-stretch: 100%;
-
-                            
-                            @include desktop {
-                                font-size: 50px;
-                            }*/
-  /*margin: 0;
-                            padding: 0;
-                            border: 0;
-                            outline: 0;*/
+@media screen and (min-width: 350px) {
+  body#body_index main section#primary div ul li#seconds-container span {
+    width: 36.5px;
+  }
 }
 
 body#body_index main section#primary div ul li span {
   display: block;
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 50px;
   padding: 21px 0 12px;
   font-family: 'Aldrich', sans-serif;
+}
+
+@media screen and (min-width: 350px) {
+  body#body_index main section#primary div ul li span {
+    font-size: 50px;
+  }
 }
 
 body#body_index main section#primary div ul li p {

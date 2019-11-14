@@ -111,6 +111,11 @@ $(document).ready(function () {
     });*/
 });
 
+function math(ntn, number) {
+    var len = Math.floor(Math.log(number) / Math.LN10) - ntn;
+    return ((number / Math.pow(10, len)) % 10) | 0;
+}
+
 function minTwoDigits(n) {
     return (n < 10 ? '0' : '') + n;
 }
@@ -119,8 +124,14 @@ function minTwoDigits(n) {
 //var countDownDate = new Date("Jan 7, 2020 17:00:00").getTime();
 var countDownDate = new Date("Mar 6, 2020 19:00:00").getTime();
 
+var second;
+var seconds_1;
+var seconds_2;
+
 // Update the count down every 1 second
 var x = setInterval(function () {
+    //setInterval(function () {
+    //function funcName() {
 
     // Get today's date and time
     var now = new Date().getTime();
@@ -133,9 +144,21 @@ var x = setInterval(function () {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     //var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    
-    //var second_1 = Math.round(minTwoDigits(seconds) /= 10);
+
+    second = Math.floor((distance % (1000 * 60)) / 1000);
+    //seconds_1 = Math.floor((distance % (1000 * 60)) / 1000);
+    //seconds_2 = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //seconds_1 = Math.round(second / 10);
+    //seconds_2 = (second * 1 % 10);
+
+    seconds_1 = math(0, second);
+    seconds_2 = math(1, second);
+
+    //seconds_1 = Math.round(minTwoDigits(seconds) /= 10);
+
+    //var seconds_1 = Math.round(minTwoDigits(seconds) /= 10);
+    //console.log(seconds_1);
 
     // Display the result in the element with id="demo"
     //document.getElementById("countdown").innerHTML = days + "" + hours + " " +
@@ -144,7 +167,11 @@ var x = setInterval(function () {
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = minTwoDigits(hours);
     document.getElementById("minutes").innerHTML = minTwoDigits(minutes);
-    document.getElementById("seconds").innerHTML = minTwoDigits(seconds);
+    //document.getElementById("seconds").innerHTML = minTwoDigits(seconds);
+    document.getElementById("seconds_1").innerHTML = seconds_1;
+    document.getElementById("seconds_2").innerHTML = seconds_2;
+    //document.getElementById("seconds").innerHTML = seconds;
+
 
     // If the count down is finished, write some text
     if (distance < 0) {
@@ -158,7 +185,10 @@ var x = setInterval(function () {
     }
 }, 1000);
 
-var $document = $(document);
+//var run = setInterval(funcName, 1000)
+//setInterval(funcName, 1000)
+
+//var $document = $(document);
 
 /*$(document).ready(function() {
     if ($document.scrollTop() < 400) {
