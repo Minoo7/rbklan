@@ -10,12 +10,13 @@
 footer {
     color: #fff;
     padding-top: 2rem;
-    text-align: justify; 
+    text-align: center; 
     position: relative;
     height: auto;
     font-family: 'Roboto', sans-serif;
     margin-top: -200px;
     background-color: #000;
+
 
     .container{
     margin-top:25px !important;
@@ -31,16 +32,30 @@ footer {
     }
 
     img{
-        width:25%; 
-        margin-bottom: 50px;
+        width:25%;
+        margin: 0 1em 2em 1em;
+        display:inline-block;
+        border: 1px dashed #fff;
 
         @include desktop{
             width: 50%;
+            margin: auto; 
+
+            &:first-of-type{
+                margin-bottom: 50px;
+            }
         }
 
-        &:first-of-type{
-            margin-bottom: 50px;
+        @include tablet{
+            width: 50%;
+            margin: auto; 
+
+            &:first-of-type{
+                margin-bottom: 50px;
+            }
         }
+
+      
     }
 
     h5{
@@ -53,10 +68,14 @@ footer {
         color:gray;
     }
 
+    @include tablet {
+        text-align: left; 
+    }
+
     @include desktop {
         height: 325px;
         margin-top: -325px;
-        margin-left: 0;
+        text-align: left; 
     }
 
     @include zoom {

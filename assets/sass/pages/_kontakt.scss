@@ -67,21 +67,24 @@ body#body_kontakt {
             }
         }
 
-        h1,
-        h2 {
-            font-weight: bold;
-        }
-
         h1 {
-            font-weight: bold;
+            color: #fff;
+            font-size: 1.8em;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            font-size: 1.5em;
-
+            padding: 10px;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+    
+            @include tablet {
+                font-size: 2em;
+                letter-spacing: 0.1em;
+            }
+    
             @include desktop {
                 font-size: 2.5em;
-                letter-spacing: 0.2em;
+                letter-spacing: 0.15em;
             }
         }
 

@@ -18,23 +18,21 @@ body#body_turneringar {
         }
 
         h1 {
+            color: #fff;
             text-align: center;
-            font-weight: bold;
+            font-size: 2em;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            font-size: 1.5em;
+            padding: 10px;
+            margin: 0px 0 1.5em 0;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.2em;
 
             @include desktop {
-                font-size: 2.5em;
+                font-size: 4em;
                 letter-spacing: 0.2em;
             }
 
-
-            /* @include desktop{
-            text-align: left;
-            margin: 0;
-            }*/
         }
 
         /*p {

@@ -36,19 +36,28 @@
           }
       }*/
 
-        h1 {
-            text-align: center;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            font-size: 1.5em;
+      h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0px 0 1.5em 0;
+        font-weight: 500;
+        transition: opacity 0.5s linear;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
 
-            @include desktop {
-                font-size: 2.5em;
-                letter-spacing: 0.2em;
-            }
+        @include tablet {
+            font-size: 2em;
+            letter-spacing: 0.1em;
         }
+
+        @include desktop {
+            font-size: 2.5em;
+            letter-spacing: 0.15em;
+        }
+    }
 
         p{
             text-align: justify;

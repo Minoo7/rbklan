@@ -158,7 +158,7 @@ body#body_index {
                                     margin-left: -5px;
                                 }
 
-                                @media screen and (min-width: 350px) {
+                               @media screen and (min-width: 350px) {
                                     width: 36.5px;
                                 }
                             }
@@ -172,7 +172,7 @@ body#body_index {
                             padding: 21px 0 12px;
                             font-family: 'Aldrich', sans-serif;
 
-                            @media screen and (min-width: 350px) {
+                            @media screen and (min-width: 450px) {
                                 font-size: 50px;
                             }
                         }
@@ -408,114 +408,6 @@ body#body_index {
         }
     }
 
-    #om-container {
-
-        padding: 50px 50px 50px 50px;
-
-        /*background-image: linear-gradient(to bottom,
-            #000,
-            rgba(#000, 0)),
-        linear-gradient(to top,
-            #000,
-            rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;*/
-        background-color: rgb(50, 54, 57);
-
-        @include desktop {
-            padding: 150px 50px 150px 50px;
-            width: 100%;
-        }
-
-        h1 {
-            color: #fff;
-            text-align: center;
-            font-size: 2em;
-
-            text-transform: uppercase;
-            padding: 10px;
-            margin: 0px 0 100px 0;
-            font-weight: 500;
-            transition: opacity 0.5s linear;
-
-            @include desktop {
-                font-size: 3.5em;
-                letter-spacing: 0.2em;
-            }
-        }
-
-        p {
-            color: #fff;
-            text-align: center;
-            font-size: 1.15em;
-            transition: opacity 0.5s linear;
-        }
-
-        section#om {
-
-
-            @include desktop {
-                display: grid;
-                justify-content: center;
-                justify-items: center;
-                width: 80%;
-                margin: auto;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-                grid-gap: 1em;
-                row-gap: 1em;
-            }
-
-            >div {
-                padding: 1em;
-            }
-
-            .om-text {
-                grid-column: 1/2;
-                grid-row: 1/2;
-            }
-
-            .adress {
-                grid-column: 2/3;
-                grid-row: 1/2;
-            }
-
-            .standard-biljett {
-                grid-column: 1/2;
-                grid-row: 2/3;
-            }
-
-            .vip-biljett {
-                grid-column: 2/3;
-                grid-row: 2/3;
-            }
-
-            .boka {
-                grid-column: 1/3;
-            }
-        }
-
-        .om-text {
-            padding: 2.5em !important;
-        }
-
-
-        //Info-box
-        .card {
-            background: transparent;
-            color: #fff;
-            padding: 20px;
-            width: 100%;
-            border-style: none;
-
-            h2 {
-                text-align: justify;
-                text-transform: uppercase;
-            }
-        }
-    }
-
 
     #biljetter-container {
         padding: 1em;
@@ -540,17 +432,18 @@ body#body_index {
             color: #fff;
             text-align: center;
             font-size: 2em;
-
             text-transform: uppercase;
             padding: 10px;
-            margin: 0px 0 100px 0;
+            margin: 0px 0 1.5em 0;
             font-weight: 500;
             transition: opacity 0.5s linear;
+            letter-spacing: 0.2em;
 
             @include desktop {
-                font-size: 3.5em;
+                font-size: 4em;
                 letter-spacing: 0.2em;
             }
+
         }
 
         p {

@@ -16,7 +16,7 @@
 footer {
   color: #fff;
   padding-top: 2rem;
-  text-align: justify;
+  text-align: center;
   position: relative;
   height: auto;
   font-family: 'Roboto', sans-serif;
@@ -39,17 +39,29 @@ footer a:hover {
 
 footer img {
   width: 25%;
-  margin-bottom: 50px;
+  margin: 0 1em 2em 1em;
+  display: inline-block;
+  border: 1px dashed #fff;
 }
 
 @media (min-width: 1200px) {
   footer img {
     width: 50%;
+    margin: auto;
+  }
+  footer img:first-of-type {
+    margin-bottom: 50px;
   }
 }
 
-footer img:first-of-type {
-  margin-bottom: 50px;
+@media (min-width: 767px) {
+  footer img {
+    width: 50%;
+    margin: auto;
+  }
+  footer img:first-of-type {
+    margin-bottom: 50px;
+  }
 }
 
 footer h5 {
@@ -62,11 +74,17 @@ footer p {
   color: gray;
 }
 
+@media (min-width: 767px) {
+  footer {
+    text-align: left;
+  }
+}
+
 @media (min-width: 1200px) {
   footer {
     height: 325px;
     margin-top: -325px;
-    margin-left: 0;
+    text-align: left;
   }
 }
 
@@ -823,7 +841,7 @@ body#body_index main section#primary div ul li span {
   font-family: 'Aldrich', sans-serif;
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 450px) {
   body#body_index main section#primary div ul li span {
     font-size: 50px;
   }
@@ -1076,136 +1094,6 @@ body#body_index #spel-container section#spel h2 {
   margin-bottom: 50px;
 }
 
-body#body_index #om-container {
-  padding: 50px 50px 50px 50px;
-  /*background-image: linear-gradient(to bottom,
-            #000,
-            rgba(#000, 0)),
-        linear-gradient(to top,
-            #000,
-            rgba(#000, 0)), url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/keyboard-6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;*/
-  background-color: #323639;
-}
-
-@media (min-width: 1200px) {
-  body#body_index #om-container {
-    padding: 150px 50px 150px 50px;
-    width: 100%;
-  }
-}
-
-body#body_index #om-container h1 {
-  color: #fff;
-  text-align: center;
-  font-size: 2em;
-  text-transform: uppercase;
-  padding: 10px;
-  margin: 0px 0 100px 0;
-  font-weight: 500;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
-}
-
-@media (min-width: 1200px) {
-  body#body_index #om-container h1 {
-    font-size: 3.5em;
-    letter-spacing: 0.2em;
-  }
-}
-
-body#body_index #om-container p {
-  color: #fff;
-  text-align: center;
-  font-size: 1.15em;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
-}
-
-@media (min-width: 1200px) {
-  body#body_index #om-container section#om {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    justify-items: center;
-    width: 80%;
-    margin: auto;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    grid-gap: 1em;
-    row-gap: 1em;
-  }
-}
-
-body#body_index #om-container section#om > div {
-  padding: 1em;
-}
-
-body#body_index #om-container section#om .om-text {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-body#body_index #om-container section#om .adress {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-body#body_index #om-container section#om .standard-biljett {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-}
-
-body#body_index #om-container section#om .vip-biljett {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-}
-
-body#body_index #om-container section#om .boka {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
-}
-
-body#body_index #om-container .om-text {
-  padding: 2.5em !important;
-}
-
-body#body_index #om-container .card {
-  background: transparent;
-  color: #fff;
-  padding: 20px;
-  width: 100%;
-  border-style: none;
-}
-
-body#body_index #om-container .card h2 {
-  text-align: justify;
-  text-transform: uppercase;
-}
-
 body#body_index #biljetter-container {
   padding: 1em;
   width: 100%;
@@ -1228,15 +1116,16 @@ body#body_index #biljetter-container h1 {
   font-size: 2em;
   text-transform: uppercase;
   padding: 10px;
-  margin: 0px 0 100px 0;
+  margin: 0px 0 1.5em 0;
   font-weight: 500;
   -webkit-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
+  letter-spacing: 0.2em;
 }
 
 @media (min-width: 1200px) {
   body#body_index #biljetter-container h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     letter-spacing: 0.2em;
   }
 }
@@ -1450,21 +1339,21 @@ body#body_turneringar #turneringar-content p {
 }
 
 body#body_turneringar #turneringar-content h1 {
+  color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-size: 2em;
   text-transform: uppercase;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  font-size: 1.5em;
-  /* @include desktop{
-            text-align: left;
-            margin: 0;
-            }*/
+  padding: 10px;
+  margin: 0px 0 1.5em 0;
+  font-weight: 500;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  letter-spacing: 0.2em;
 }
 
 @media (min-width: 1200px) {
   body#body_turneringar #turneringar-content h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     letter-spacing: 0.2em;
   }
 }
@@ -1711,23 +1600,29 @@ body#body_kontakt section#kontakt img#skola {
   }
 }
 
-body#body_kontakt section#kontakt h1,
-body#body_kontakt section#kontakt h2 {
-  font-weight: bold;
+body#body_kontakt section#kontakt h1 {
+  color: #fff;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: 500;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
 }
 
-body#body_kontakt section#kontakt h1 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  font-size: 1.5em;
+@media (min-width: 767px) {
+  body#body_kontakt section#kontakt h1 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+  }
 }
 
 @media (min-width: 1200px) {
   body#body_kontakt section#kontakt h1 {
     font-size: 2.5em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
   }
 }
 
@@ -1790,18 +1685,30 @@ body#body_kontakt section#kontakt iframe {
 }
 
 .information section#information h1 {
+  color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-size: 1.8em;
   text-transform: uppercase;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  font-size: 1.5em;
+  padding: 10px;
+  margin: 0px 0 1.5em 0;
+  font-weight: 500;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+@media (min-width: 767px) {
+  .information section#information h1 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+  }
 }
 
 @media (min-width: 1200px) {
   .information section#information h1 {
     font-size: 2.5em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
   }
 }
 
