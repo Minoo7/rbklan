@@ -39,76 +39,6 @@ $(document).ready(function () {
 
         return false;
     });
-
-    /*lol.children("a").click(function (event) {
-        var elmnt = document.getElementById("myDIV");
-        var y = elmnt.scrollTop;
-        event.preventDefault();
-        $("#csgo,#fortnite").css("box-shadow", "unset");
-        var gap = (($("#spel").width()) * 0.1);
-        var width = 350 + gap;
-
-        lol.css("z-index", "1").transition({
-            x: width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        fortnite.transition({
-            x: '-' + width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        setTimeout(function () {
-            window.location = "./turneringar.html#lol";
-        }, 500);
-
-        return false;
-    });
-
-    csgo.children("a").click(function (event) {
-        event.preventDefault();
-        $("#lol,#fortnite").css("box-shadow", "unset");
-        var gap = (($("#spel").width()) * 0.1);
-        var width = 350 + gap;
-
-        //csgo.children("a").children("img").css("width", "351px");
-
-        csgo.css("z-index", "5");
-
-        lol.transition({
-            x: width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        fortnite.transition({
-            x: '-' + width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        setTimeout(function () {
-            window.location = "./turneringar.html#csgo";
-        }, 500);
-
-        return false;
-    });
-
-    fortnite.children("a").click(function (event) {
-        event.preventDefault();
-        $("#lol,#csgo").css("box-shadow", "unset");
-        var gap = (($("#spel").width()) * 0.1);
-        var width = 350 + gap;
-
-        lol.transition({
-            x: width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        fortnite.css("z-index", "5").transition({
-            x: '-' + width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        setTimeout(function () {
-            $("#lol,#csgo").css("visibility", "hidden");
-            window.location = "./turneringar.html#csgo";
-        }, 500);
-
-        return false;
-    });*/
 });
 
 function math(ntn, number) {
@@ -121,7 +51,6 @@ function minTwoDigits(n) {
 }
 
 // Set the date we're counting down to
-//var countDownDate = new Date("Jan 7, 2020 17:00:00").getTime();
 var countDownDate = new Date("Mar 6, 2020 19:00:00").getTime();
 
 var second;
@@ -129,95 +58,45 @@ var seconds_1;
 var seconds_2;
 
 // Update the count down every 1 second
-var x = setInterval(function () {
-    //setInterval(function () {
-    //function funcName() {
+$(document).ready(function () {
+    function counter() {
 
-    // Get today's date and time
-    var now = new Date().getTime();
+        // Get today's date and time
+        var now = new Date().getTime();
 
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    second = Math.floor((distance % (1000 * 60)) / 1000);
-    //seconds_1 = Math.floor((distance % (1000 * 60)) / 1000);
-    //seconds_2 = Math.floor((distance % (1000 * 60)) / 1000);
+        second = minTwoDigits(Math.floor((distance % (1000 * 60)) / 1000));
+        second = second.toString();
 
-    //seconds_1 = Math.round(second / 10);
-    //seconds_2 = (second * 1 % 10);
+        seconds_1 = second.charAt(0);
+        seconds_2 = second.charAt(1);
 
-    seconds_1 = math(0, second);
-    seconds_2 = math(1, second);
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = minTwoDigits(hours);
+        document.getElementById("minutes").innerHTML = minTwoDigits(minutes);
+        document.getElementById("seconds_1").innerHTML = seconds_1;
+        document.getElementById("seconds_2").innerHTML = seconds_2;
 
-    //seconds_1 = Math.round(minTwoDigits(seconds) /= 10);
-
-    //var seconds_1 = Math.round(minTwoDigits(seconds) /= 10);
-    //console.log(seconds_1);
-
-    // Display the result in the element with id="demo"
-    //document.getElementById("countdown").innerHTML = days + "" + hours + " " +
-    //    minutes + ":" + seconds;
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = minTwoDigits(hours);
-    document.getElementById("minutes").innerHTML = minTwoDigits(minutes);
-    //document.getElementById("seconds").innerHTML = minTwoDigits(seconds);
-    document.getElementById("seconds_1").innerHTML = seconds_1;
-    document.getElementById("seconds_2").innerHTML = seconds_2;
-    //document.getElementById("seconds").innerHTML = seconds;
-
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("days").innerHTML = "";
-        document.getElementById("hours").innerHTML = "";
-        document.getElementById("minutes").innerHTML = "";
-        document.getElementById("seconds").innerHTML = "";
-        $("#primary div ul li p").hide();
-        $("#live").show();
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown-container").style.display = "none";
+            $("#live").show();
+        }
     }
-}, 1000);
 
-//var run = setInterval(funcName, 1000)
-//setInterval(funcName, 1000)
+    // run it initially
+    counter();
 
-//var $document = $(document);
-
-/*$(document).ready(function() {
-    if ($document.scrollTop() < 400) {
-        $("hr").eq(0).css("display", "none");
-        $("#spel img").css("opacity", "0");
-        $("#spel-container h1").css("opacity", "0");
-        $("#om-container h2").css("opacity", "0");
-        $("#om-container p").css("opacity", "0");
-        $("#om-container img").css("opacity", "0");
-        $("#biljetter-container h1").css("opacity", "0");
-        $("#biljetter-container p").css("opacity", "0");
-
-        $document.scroll(function () {
-            if ($document.scrollTop() > 0) {
-                $("hr").eq(0).css("display", "block");
-            }
-            if ($document.scrollTop() > 700) {
-                $("#spel img").css("opacity", "1");
-                $("#spel-container h1").css("opacity", "1");
-            }
-            if ($document.scrollTop() > 400) {
-                $("#om-container h2").css("opacity", "1");
-                $("#om-container p").css("opacity", "1");
-                $("#om-container img").css("opacity", "1");
-            }
-            if ($document.scrollTop() > 900){
-                $("#biljetter-container h1").css("opacity", "1");
-                $("#biljetter-container p").css("opacity", "1");
-            }
-        });
-    }
-});*/
+    // run it every second
+    var x = setInterval(function () {
+        counter();
+    }, 1000);
+});
