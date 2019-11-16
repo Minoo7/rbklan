@@ -948,10 +948,6 @@ body#body_index main section#primary #logo-container {
 
 body#body_index main section#primary #logo-container img {
   width: 250px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 @media (min-width: 1200px) {
@@ -1394,10 +1390,6 @@ body#body_turneringar #turneringar-content h1 {
   transition: opacity 0.5s linear;
   letter-spacing: 0.1em;
   line-height: 1.5;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   margin: 0 0 1.5em 0;
 }
 

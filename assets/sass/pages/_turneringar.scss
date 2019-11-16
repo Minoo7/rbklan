@@ -33,7 +33,6 @@ body#body_turneringar {
             transition: opacity 0.5s linear;
             letter-spacing: 0.1em;
             line-height: 1.5;
-            user-select: none; 
             margin: 0 0 1.5em 0;
 
             @include tablet {

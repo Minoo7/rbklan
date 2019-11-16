@@ -236,8 +236,7 @@ body#body_index {
             #logo-container {
                 img {
                     width: 250px;
-                    user-select: none;
-
+                    
                     @include desktop {
                         width: 400px;
                     }
