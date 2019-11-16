@@ -11,11 +11,10 @@ body#body_turneringar {
         font-family: 'Roboto', sans-serif;
         padding: 30px 35px 0px 35px;
         margin-top: 80px;
+        margin-bottom: 80px;
         //padding: 1em 0;
 
         @include desktop {
-            margin-top: 80px;
-            margin-bottom: 80px;
             width: 50%;
         }
 
