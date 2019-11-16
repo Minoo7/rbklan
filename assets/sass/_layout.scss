@@ -1,7 +1,25 @@
 .ham_on {
     overflow-y: hidden;
-    margin-right: 10px !important;
+    //overflow-y: overlay;
+    //overflow-y: scroll;
+    //margin-right: 10px !important;
+    padding-right: 10px !important;
+
+    ::-webkit-scrollbar-thumb {
+        background: rgb(0, 0, 0) !important;
+    }
+
+    
 }
+
+/*body, #body {
+    max-height: 100%;
+    overflow-y: scroll;
+}*/
+
+/*body {
+    margin-right: 10px !important;
+}*/
 
 html,
 body {
@@ -91,46 +109,46 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px !important;
-    height: 10px !important;
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-button {
-    width: 0px !important;
-    height: 0px !important;
+    width: 0px;
+    height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #a343DB !important;
-    border: none !important;
-    border-radius: 0px !important;
+    background: #a343DB;
+    border: none;
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: white !important;
+    background: white;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: white !important;
+    background: white;
 }
 
-::-webkit-scrollbar-track {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0px !important;
+/*::-webkit-scrollbar-track {
+    background: transparent;
+    border: none;
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-track:hover {
-    background: transparent !important;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-track:active {
-    background: transparent !important;
+    background: transparent;
 }
 
-::-webkit-scrollbar-corner {
-    background: transparent !important;
-}
+/*::-webkit-scrollbar-corner {
+    background: transparent;
+}*/
 
 #container {
     min-height: 100%;

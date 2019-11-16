@@ -196,8 +196,6 @@ header .overlay a {
   font-size: 20px;
   color: #fff;
   display: block;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 @media screen and (min-height: 450px) {
@@ -225,12 +223,13 @@ header .overlay .closebtn {
   }
 }
 
-header .overlay .overlay-content {
-  position: relative;
+header .overlay #overlay-content {
+  position: absolute;
   top: 25%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
+  right: 10px;
 }
 
 header a {
@@ -483,9 +482,20 @@ header * {
 }*/
 .ham_on {
   overflow-y: hidden;
-  margin-right: 10px !important;
+  padding-right: 10px !important;
 }
 
+.ham_on ::-webkit-scrollbar-thumb {
+  background: black !important;
+}
+
+/*body, #body {
+    max-height: 100%;
+    overflow-y: scroll;
+}*/
+/*body {
+    margin-right: 10px !important;
+}*/
 html,
 body {
   /*background: linear-gradient(50deg,
@@ -571,66 +581,48 @@ body {
   margin: 0;
 }
 
-#loading {
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  position: fixed;
-  display: block;
-  z-index: 99;
-}
-
-#loading-image {
-  position: absolute;
-  top: 40%;
-  left: 45%;
-  z-index: 100;
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px !important;
-  height: 10px !important;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-button {
-  width: 0px !important;
-  height: 0px !important;
+  width: 0px;
+  height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a343DB !important;
-  border: none !important;
-  border-radius: 0px !important;
+  background: #a343DB;
+  border: none;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: white !important;
+  background: white;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: white !important;
+  background: white;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0px !important;
+/*::-webkit-scrollbar-track {
+    background: transparent;
+    border: none;
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-track:hover {
-  background: transparent !important;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-track:active {
-  background: transparent !important;
+    background: transparent;
 }
 
-::-webkit-scrollbar-corner {
-  background: transparent !important;
-}
-
+/*::-webkit-scrollbar-corner {
+    background: transparent;
+}*/
 #container {
   min-height: 100%;
 }
@@ -930,6 +922,10 @@ body#body_index main section#primary #logo-container {
 
 body#body_index main section#primary #logo-container img {
   width: 250px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 1200px) {
@@ -1050,7 +1046,7 @@ body#body_index #spel-container section#spel .game {
   cursor: pointer;
 }
 
-body#body_index #spel-container section#spel .game:hover .overlay {
+body#body_index #spel-container section#spel .game:hover .overlay-card {
   opacity: 0.75;
 }
 
@@ -1082,7 +1078,7 @@ body#body_index #spel-container section#spel p {
   color: #ccc;
 }
 
-body#body_index #spel-container section#spel .overlay {
+body#body_index #spel-container section#spel .overlay-card {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1096,11 +1092,7 @@ body#body_index #spel-container section#spel .overlay {
   background-color: black;
 }
 
-body#body_index #spel-container section#spel .overlay#myNav {
-  height: 0;
-}
-
-body#body_index #spel-container section#spel .text {
+body#body_index #spel-container section#spel .overlay-card .text {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -1111,7 +1103,7 @@ body#body_index #spel-container section#spel .text {
   text-align: center;
 }
 
-body#body_index #spel-container section#spel h2 {
+body#body_index #spel-container section#spel .overlay-card h2 {
   margin-bottom: 50px;
 }
 
@@ -1338,7 +1330,9 @@ body#body_turneringar #turneringar-content {
   background-color: #101011;
   width: 90%;
   height: 100%;
-  margin: 150px auto;
+  margin: 80px auto;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 20px 0px 20px;
   /*p {
             text-align: center;
             margin: 20px 0 25px 0;
@@ -1362,20 +1356,32 @@ body#body_turneringar #turneringar-content p {
 body#body_turneringar #turneringar-content h1 {
   color: #fff;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: uppercase;
   padding: 10px;
-  margin: 0px 0 1.5em 0;
+  margin: 0 1.5em 0;
   font-weight: 500;
   -webkit-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (min-width: 767px) {
+  body#body_turneringar #turneringar-content h1 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+  }
 }
 
 @media (min-width: 1200px) {
   body#body_turneringar #turneringar-content h1 {
-    font-size: 4em;
-    letter-spacing: 0.2em;
+    font-size: 2.5em;
+    letter-spacing: 0.15em;
   }
 }
 
@@ -1711,12 +1717,16 @@ body#body_kontakt section#kontakt iframe {
   font-size: 1.8em;
   text-transform: uppercase;
   padding: 10px;
-  margin: 0px 0 1.5em 0;
+  margin: 1.5em 0 1.5em 0;
   font-weight: 500;
   -webkit-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
   letter-spacing: 0.1em;
   line-height: 1.5;
+}
+
+.information section#information h1:nth-of-type(1) {
+  margin-top: 0;
 }
 
 @media (min-width: 767px) {

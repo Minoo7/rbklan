@@ -1,8 +1,7 @@
 $(document).ready(function () {
-    var scrollPos = sessionStorage.getItem("scrollPos");
-    window.scrollTo(scrollPos, 0);
+    //window.scrollTo(scrollPos, 0);
 
-    var topMargin = $(".content").position().top
+    var topMargin = $(".content").position().top;
     var bottomMargin = 58;
 
     var l_h = $("#lol .content").height()+topMargin+bottomMargin;
@@ -15,7 +14,7 @@ $(document).ready(function () {
 });
 
 $(window).on('resize', function (){
-    var topMargin = $(".content").position().top
+    var topMargin = $(".content").position().top;
     var bottomMargin = 58;
 
     var l_h = $("#lol .content").height()+topMargin+bottomMargin;

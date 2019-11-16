@@ -10,7 +10,7 @@
 footer {
     color: #fff;
     padding-top: 2rem;
-    text-align: center; 
+    text-align: center;
     position: relative;
     height: auto;
     font-family: 'Roboto', sans-serif;
@@ -18,64 +18,64 @@ footer {
     background-color: #000;
 
 
-    .container{
-    margin-top:25px !important;
+    .container {
+        margin-top: 25px !important;
     }
 
-    a{
+    a {
         text-decoration: none;
-        color:gray;
+        color: gray;
 
-        &:hover{
-            color:#d5d5d5;
+        &:hover {
+            color: #d5d5d5;
         }
     }
 
-    img{
-        width:25%;
+    img {
+        width: 25%;
         margin: 0 1em 2em 1em;
-        display:inline-block;
+        display: inline-block;
         border: 1px dashed #fff;
 
-        @include desktop{
+        @include desktop {
             width: 50%;
-            margin: auto; 
+            margin: auto;
 
-            &:first-of-type{
+            &:first-of-type {
                 margin-bottom: 50px;
             }
         }
 
-        @include tablet{
+        @include tablet {
             width: 50%;
-            margin: auto; 
+            margin: auto;
 
-            &:first-of-type{
+            &:first-of-type {
                 margin-bottom: 50px;
             }
         }
 
-      
+
     }
 
-    h5{
+    h5 {
         font-weight: bold;
         margin-bottom: 15px;
-        color:#fff;
+        color: #fff;
     }
 
-    p{
-        color:gray;
+    p {
+        color: gray;
     }
 
     @include tablet {
-        text-align: left; 
+        text-align: left;
     }
 
     @include desktop {
         height: 325px;
         margin-top: -325px;
-        text-align: left; 
+        text-align: left;
     }
 
     @include zoom {
@@ -163,6 +163,7 @@ header {
 
         &.cross {
             path {
+
                 &#top,
                 &#bottom {
                     stroke-dashoffset: -650px;
@@ -194,7 +195,7 @@ header {
             font-size: 20px;
             color: color(white);
             display: block;
-            transition: 0.3s;
+            //transition: 0.3s;
 
             @media screen and (min-height: 450px) {
                 font-size: 36px;
@@ -219,12 +220,17 @@ header {
             }
         }
 
-        .overlay-content {
-            position: relative;
+        #overlay-content {
+            //position: relative;
+            position: absolute;
             top: 25%;
             width: 100%;
             text-align: center;
             margin-top: 30px;
+
+            //&.overlay-margin {
+                right: 10px;
+            //}
         }
     }
 
