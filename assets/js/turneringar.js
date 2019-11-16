@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.onload = (function () {
     //window.scrollTo(scrollPos, 0);
 
     var topMargin = $(".content").position().top;
