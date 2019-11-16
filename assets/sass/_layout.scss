@@ -7,9 +7,7 @@
 
     ::-webkit-scrollbar-thumb {
         background: rgb(0, 0, 0) !important;
-    }
-
-    
+    }    
 }
 
 /*body, #body {
@@ -157,6 +155,7 @@ body {
 #body {
     padding-bottom: 200px;
     overflow: auto;
+    overflow-y: hidden;
 
     @include desktop {
         padding-bottom: 320px;

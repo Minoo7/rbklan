@@ -88,8 +88,12 @@ footer {
 header.scrolled {
     background-color: #000 !important;
     transition: all 0.3s;
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.20);
+}
+
+header.scrolled_i {
+    background-color: #000 !important;
+    transition: none;
 }
 
 header {
@@ -115,67 +119,6 @@ header {
     @media (min-width: 767px) {
         height: 80px;
         padding: 0 30px;
-    }
-
-    #hamburger {
-        overflow: hidden;
-        width: 41px;
-        height: 38px;
-        margin-top: 0px;
-        z-index: 1;
-
-        div {
-            svg {
-                margin-top: -15.5px;
-                margin-left: -14px;
-                width: 65px;
-                height: 65px;
-                cursor: pointer;
-                -webkit-transform: translate3d(0, 0, 0);
-                -moz-transform: translate3d(0, 0, 0);
-                -o-transform: translate3d(0, 0, 0);
-                -ms-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-
-                path {
-                    fill: none;
-                    -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
-                    -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
-                    -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
-                    -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
-                    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
-                    stroke-width: 40px;
-                    stroke-linecap: round;
-                    stroke: color(primary);
-                    stroke-dashoffset: 0px;
-
-                    &#top,
-                    &#bottom {
-                        stroke-dasharray: 240px 950px;
-                    }
-
-                    &#middle {
-                        stroke-dasharray: 240px 240px;
-                    }
-                }
-            }
-        }
-
-        &.cross {
-            path {
-
-                &#top,
-                &#bottom {
-                    stroke-dashoffset: -650px;
-                    stroke-dashoffset: -650px;
-                }
-
-                &#middle {
-                    stroke-dashoffset: -115px;
-                    stroke-dasharray: 1px 220px;
-                }
-            }
-        }
     }
 
     .overlay {
@@ -228,9 +171,13 @@ header {
             text-align: center;
             margin-top: 30px;
 
-            //&.overlay-margin {
-                right: 10px;
-            //}
+            &.overlay-margin {
+                left: -5px;                
+            }
+
+            &.phone-margin {
+                left: 0 !important;
+            }
         }
     }
 
@@ -358,6 +305,72 @@ header {
         justify-content: center;
         position: relative;
         margin-left: 20px;
+
+        &.hamburger-margin {
+            margin-right: 10px;
+            //display: none;
+        }
+
+        #hamburger {
+            overflow: hidden;
+            width: 41px;
+            height: 38px;
+            margin-top: 0px;
+            z-index: 1;
+    
+            div {
+                svg {
+                    margin-top: -15.5px;
+                    margin-left: -14px;
+                    width: 65px;
+                    height: 65px;
+                    cursor: pointer;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -moz-transform: translate3d(0, 0, 0);
+                    -o-transform: translate3d(0, 0, 0);
+                    -ms-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+    
+                    path {
+                        fill: none;
+                        -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+                        -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+                        -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+                        -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+                        transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+                        stroke-width: 40px;
+                        stroke-linecap: round;
+                        stroke: color(primary);
+                        stroke-dashoffset: 0px;
+    
+                        &#top,
+                        &#bottom {
+                            stroke-dasharray: 240px 950px;
+                        }
+    
+                        &#middle {
+                            stroke-dasharray: 240px 240px;
+                        }
+                    }
+                }
+            }
+    
+            &.cross {
+                path {
+    
+                    &#top,
+                    &#bottom {
+                        stroke-dashoffset: -650px;
+                        stroke-dashoffset: -650px;
+                    }
+    
+                    &#middle {
+                        stroke-dashoffset: -115px;
+                        stroke-dasharray: 1px 220px;
+                    }
+                }
+            }
+        }
 
         button {
             color: inherit;
