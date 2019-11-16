@@ -10,6 +10,7 @@ body#body_turneringar {
         height: 100%;
         font-family: 'Roboto', sans-serif;
         padding: 30px 35px 0px 35px;
+        margin-top: 80px;
         //padding: 1em 0;
 
         @include desktop {
@@ -32,17 +33,18 @@ body#body_turneringar {
             transition: opacity 0.5s linear;
             letter-spacing: 0.1em;
             line-height: 1.5;
-            user-select: none;
+            user-select: none; 
+            margin: 0 0 1.5em 0;
 
             @include tablet {
                 font-size: 2em;
                 letter-spacing: 0.1em;
+               
             }
 
             @include desktop {
                 font-size: 2.5em;
                 letter-spacing: 0.15em;
-                margin: 0 1.5em 0;
             }
         }
 
