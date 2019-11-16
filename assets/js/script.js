@@ -17,6 +17,8 @@ $(document).ready(function () {
 		var $nav = $("header");
 		$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 	});
+
+	document.getElementsByTagName("html")[0].style.visibility = "visible";
 });
 
 (function () {

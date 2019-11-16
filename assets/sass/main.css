@@ -521,6 +521,10 @@ header * {
 /*body {
     margin-right: 10px !important;
 }*/
+html {
+  visibility: hidden;
+}
+
 html,
 body {
   /*background: linear-gradient(50deg,

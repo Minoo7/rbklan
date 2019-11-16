@@ -11,6 +11,7 @@ window.onload = (function () {
     $("#lol-bg").height(l_h);
     $("#csgo-bg").height(c_h);
     $("#fortnite-bg").height(f_h);
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
 });
 
 $(window).on('resize', function (){
