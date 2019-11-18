@@ -5,14 +5,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
-/*nav {
-    background-color: #000;
-    box-shadow: 0px 5px 10px #000;
-
-    img {
-        width:100px;
-    }
-}*/
 footer {
   color: #fff;
   padding-top: 2rem;
@@ -22,6 +14,7 @@ footer {
   font-family: 'Roboto', sans-serif;
   margin-top: -200px;
   background-color: #000;
+  padding-bottom: 40px;
 }
 
 footer .container {
@@ -54,16 +47,6 @@ footer img {
   }
 }
 
-@media (min-width: 767px) {
-  footer img {
-    width: 50%;
-    margin: auto;
-  }
-  footer img:first-of-type {
-    margin-bottom: 50px;
-  }
-}
-
 footer h5 {
   font-weight: bold;
   margin-bottom: 15px;
@@ -76,7 +59,7 @@ footer p {
 
 @media (min-width: 767px) {
   footer {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -84,7 +67,7 @@ footer p {
   footer {
     height: 325px;
     margin-top: -325px;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -464,47 +447,6 @@ header * {
   outline: 0;
 }
 
-/*::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-button {
-    width: 0;
-    height: 0;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #a8aeca;
-    border: 0 none #fff;
-    border-radius: 10px;
-    transition: background 0.2s ease;
-
-    &:hover {
-        background: #969bb3;
-    }
-
-    &:active {
-        background: #787d92;
-    }
-}
-
-::-webkit-scrollbar-track {
-    background: #1f2233;
-    border: 0 none #fff;
-    border-radius: 50px;
-}
-
-::-webkit-scrollbar-corner {
-    background: 0 0;
-}
-
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-moz-placeholder,
-:-ms-input-placeholder {
-    color: #676e8a;
-}*/
 .ham_on {
   overflow-y: hidden;
   padding-right: 10px !important;
@@ -514,94 +456,12 @@ header * {
   background: black !important;
 }
 
-/*body, #body {
-    max-height: 100%;
-    overflow-y: scroll;
-}*/
-/*body {
-    margin-right: 10px !important;
-}*/
 html {
   visibility: hidden;
 }
 
 html,
 body {
-  /*background: linear-gradient(50deg,
-            rgba(146, 146, 146, 0.02) 0%,
-            rgba(146, 146, 146, 0.02) 25%,
-            rgba(82, 82, 82, 0.02) 25%,
-            rgba(82, 82, 82, 0.02) 50%,
-            rgba(217, 217, 217, 0.02) 50%,
-            rgba(217, 217, 217, 0.02) 75%,
-            rgba(41, 41, 41, 0.02) 75%,
-            rgba(41, 41, 41, 0.02) 100%),
-        linear-gradient(252deg,
-            rgba(126, 126, 126, 0.01) 0%,
-            rgba(126, 126, 126, 0.01) 25%,
-            rgba(117, 117, 117, 0.01) 25%,
-            rgba(117, 117, 117, 0.01) 50%,
-            rgba(219, 219, 219, 0.01) 50%,
-            rgba(219, 219, 219, 0.01) 75%,
-            rgba(41, 41, 41, 0.01) 75%,
-            rgba(41, 41, 41, 0.01) 100%),
-        linear-gradient(272deg,
-            rgba(166, 166, 166, 0.01) 0%,
-            rgba(166, 166, 166, 0.01) 20%,
-            rgba(187, 187, 187, 0.01) 20%,
-            rgba(187, 187, 187, 0.01) 40%,
-            rgba(238, 238, 238, 0.01) 40%,
-            rgba(238, 238, 238, 0.01) 60%,
-            rgba(204, 204, 204, 0.01) 60%,
-            rgba(204, 204, 204, 0.01) 80%,
-            rgba(5, 5, 5, 0.01) 80%,
-            rgba(5, 5, 5, 0.01) 100%),
-        linear-gradient(86deg,
-            rgba(143, 143, 143, 0.02) 0%,
-            rgba(143, 143, 143, 0.02) 12.5%,
-            rgba(36, 36, 36, 0.02) 12.5%,
-            rgba(36, 36, 36, 0.02) 25%,
-            rgba(23, 23, 23, 0.02) 25%,
-            rgba(23, 23, 23, 0.02) 37.5%,
-            rgba(223, 223, 223, 0.02) 37.5%,
-            rgba(223, 223, 223, 0.02) 50%,
-            rgba(101, 101, 101, 0.02) 50%,
-            rgba(101, 101, 101, 0.02) 62.5%,
-            rgba(94, 94, 94, 0.02) 62.5%,
-            rgba(94, 94, 94, 0.02) 75%,
-            rgba(148, 148, 148, 0.02) 75%,
-            rgba(148, 148, 148, 0.02) 87.5%,
-            rgba(107, 107, 107, 0.02) 87.5%,
-            rgba(107, 107, 107, 0.02) 100%),
-        linear-gradient(25deg,
-            rgba(2, 2, 2, 0.02) 0%,
-            rgba(2, 2, 2, 0.02) 16.667%,
-            rgba(51, 51, 51, 0.02) 16.667%,
-            rgba(51, 51, 51, 0.02) 33.334%,
-            rgba(26, 26, 26, 0.02) 33.334%,
-            rgba(26, 26, 26, 0.02) 50.001000000000005%,
-            rgba(238, 238, 238, 0.02) 50.001%,
-            rgba(238, 238, 238, 0.02) 66.668%,
-            rgba(128, 128, 128, 0.02) 66.668%,
-            rgba(128, 128, 128, 0.02) 83.33500000000001%,
-            rgba(21, 21, 21, 0.02) 83.335%,
-            rgba(21, 21, 21, 0.02) 100.002%),
-        linear-gradient(325deg,
-            rgba(95, 95, 95, 0.03) 0%,
-            rgba(95, 95, 95, 0.03) 14.286%,
-            rgba(68, 68, 68, 0.03) 14.286%,
-            rgba(68, 68, 68, 0.03) 28.572%,
-            rgba(194, 194, 194, 0.03) 28.572%,
-            rgba(194, 194, 194, 0.03) 42.858%,
-            rgba(51, 51, 51, 0.03) 42.858%,
-            rgba(51, 51, 51, 0.03) 57.144%,
-            rgba(110, 110, 110, 0.03) 57.144%,
-            rgba(110, 110, 110, 0.03) 71.42999999999999%,
-            rgba(64, 64, 64, 0.03) 71.43%,
-            rgba(64, 64, 64, 0.03) 85.71600000000001%,
-            rgba(31, 31, 31, 0.03) 85.716%,
-            rgba(31, 31, 31, 0.03) 100.002%),
-        linear-gradient(90deg, hsl(80, 0%, 14%), hsl(80, 0%, 14%));*/
   background-color: #000;
 }
 
@@ -610,7 +470,6 @@ body {
   margin: 0;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -635,23 +494,6 @@ body {
   background: white;
 }
 
-/*::-webkit-scrollbar-track {
-    background: transparent;
-    border: none;
-    border-radius: 0px;
-}
-
-::-webkit-scrollbar-track:hover {
-    background: transparent;
-}
-
-::-webkit-scrollbar-track:active {
-    background: transparent;
-}
-
-/*::-webkit-scrollbar-corner {
-    background: transparent;
-}*/
 #container {
   min-height: 100%;
 }
@@ -730,22 +572,12 @@ body#body_index main section#primary {
   color: #fff;
   padding: 25px;
   text-align: center;
-  /*@include desktop {
-            grid-area: primary;
-            text-align: left;
-            margin: 4em 0 0 4em;
-        }*/
 }
 
 body#body_index main section#primary h2 {
   font-size: 3em;
   margin: 10px 0 20px 0;
   text-transform: uppercase;
-  /*@include desktop {
-                width: 80%;
-                font-size: 4em;
-                line-height: 0.9em;
-            }*/
 }
 
 body#body_index main section#primary #rbk {
@@ -866,7 +698,13 @@ body#body_index main section#primary div ul li#seconds-container span {
 }
 
 body#body_index main section#primary div ul li#seconds-container span:nth-of-type(2) {
-  margin-left: -5px;
+  margin-left: -15px;
+}
+
+@media screen and (min-width: 450px) {
+  body#body_index main section#primary div ul li#seconds-container span:nth-of-type(2) {
+    margin-left: -5px;
+  }
 }
 
 @media screen and (min-width: 350px) {
@@ -878,7 +716,7 @@ body#body_index main section#primary div ul li#seconds-container span:nth-of-typ
 body#body_index main section#primary div ul li span {
   display: block;
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 50px;
   padding: 21px 0 12px;
   font-family: 'Aldrich', sans-serif;
@@ -1133,23 +971,23 @@ body#body_index #spel-container section#spel .overlay-card h2 {
   margin-bottom: 50px;
 }
 
-body#body_index #biljetter-container {
+body#body_index .biljetter-container {
   padding: 1em;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
-  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0))), url("../images/biljetter.jpg");
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), url("../images/biljetter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 @media (min-width: 1200px) {
-  body#body_index #biljetter-container {
+  body#body_index .biljetter-container {
     padding: 100px;
   }
 }
 
-body#body_index #biljetter-container h1 {
+body#body_index .biljetter-container h1 {
   color: #fff;
   text-align: center;
   font-size: 2em;
@@ -1163,13 +1001,13 @@ body#body_index #biljetter-container h1 {
 }
 
 @media (min-width: 1200px) {
-  body#body_index #biljetter-container h1 {
+  body#body_index .biljetter-container h1 {
     font-size: 4em;
     letter-spacing: 0.2em;
   }
 }
 
-body#body_index #biljetter-container p {
+body#body_index .biljetter-container p {
   color: #fff;
   text-align: center;
   font-size: 1.15em;
@@ -1178,7 +1016,7 @@ body#body_index #biljetter-container p {
 }
 
 @media (min-width: 1200px) {
-  body#body_index #biljetter-container section#biljett {
+  body#body_index .biljetter-container section#biljett {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
@@ -1196,11 +1034,11 @@ body#body_index #biljetter-container p {
   }
 }
 
-body#body_index #biljetter-container section#biljett > div {
+body#body_index .biljetter-container section#biljett > div {
   padding: 1em;
 }
 
-body#body_index #biljetter-container section#biljett .om-text {
+body#body_index .biljetter-container section#biljett .om-text {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -1209,7 +1047,7 @@ body#body_index #biljetter-container section#biljett .om-text {
   grid-row: 1/2;
 }
 
-body#body_index #biljetter-container section#biljett .adress {
+body#body_index .biljetter-container section#biljett .adress {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -1218,7 +1056,7 @@ body#body_index #biljetter-container section#biljett .adress {
   grid-row: 1/2;
 }
 
-body#body_index #biljetter-container section#biljett .standard-biljett {
+body#body_index .biljetter-container section#biljett .standard-biljett {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -1227,7 +1065,7 @@ body#body_index #biljetter-container section#biljett .standard-biljett {
   grid-row: 1/2;
 }
 
-body#body_index #biljetter-container section#biljett .vip-biljett {
+body#body_index .biljetter-container section#biljett .vip-biljett {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -1236,7 +1074,7 @@ body#body_index #biljetter-container section#biljett .vip-biljett {
   grid-row: 1/2;
 }
 
-body#body_index #biljetter-container section#biljett .boka {
+body#body_index .biljetter-container section#biljett .boka {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
@@ -1245,57 +1083,52 @@ body#body_index #biljetter-container section#biljett .boka {
   grid-row: 2/3;
 }
 
-body#body_index #biljetter-container .om-text {
+body#body_index .biljetter-container .om-text {
   padding: 2.5em !important;
 }
 
-body#body_index #biljetter-container .card {
+body#body_index .biljetter-container .card {
   background: transparent;
   color: #fff;
   padding: 20px;
   width: 100%;
   border-style: none;
-  /*
-        @include desktop {
-            grid-area: card;
-            height: fit-content;
-        }*/
 }
 
-body#body_index #biljetter-container .card h1,
-body#body_index #biljetter-container .card h2,
-body#body_index #biljetter-container .card p {
+body#body_index .biljetter-container .card h1,
+body#body_index .biljetter-container .card h2,
+body#body_index .biljetter-container .card p {
   text-align: center;
 }
 
-body#body_index #biljetter-container .card h2 {
+body#body_index .biljetter-container .card h2 {
   text-align: justify;
   text-transform: uppercase;
 }
 
-body#body_index #biljetter-container .card h1 {
+body#body_index .biljetter-container .card h1 {
   margin: 0 !important;
 }
 
-body#body_index #biljetter-container .card p.display {
+body#body_index .biljetter-container .card p.display {
   color: #a343db;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-body#body_index #biljetter-container .card p.price {
+body#body_index .biljetter-container .card p.price {
   font-size: 4em;
   margin-bottom: 0;
   font-family: 'Aldrich', sans-serif;
 }
 
-body#body_index #biljetter-container .boka {
+body#body_index .biljetter-container .boka {
   width: 100%;
   text-align: center;
 }
 
-body#body_index #biljetter-container .boka a {
+body#body_index .biljetter-container .boka a {
   font-size: 1.5em;
   color: white;
   border-radius: 5px;
@@ -1317,14 +1150,14 @@ body#body_index #biljetter-container .boka a {
 }
 
 @media (min-width: 1200px) {
-  body#body_index #biljetter-container .boka a {
+  body#body_index .biljetter-container .boka a {
     padding: 15px 60px;
     width: 300px;
   }
 }
 
 @media (min-width: 1200px) {
-  body#body_index #biljetter-container .boka a:hover {
+  body#body_index .biljetter-container .boka a:hover {
     /* IE 9 */
     -webkit-transform: scale(1.2);
     /* Safari 3-8 */
@@ -1332,25 +1165,6 @@ body#body_index #biljetter-container .boka a {
   }
 }
 
-/*! CSS Used from: https://dreamhack.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.0 ; media=all */
-/*@media all {*
-
-    div,
-    span {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-        font-family: inherit;
-        font-size: 100%;
-        font-style: inherit;
-        font-weight: inherit;
-    }
-}
-*/
 body#body_turneringar #turneringar-content {
   color: #fff;
   background-color: #101011;
@@ -1362,19 +1176,11 @@ body#body_turneringar #turneringar-content {
   padding: 30px 35px 0px 35px;
   margin-top: 80px;
   margin-bottom: 80px;
-  /*p {
-            text-align: center;
-            margin: 20px 0 25px 0;
-            font-size: 24px;
-
-            /* @include desktop{
-            margin-bottom: 0;
-            }*/
 }
 
 @media (min-width: 1200px) {
   body#body_turneringar #turneringar-content {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -1414,17 +1220,8 @@ body#body_turneringar #turneringar-content .wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   position: relative;
-  /*width: 80%;
-            height: 100%;*/
   border: 1px solid #fff;
   margin-bottom: 50px;
-  /*@include desktop {
-            width: 80%;
-            margin: auto;
-            display: grid;
-            grid-template-areas: "lol cs fortnite";
-            grid-template-columns: 50% auto;
-            }*/
 }
 
 body#body_turneringar #turneringar-content .wrapper:first-of-type {
@@ -1442,15 +1239,15 @@ body#body_turneringar #turneringar-content .wrapper .background {
 }
 
 body#body_turneringar #turneringar-content .wrapper .background#lol-bg {
-  background-image: url("https://nexus.leagueoflegends.com/wp-content/uploads/2019/06/Banner_T2_Image_tnp3w61gzna8r2n3rojp.jpg");
+  background-image: url("../images/lol-bg.jpg");
 }
 
 body#body_turneringar #turneringar-content .wrapper .background#csgo-bg {
-  background-image: url("https://dmarket.com/blog/best-csgo-wallpapers/tercsgo_huc01d3a403c050d47715d6aeed15b344f_839613_1920x1080_resize_q90_box.jpg");
+  background-image: url("../images/cs-bg.jpg");
 }
 
 body#body_turneringar #turneringar-content .wrapper .background#fortnite-bg {
-  background-image: url("../../assets/images/fortnite-bg.jpg");
+  background-image: url("../images/fortnite-bg.jpg");
 }
 
 body#body_turneringar #turneringar-content .wrapper .background:after {
@@ -1536,62 +1333,77 @@ body#body_turneringar #turneringar-content .wrapper .content .text .last {
 }
 
 body#body_turneringar .bg-turneringar {
-  /*background-image: url("../images/logo-purple.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;*/
   background-color: #101011;
   width: 100%;
   height: 100%;
 }
 
-body#body_regler .banner {
+body#body_turneringar #regler {
+  background-color: #000;
+  border: 1px solid #fff;
+  padding-bottom: 50px;
+}
+
+body#body_turneringar #regler .content {
   width: 100%;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
-  height: 400px;
-  color: #333;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
 }
 
-body#body_regler .banner h1 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 4em;
+body#body_turneringar #regler .content:last-of-type {
+  border-bottom: none;
 }
 
-body#body_regler #regler-container {
-  color: #fff;
-  width: 70%;
-  margin: auto;
-  padding: 2.5em 0 2.5em 0;
+body#body_turneringar #regler .content p {
+  color: #a8a8a8;
+  font-size: 16px;
+  text-align: start;
+}
+
+@media (min-width: 1200px) {
+  body#body_turneringar #regler .content p {
+    font-size: 24px;
+  }
+}
+
+body#body_turneringar #regler .content .text {
+  margin: 58px 10% 0 10%;
+}
+
+body#body_turneringar #regler .content .text h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+body#body_turneringar #regler .content .text ul {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #a8a8a8;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 1200px) {
+  body#body_turneringar #regler .content .text ul {
+    font-size: 20px;
+  }
+}
+
+body#body_turneringar #regler .content .text ul li {
+  display: block;
+}
+
+body#body_turneringar #regler .content .text .last {
+  margin-bottom: 0px;
 }
 
 body#body_kontakt .kontakt {
-  /*background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
-
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(163,67,219,1) 100%, rgba(255,255,255,1) 100%);*/
   background-color: #101011;
 }
 
 body#body_kontakt section#kontakt {
   width: 100%;
-  margin: 80px auto;
+  margin: 80px auto 40px auto;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   padding: 30px 20px 0px 20px;
@@ -1602,6 +1414,7 @@ body#body_kontakt section#kontakt {
 @media (min-width: 1200px) {
   body#body_kontakt section#kontakt {
     width: 100%;
+    margin: 80px auto;
   }
 }
 
@@ -1619,12 +1432,14 @@ body#body_kontakt section#kontakt .column {
   padding-left: 15px;
   height: 100%;
   background-color: transparent;
+  margin-bottom: 2.5em;
 }
 
 @media (min-width: 1200px) {
   body#body_kontakt section#kontakt .column {
     width: 50%;
     text-align: justify;
+    margin-bottom: 0;
   }
 }
 
@@ -1661,6 +1476,7 @@ body#body_kontakt section#kontakt h1 {
   transition: opacity 0.5s linear;
   letter-spacing: 0.1em;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 767px) {
@@ -1706,26 +1522,6 @@ body#body_kontakt section#kontakt iframe {
   font-family: 'Roboto', sans-serif;
   padding: 30px 20px 0px 20px;
   line-height: 2;
-  /* Create two equal columns that floats next to each other */
-  /*.column {
-          float: left;
-          width: 100%;
-          padding: 50px 50px 0 50px;
-          height: 100%;
-          background-color: transparent;
-          text-align: justify;
-      }*/
-  /* Clear floats after the columns */
-  /*.row {
-          margin-left: 0;
-          margin-right: 0;
-
-          &:after {
-              content: "";
-              display: table;
-              clear: both;
-          }
-      }*/
 }
 
 @media (min-width: 1200px) {
@@ -1774,9 +1570,6 @@ body#body_kontakt section#kontakt iframe {
 .information section#information ul {
   list-style: none;
   padding: 0;
-  /*li {
-                border-bottom: 1px solid #fff;
-            }*/
 }
 
 .information section#information .fa-check,
@@ -1806,10 +1599,6 @@ body#body_kontakt section#kontakt iframe {
   width: 90px;
   position: absolute;
   text-align: center;
-  /*@media (max-width: 768px) and (min-width: 571px) {
-                        font-size: 15vw;
-                        width: 20vw;
-                    }*/
 }
 
 @media (min-width: 1200px) {
@@ -1857,10 +1646,87 @@ body#body_kontakt section#kontakt iframe {
   display: block;
   position: relative;
   padding: 1.5em 30px 1.5em 0;
-  /*span {
-                        font-size: 16px;
-                        font-weight: 400;
-                        //display: inline-block;
-                    }*/
+}
+
+#temp .knapp {
+  width: 100%;
+  text-align: center;
+}
+
+#temp .knapp a {
+  font-size: 1.5em;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #a343db;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  margin-top: 1em;
+  font-weight: 500;
+  width: 250px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+@media (min-width: 1200px) {
+  #temp .knapp a {
+    padding: 15px 60px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #temp .knapp a:hover {
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+  }
+}
+
+#temp h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 5em 0 0 0;
+  font-weight: 500;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  letter-spacing: 0.2em;
+}
+
+@media (min-width: 1200px) {
+  #temp h1 {
+    font-size: 4em;
+    letter-spacing: 0.2em;
+  }
+}
+
+#temp h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0 0 1.5em 0;
+  font-weight: 500;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  letter-spacing: 0.2em;
+}
+
+@media (min-width: 1200px) {
+  #temp h2 {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

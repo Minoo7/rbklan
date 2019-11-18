@@ -28,22 +28,10 @@ body#body_index {
             padding: 25px;
             text-align: center;
 
-            /*@include desktop {
-            grid-area: primary;
-            text-align: left;
-            margin: 4em 0 0 4em;
-        }*/
-
             h2 {
                 font-size: 3em;
                 margin: 10px 0 20px 0;
                 text-transform: uppercase;
-
-                /*@include desktop {
-                width: 80%;
-                font-size: 4em;
-                line-height: 0.9em;
-            }*/
             }
 
 
@@ -53,7 +41,6 @@ body#body_index {
                 font-size: 2.5em;
                 text-transform: uppercase;
                 padding: 10px;
-                //margin: 0px 0 50px 0;
                 margin-bottom: 0;
                 font-weight: 500;
 
@@ -84,7 +71,6 @@ body#body_index {
                 text-align: center;
                 box-sizing: border-box;
                 line-height: 1.7;
-                //border-style: dashed;
                 padding: 0;
                 margin: 0 auto;
                 width: max-content;
@@ -122,11 +108,6 @@ body#body_index {
                     display: inline-block;
                     text-align: center;
 
-                    @include desktop {
-                        //max-width: 400px;
-                        //width: 400px;
-                    }
-
                     @media screen and (min-width: 350px) {
                         max-width: 300px;
                     }
@@ -149,9 +130,6 @@ body#body_index {
 
                         &#seconds-container {
 
-                            //margin-left: 8px;
-                            //width: 87.5px;
-                            //width: 62.25px;
                             span {
                                 display: inline-block;
                                 width: 29px;
@@ -159,7 +137,11 @@ body#body_index {
                                 padding-right: 0;
 
                                 &:nth-of-type(2) {
-                                    margin-left: -5px;
+                                    margin-left: -15px;
+
+                                    @media screen and (min-width: 450px) {
+                                        margin-left: -5px;
+                                    }
                                 }
 
                                @media screen and (min-width: 350px) {
@@ -171,7 +153,7 @@ body#body_index {
                         span {
                             display: block;
                             text-align: center;
-                            font-size: 30px;
+                            font-size: 36px;
                             line-height: 50px;
                             padding: 21px 0 12px;
                             font-family: 'Aldrich', sans-serif;
@@ -322,8 +304,6 @@ body#body_index {
 
             @include tablet {
                 display: grid;
-                //padding-left: 30px;
-                //padding-right: 30px;
                 width: 100%;
                 grid-template-areas: "lol cs fortnite";
                 grid-template-columns: 225px 225px 225px;
@@ -332,8 +312,6 @@ body#body_index {
 
             @include desktop {
                 display: grid;
-                //padding-left: 30px;
-                //padding-right: 30px;
                 width: 80%;
                 grid-template-areas: "lol cs fortnite";
                 grid-template-columns: 350px 350px 350px;
@@ -408,24 +386,21 @@ body#body_index {
         }
     }
 
-
-    #biljetter-container {
+    .biljetter-container {
         padding: 1em;
-        //background-color: color(black);
         width: 100%;
         background-image: linear-gradient(to bottom,
                 #000,
                 rgba(#000, 0)),
             linear-gradient(to top,
                 #000,
-                rgba(#000, 0)), url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
+                rgba(#000, 0)), url("../images/biljetter.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
 
         @include desktop {
             padding: 100px;
-
         }
 
         h1 {
@@ -509,13 +484,6 @@ body#body_index {
             width: 100%;
             border-style: none;
 
-
-            /*
-        @include desktop {
-            grid-area: card;
-            height: fit-content;
-        }*/
-
             h1,
             h2,
             p {
@@ -585,23 +553,3 @@ body#body_index {
         }
     }
 }
-
-/*! CSS Used from: https://dreamhack.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.0 ; media=all */
-/*@media all {*
-
-    div,
-    span {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-        font-family: inherit;
-        font-size: 100%;
-        font-style: inherit;
-        font-weight: inherit;
-    }
-}
-*/

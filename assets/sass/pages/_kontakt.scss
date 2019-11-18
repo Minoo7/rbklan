@@ -1,27 +1,19 @@
 body#body_kontakt {
+    
     .kontakt {
-        /*background-image: url(https://wallpaperplay.com/walls/full/3/8/f/313814.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
-
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(163,67,219,1) 100%, rgba(255,255,255,1) 100%);*/
-
         background-color: #101011;
     }
 
     section#kontakt {
         width: 100%;
-        margin: 80px auto;
+        margin: 80px auto 40px auto;
         color: #fff;
         font-family: 'Roboto', sans-serif;
         padding: 30px 20px 0px 20px;
 
         @include desktop {
             width: 100%;
+            margin: 80px auto;
         }
 
         @include desktopxl {
@@ -37,10 +29,12 @@ body#body_kontakt {
             padding-left: 15px;
             height: 100%;
             background-color: transparent;
+            margin-bottom: 2.5em;
 
             @include desktop {
                 width: 50%;
                 text-align: justify;
+                margin-bottom: 0;
             }
         }
 
@@ -75,6 +69,7 @@ body#body_kontakt {
             transition: opacity 0.5s linear;
             letter-spacing: 0.1em;
             line-height: 1.5;
+            margin-bottom: 20px;
     
             @include tablet {
                 font-size: 2em;

@@ -1,0 +1,74 @@
+#temp {
+    
+    .knapp {
+        width: 100%;
+        text-align: center;
+
+        a {
+            font-size: 1.5em;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: color(primary);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+            display: inline-block;
+            text-align: center;
+            padding: $padding;
+            margin-top: 1em;
+            font-weight: 500;
+            width: 250px;
+            transition: transform 0.5s;
+
+            @include desktop {
+                padding: $padding $padding * 4;
+                width: 300px;
+            }
+        }
+
+        a:hover {
+            @include desktop {
+                -ms-transform: scale(1.2);
+                /* IE 9 */
+                -webkit-transform: scale(1.2);
+                /* Safari 3-8 */
+                transform: scale(1.2);
+            }
+        }
+    }
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 5em 0 0 0;
+        font-weight: 500;
+        transition: opacity 0.5s linear;
+        letter-spacing: 0.2em;
+
+        @include desktop {
+            font-size: 4em;
+            letter-spacing: 0.2em;
+        }
+
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0 0 1.5em 0;
+        font-weight: 500;
+        transition: opacity 0.5s linear;
+        letter-spacing: 0.2em;
+
+        @include desktop {
+            font-size: 1.5em;
+            letter-spacing: 0.2em;
+        }
+
+    }
+}

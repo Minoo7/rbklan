@@ -1,43 +1,48 @@
 "use strict"
 
+window.onload = (function () {
+    document.getElementById('countdown-container').style.visibility = 'visible'
+});
+
 $(document).ready(function () {
+    var game = $(".game");
     var lol = $("#lol");
     var csgo = $("#csgo");
     var fortnite = $("#fortnite");
-    var game = $(".game");
-    game.children("a").click(function (e) {
-        e.preventDefault();
-    });
-
     game.click(function () {
-        var id = $(this).attr("id");
-        var gap = (($("#spel").width()) * 0.1);
-        var width = 350 + gap;
+        if (window.matchMedia("(min-width: 1200px)").matches) {
 
-        game.not(this).css("box-shadow", "unset");
+            game.children("a").click(function (e) {
+                e.preventDefault();
+            });
 
-        if (id == "lol") {
-            lol.css("z-index", "1");
+            var id = $(this).attr("id");
+            var gap = (($("#spel").width()) * 0.1);
+            var width = 350 + gap;
+
+            game.not(this).css("box-shadow", "unset");
+
+            if (id == "lol") {
+                lol.css("z-index", "1");
+            }
+            if (id == "csgo") {
+                csgo.css("z-index", "5");
+            }
+
+            lol.transition({
+                x: width
+            }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+            fortnite.transition({
+                x: '-' + width
+            }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
+
+            setTimeout(function () {
+                window.location = "./turneringar.html#" + id;
+            }, 500);
+        
+            return false;
         }
-        if (id == "csgo") {
-            csgo.css("z-index", "5");
-        }
-
-        lol.transition({
-            x: width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        fortnite.transition({
-            x: '-' + width
-        }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
-
-        sessionStorage.setItem("scrollPos", $("html").scrollTop());
-
-        setTimeout(function () {
-            window.location = "./turneringar.html#" + id;
-        }, 500);
-
-        return false;
     });
 });
 
