@@ -38,7 +38,7 @@ $(document).ready(function () {
             }, 500, 'cubic-bezier(0.250,0.460,0.450,0.940)');
 
             setTimeout(function () {
-                window.location = "./turneringar.html#" + id;
+                window.location = "./turneringar#" + id;
             }, 500);
         
             return false;
