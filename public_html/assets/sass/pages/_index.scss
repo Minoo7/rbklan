@@ -1,0 +1,555 @@
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+body#body_index {
+    //height: 100vh !important;
+
+    main {
+
+        &#bg {
+            background-image: linear-gradient(to top,
+                    #000,
+                    rgba(#000, 0)), url("../images/indexbg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+
+
+            @include desktop {
+                height: 1000px;
+            }
+        }
+
+        section#primary {
+            color: color(white);
+            padding: 25px;
+            text-align: center;
+
+            h2 {
+                font-size: 3em;
+                margin: 10px 0 20px 0;
+                text-transform: uppercase;
+            }
+
+
+            #rbk {
+                color: color(white);
+                text-align: center;
+                font-size: 2.5em;
+                text-transform: uppercase;
+                padding: 10px;
+                margin-bottom: 0;
+                font-weight: 500;
+
+                @include desktop {
+                    font-size: 4em;
+                    letter-spacing: 0.2em;
+                }
+
+            }
+
+            h3 {
+                display: none;
+                margin-top: 70px;
+                font-size: 72px;
+                font-family: 'ABeeZee', sans-serif;
+            }
+
+            p {
+                font-size: 1.4em;
+                margin-bottom: 12px;
+            }
+
+            #countdown-container {
+                visibility: hidden;
+            }
+
+            div {
+                text-align: center;
+                box-sizing: border-box;
+                line-height: 1.7;
+                padding: 0;
+                margin: 0 auto;
+                width: max-content;
+                color: color(white);
+                overflow: hidden;
+
+                & * {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                *,
+                *:before,
+                *:after {
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                ::selection {
+                    color: color(white);
+                    background: color(accent);
+                    text-shadow: none;
+                }
+
+                ::-moz-selection {
+                    color: #fff;
+                    background: #333;
+                    text-shadow: none;
+                }
+
+                ul {
+                    max-width: unset;
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+
+                    @media screen and (min-width: 350px) {
+                        max-width: 300px;
+                    }
+
+                    @media screen and (min-width: 420px) {
+                        max-width: 400px;
+                    }
+
+                    li {
+                        display: block;
+                        margin: 0 0px;
+                        float: left;
+                        width: 20%;
+                        //width: 65px;
+                        list-style-type: none;
+
+                        @media screen and (min-width: 350px) {
+                            width: 25%;
+                        }
+
+                        &#seconds-container {
+
+                            span {
+                                display: inline-block;
+                                width: 29px;
+                                padding-left: 0;
+                                padding-right: 0;
+
+                                &:nth-of-type(2) {
+                                    margin-left: -15px;
+
+                                    @media screen and (min-width: 450px) {
+                                        margin-left: -5px;
+                                    }
+                                }
+
+                               @media screen and (min-width: 350px) {
+                                    width: 36.5px;
+                                }
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            text-align: center;
+                            font-size: 36px;
+                            line-height: 50px;
+                            padding: 21px 0 12px;
+                            font-family: 'Aldrich', sans-serif;
+
+                            @media screen and (min-width: 450px) {
+                                font-size: 50px;
+                            }
+                        }
+
+                        p {
+                            font-family: 'Lato', sans-serif;
+                            clear: both;
+                            display: inline-block;
+                            font-size: 12px;
+                            line-height: 20px;
+                            padding: 0 4px;
+                            text-transform: uppercase;
+                            border-radius: 2px;
+
+                            @include desktop {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            a {
+                font-size: 1.5em;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-color: color(primary);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                display: block;
+                text-align: center;
+                margin: 3.5em auto 0 auto;
+                padding: $padding;
+                font-weight: 500;
+                width: 250px;
+                transition: transform 0.5s;
+
+                @include desktop {
+                    display: inline-block;
+                    padding: $padding $padding * 4;
+                    width: 300px;
+                }
+            }
+
+            a:hover {
+                @include desktop {
+                    -ms-transform: scale(1.2);
+                    /* IE 9 */
+                    -webkit-transform: scale(1.2);
+                    /* Safari 3-8 */
+                    transform: scale(1.2);
+                }
+
+            }
+
+            #logo-container {
+                img {
+                    width: 250px;
+                    
+                    @include desktop {
+                        width: 400px;
+                    }
+                }
+
+                margin-top:8em;
+                margin-bottom:3.5em;
+            }
+        }
+    }
+
+    #grid-container {
+        margin: auto;
+        width: 250px;
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    hr {
+        border: 1px solid color(white);
+        border-radius: 20px;
+        transition: opacity 0.5s linear;
+        width: 250px;
+
+        @include desktop {
+            width: 400px;
+        }
+    }
+
+    #spel-container {
+        margin-bottom: 1.5em;
+
+        @include desktop {
+            padding: 100px;
+        }
+
+        width: 100%;
+        background: linear-gradient(to bottom,
+            #000,
+            rgba(#000, 0)),
+        linear-gradient(to top,
+            #000,
+            rgba(#000, 0)),
+        url("../images/spelbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 25px;
+        height: 100%;
+
+
+        @include desktop {
+            height: 1000px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 0px 0 1.5em 0;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.2em;
+
+            @include desktop {
+                font-size: 4em;
+                letter-spacing: 0.2em;
+            }
+
+        }
+
+        section#spel {
+            display: inline-grid;
+            justify-content: center;
+            justify-items: center;
+            width: 250px;
+            margin: auto;
+            row-gap: 3em;
+
+            @include tablet {
+                display: grid;
+                width: 100%;
+                grid-template-areas: "lol cs fortnite";
+                grid-template-columns: 225px 225px 225px;
+                grid-gap: 35px;
+            }
+
+            @include desktop {
+                display: grid;
+                width: 80%;
+                grid-template-areas: "lol cs fortnite";
+                grid-template-columns: 350px 350px 350px;
+                grid-gap: 10%;
+            }
+
+            .game {
+                position: relative;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                cursor: pointer;
+
+                &:hover .overlay-card {
+                    opacity: 0.75;
+                }
+            }
+
+            #lol {
+                grid-area: "lol";
+            }
+
+            #csgo {
+                grid-area: "cs";
+            }
+
+            #fortnite {
+                grid-area: "fortine";
+            }
+
+            img {
+                transition: opacity 0.5s linear;
+                width: 100%;
+                height: 100%;
+            }
+
+            p {
+                font-size: 20px;
+                text-align: center;
+                font-weight: bold;
+                margin: 0;
+                padding: 16px 0 16px 0;
+                color: #ccc;
+            }
+
+            .overlay-card {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgb(0, 0, 0);
+
+                .text {
+                    color: white;
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+    
+                h2 {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .biljetter-container {
+        padding: 1em;
+        width: 100%;
+        background-image: linear-gradient(to bottom,
+                #000,
+                rgba(#000, 0)),
+            linear-gradient(to top,
+                #000,
+                rgba(#000, 0)), url("../images/biljetter.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include desktop {
+            padding: 100px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 0px 0 1.5em 0;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.2em;
+
+            @include desktop {
+                font-size: 4em;
+                letter-spacing: 0.2em;
+            }
+
+        }
+
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 1.15em;
+            transition: opacity 0.5s linear;
+        }
+
+        section#biljett {
+
+            @include desktop {
+                display: grid;
+                justify-content: center;
+                justify-items: center;
+                width: 80%;
+                margin: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 1em;
+                row-gap: 1em;
+            }
+
+            >div {
+                padding: 1em;
+            }
+
+            .om-text {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .adress {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            .standard-biljett {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .vip-biljett {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            .boka {
+                grid-column: 1/3;
+                grid-row: 2/3;
+            }
+        }
+
+        .om-text {
+            padding: 2.5em !important;
+        }
+
+        //Info-box
+        .card {
+            background: transparent;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            border-style: none;
+
+            h1,
+            h2,
+            p {
+                text-align: center;
+            }
+
+            h2 {
+                text-align: justify;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 0 !important;
+            }
+
+            p.display {
+                color: color(primary);
+                font-size: 1.5em;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            p.price {
+                font-size: 4em;
+                margin-bottom: 0;
+                font-family: 'Aldrich', sans-serif;
+            }
+        }
+
+        //Knapp
+        .boka {
+            width: 100%;
+            text-align: center;
+
+            a {
+                font-size: 1.5em;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-color: color(primary);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                display: inline-block;
+                text-align: center;
+                padding: $padding;
+                margin-top: 1em;
+                font-weight: 500;
+                width: 250px;
+                transition: transform 0.5s;
+
+                @include desktop {
+                    padding: $padding $padding * 4;
+                    width: 300px;
+                }
+            }
+
+            a:hover {
+                @include desktop {
+                    -ms-transform: scale(1.2);
+                    /* IE 9 */
+                    -webkit-transform: scale(1.2);
+                    /* Safari 3-8 */
+                    transform: scale(1.2);
+                }
+
+            }
+        }
+    }
+}

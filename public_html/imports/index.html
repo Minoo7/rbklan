@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="smooth-scroll" lang="sv-SE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RudbeckLan</title>
+
+    <link rel="stylesheet" href="imports/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="assets/sass/main.css">
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery.transit.min.js"></script>
+
+    <!--Countdown-->
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!--Import-->
+    <script src="imports/get.js"></script>
+</head>
+
+<body id="body_index">
+    <div id="container">
+        <div id="body">
+            <div id="get-nav"></div>
+            <!--Import-->
+
+            <main id="bg">
+                <section id="primary">
+                    <div id="logo-container">
+                        <img alt="logo" src="assets/images/logo-purple.png">
+                        <h4>6-8 Mars, Rudbecksskolan</h4>
+                    </div>
+                    <h3 id="live">Live!</h3>
+                    <div id="countdown-container">
+                        <ul>
+                            <li>
+                                <span id="days">00</span>
+                                <p> Dagar </p>
+                            </li>
+                            <li>
+                                <span id="hours">00</span>
+                                <p> Timmar </p>
+                            </li>
+                            <li>
+                                <span id="minutes">00</span>
+                                <p> Minuter </p>
+                            </li>
+                            <li id="seconds-container">
+                                <span id="seconds_1">0</span>
+                                <span id="seconds_2">0</span>
+                                <p> Sekunder </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#biljetter">Köp Biljett <i class="fas fa-arrow-down"></i></a>
+                </section>
+            </main>
+
+            <hr>
+            <div id="spel-container">
+                <h1>Turneringar</h1>
+                <div id="grid-container">
+                    <section id="spel">
+                        <div id="lol" class="game">
+                            <a href="./turneringar#lol"><img alt="League Of Legends" src="assets/images/lol.png">
+                                <div class="overlay-card">
+                                    <div class="text">
+                                        <h2>1v1</h2>
+                                        <h2>2v2</h2>
+                                        <h2>5v5</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="csgo" class="game">
+                            <a href="./turneringar#csgo"><img alt="CSGO" src="assets/images/csgo.jpg">
+                                <div class="overlay-card">
+                                    <div class="text">
+                                        <h2>1v1</h2>
+                                        <h2>2v2</h2>
+                                        <h2>5v5</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="fortnite" class="game">
+                            <a href="./turneringar#fortnite"><img alt="Fortnite" src="assets/images/Fortnite.jpg">
+                                <div class="overlay-card">
+                                    <div class="text">
+                                        <h2>1v1</h2>
+                                        <h2>2v2</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <hr>
+            <div id="biljetter" class="biljetter-container">
+                <h1>Biljetter</h1>
+                <section id="biljett">
+                    <div class="card vip-biljett">
+                        <h1><i class="fas fa-ticket-alt"></i></h1>
+                        <p class="display">VIP - Biljett</p>
+                        <p>Enkel stol, Större Datorplats, Max 2st Skärmar</p>
+                        <p class="price">300</p>
+                        <p>SEK</p>
+                    </div>
+
+                    <div class="card standard-biljett">
+                        <h1><i class="fas fa-ticket-alt"></i></h1>
+                        <p class="display">Standardbiljett</p>
+                        <p>Enkel stol, Enkel Datorplats, Max 1 Skärm</p>
+                        <p class="price">250</p>
+                        <p>SEK</p>
+                    </div>
+
+                    <div class="boka"><a href="boka.rudbecklan.se">Till bokning</a></div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="get-footer"></div>
+    <!--Import-->
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+body#body_turneringar {
+    #turneringar-content {
+        color: color(white);
+        background-color: #101011;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+        padding: 30px 35px 0px 35px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include desktop {
+            width: 60%;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            padding: 10px;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+            margin: 0 0 1.5em 0;
+
+            @include tablet {
+                font-size: 2em;
+                letter-spacing: 0.1em;
+               
+            }
+
+            @include desktop {
+                font-size: 2.5em;
+                letter-spacing: 0.15em;
+            }
+        }
+
+        .wrapper {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            position: relative;
+            border: 1px solid #fff;
+            margin-bottom: 50px;
+
+            &:first-of-type{
+                border-style: none;
+            }
+
+            .background {
+                &#lol-bg {
+                    background-image: url("../images/lol-bg.jpg");
+                }
+
+                &#csgo-bg {
+                    background-image: url("../images/cs-bg.jpg");
+                }
+
+                &#fortnite-bg {
+                    background-image: url("../images/fortnite-bg.jpg");
+                }
+
+                filter: blur(4px);
+                -webkit-filter: blur(4px);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                height: 1060px;
+                width: 100%;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            .content {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+              
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                p {
+                    color: #a8a8a8;
+                    font-size: 16px;
+                    text-align: start;
+
+                    @include desktop{
+                        font-size: 24px;
+                    }
+                }
+
+                .logos {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 15px 0 rgba(0, 0, 0, 0.71);
+                    width: 250px;
+                    height: 100%;
+
+                    @include desktop{
+                        width: 350px;
+                    }
+                }
+
+                .text {
+                    margin: 58px 10% 0 10%;
+
+                    h2 {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 700;
+                    }
+
+                    ul {
+                        font-size: 16px;
+                        letter-spacing: 0.5px;
+                        color: #a8a8a8;
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                        list-style: none;
+
+                        @include desktop {
+                            font-size: 20px;
+                        }
+
+                        li {
+                            display: block;
+                        }
+                    }
+
+                    .last {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bg-turneringar {
+        background-color: #101011;
+        width: 100%;
+        height: 100%;
+    }
+
+    #regler{
+        background-color: #000;
+        border: 1px solid #fff;
+        padding-bottom: 50px;
+
+        .content {
+            width: 100%;
+          
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            p {
+                color: #a8a8a8;
+                font-size: 16px;
+                text-align: start;
+
+                @include desktop{
+                    font-size: 24px;
+                }
+            }
+
+
+            .text {
+                margin: 58px 10% 0 10%;
+
+                h2 {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 700;
+                }
+
+                ul {
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    color: #a8a8a8;
+                    display: block;
+                    width: 100%;
+                    padding: 0;
+                    list-style: none;
+
+                    @include desktop {
+                        font-size: 20px;
+                    }
+
+                    li {
+                        display: block;
+                    }
+                }
+
+                .last {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

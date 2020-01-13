@@ -1,0 +1,134 @@
+.information {
+    background-color: #101011;
+
+    section#information {
+        width: 100%;
+        margin: 80px auto;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        padding: 30px 20px 0px 20px;
+        line-height: 2;
+
+        @include desktop {
+            width: 80%;
+            padding: 50px 50px 0 50px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 1.5em 0 1.5em 0;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+            &:nth-of-type(1){
+                margin-top:0;
+            }
+
+            @include tablet {
+                font-size: 2em;
+                letter-spacing: 0.1em;
+            }
+
+            @include desktop {
+                font-size: 2.5em;
+                letter-spacing: 0.15em;
+            }
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .fa-check,
+        .fa-ban {
+            color: color(primary);
+            margin-right: 5px;
+        }
+
+        #faq {
+            div {
+                position: relative;
+                border-left: 5px solid gray;
+                box-sizing: border-box;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &.q:before,
+                &.a:before {
+                    box-sizing: border-box;
+                    font-size: 2.5em;
+                    color: gray;
+                    //padding-left: 30px;
+                    font-weight: bold;
+                    display: block;
+                    width: 90px;
+
+                    @include desktop {
+                        width: 6vw;
+                    }
+
+                    position: absolute;
+                    text-align: center;
+                }
+
+                &.q {
+                    border-color: color(primary);
+                    margin-top: 40px;
+
+                    &:before {
+                        content: attr(data-decor) "Q. ";
+                        color: color(primary);
+                    }
+                }
+
+                &.a {
+                    &:before {
+                        content: attr(data-decor) "A. ";
+                    }
+                }
+
+                p {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    text-align: initial;
+                }
+
+                .question {
+
+                    span {
+                        font-size: 1.2em;
+                        font-weight: bold;
+                    }
+
+                    margin-left: 5.542rem;
+                    width: calc(100% - 5.542rem);
+
+                    display: block;
+                    position: relative;
+                    padding: 1.5em 20px 17.5px 0;
+                }
+
+                .ans {
+                    margin-left: 5.542rem;
+                    width: calc(100% - 5.542rem);
+
+                    display: block;
+                    position: relative;
+                    padding: 1.5em 30px 1.5em 0;
+                }
+            }
+        }
+    }
+}

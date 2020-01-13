@@ -1,0 +1,101 @@
+body#body_kontakt {
+    
+    .kontakt {
+        background-color: #101011;
+    }
+
+    section#kontakt {
+        width: 100%;
+        margin: 80px auto 40px auto;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        padding: 30px 20px 0px 20px;
+
+        @include desktop {
+            width: 100%;
+            margin: 80px auto;
+        }
+
+        @include desktopxl {
+            width: 80%;
+            padding: 50px 50px 0 50px;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            height: 100%;
+            background-color: transparent;
+            margin-bottom: 2.5em;
+
+            @include desktop {
+                width: 50%;
+                text-align: justify;
+                margin-bottom: 0;
+            }
+        }
+
+        /* Clear floats after the columns */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }
+
+        img#skola {
+            width: 100%;
+            border: 1px solid #fff;
+            height: auto;
+            margin-bottom: 20px;
+
+            @include desktop {
+                height: 350px;
+            }
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: opacity 0.5s linear;
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+    
+            @include tablet {
+                font-size: 2em;
+                letter-spacing: 0.1em;
+            }
+    
+            @include desktop {
+                font-size: 2.5em;
+                letter-spacing: 0.15em;
+            }
+        }
+
+        iframe {
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            height: 200px;
+
+            @include tablet {
+                height: 400px;
+            }
+
+
+            @include desktop {
+                height: 350px;
+            }
+        }
+
+    }
+}
